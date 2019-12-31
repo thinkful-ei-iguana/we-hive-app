@@ -1,5 +1,5 @@
 .App {
-  text-align: center;
+  /* text-align: center; */
 }
 
 .App-logo {
@@ -34,5 +34,28 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+.Header__tagline--wide {
+  opacity: 0.35;
+  margin-left: 10px;
+}
+
+.Header__tagline--narrow {
+  opacity: 0.35;
+  display: block;
+  text-align: center;
+  display: none;
+  margin-top: 10px;
+}
+
+@media screen and (max-width: 490px) {
+  .Header__tagline--wide {
+    display: none;
+  }
+
+  .Header__tagline--narrow {
+    display: inherit;
   }
 }

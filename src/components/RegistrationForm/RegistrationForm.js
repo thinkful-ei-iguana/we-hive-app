@@ -92,7 +92,7 @@ export default class RegistrationForm extends Component {
             id="RegistrationForm__confirm-password"
           ></Input>
         </div>
-        <Button type="submit">Register</Button>
+        <Button type="submit">Join the Hive</Button>
       </form>
     );
   }
