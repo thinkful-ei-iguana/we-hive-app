@@ -6,6 +6,7 @@ import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import LandingPage from "../../routes/LandingPage";
 
 import LoginPage from "../../routes/LoginPage";
+import RegistrationPage from "../../routes/RegistrationPage";
 
 class App extends Component {
   state = { hasError: false };
@@ -21,6 +22,7 @@ class App extends Component {
           <Switch>
             <Route exact path={"/"} component={LandingPage} />
             <PublicOnlyRoute path={"/login"} component={LoginPage} />
+            <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
           </Switch>
         </main>
       </div>
