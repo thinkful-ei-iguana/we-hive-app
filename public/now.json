@@ -1,0 +1,8 @@
+{
+  "version": 2,
+  "name": "we-hive-app",
+  "routes": [
+    { "handle": "filesystem" },
+    { "src": "/.*", "dest": "/index.html" }
+  ]
+}
