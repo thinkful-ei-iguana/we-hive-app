@@ -24,6 +24,10 @@ export function Section({ className, list, ...props }) {
   return <section className={classes} {...props} />;
 }
 
+export function Tab({ className, ...props }) {
+  return <tab className={["Button", className].join(" ")} {...props} />;
+}
+
 export function Textarea({ className, ...props }) {
   return <textarea className={["Textarea", className].join(" ")} {...props} />;
 }

@@ -1,15 +1,15 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
-import { GoalProvider } from "./context/GoalContext";
+import { HiveProvider } from "./context/HiveContext";
 import "./index.css";
 import App from "./components/App/App";
 
 ReactDOM.render(
   <BrowserRouter>
-    <GoalProvider>
+    <HiveProvider>
       <App />
-    </GoalProvider>
+    </HiveProvider>
   </BrowserRouter>,
   document.getElementById("root")
 );

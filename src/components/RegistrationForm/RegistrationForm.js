@@ -81,17 +81,7 @@ export default class RegistrationForm extends Component {
             id="RegistrationForm__password"
           ></Input>
         </div>
-        <div className="confirm-password">
-          <label htmlFor="RegistrationForm__confirm-password">
-            Confirm Password <Required />
-          </label>
-          <Input
-            name="confirm-password"
-            type="password"
-            required
-            id="RegistrationForm__confirm-password"
-          ></Input>
-        </div>
+
         <Button type="submit">Join the Hive</Button>
       </form>
     );

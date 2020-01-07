@@ -1,0 +1,29 @@
+.HiveNavItem {
+  text-decoration: none;
+}
+
+.HiveNavItem__heading {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 30px 10px 0;
+  padding: 10px;
+  background-color: #030f1f;
+  color: #b5b3b3;
+  display: block;
+  font-size: 20px;
+  margin: 0 0 8px auto;
+  max-width: 220px;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.HiveNavItem__heading:hover {
+  color: #ffb72f;
+  cursor: pointer;
+}
+
+.HiveNavItem__heading.active {
+  background-color: #ffb72f;
+  color: #030f1f;
+}

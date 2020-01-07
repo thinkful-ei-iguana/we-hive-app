@@ -1,0 +1,10 @@
+label {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+
+input,
+textarea {
+  width: 200px;
+}
