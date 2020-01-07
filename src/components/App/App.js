@@ -10,10 +10,11 @@ import PrivateRoute from "../Utils/PrivateRoute";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
 import HivePage from "../../routes/HivePage/HivePage";
-
+import PostCodePage from "../../routes/PostCodePage/PostCodePage";
 import "./App.css";
 import UserDashPage from "../../routes/UserDashPage/UserDashPage";
 import AddHivePage from "../../routes/AddHivePage/AddHivePage";
+import MemberNavList from "../../routes/MemberNavList/MemberNavList";
 class App extends Component {
   constructor(props) {
     super(props);
@@ -31,7 +32,9 @@ class App extends Component {
   renderNavRoutes() {
     return (
       <>
-        <Route path={"/myhives/"} component={HiveNavPage} />
+        <Route exact path={"/myhives/"} component={HiveNavPage} />
+        <Route exact path={"/myhives/:hiveId"} component={HiveNavPage} />
+        <Route path={"/myhives/:hiveId/hive-mind"} component={MemberNavList} />
       </>
     );
   }
@@ -48,7 +51,11 @@ class App extends Component {
           <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
           <PrivateRoute exact path={"/add-hive"} component={AddHivePage} />
-          <PrivateRoute path={"/myhives/:hiveId"} component={HivePage} />
+          <PrivateRoute exact path={"/myhives/:hiveId"} component={HivePage} />
+          <PrivateRoute
+            path={"/myhives/:hiveId/add-code"}
+            component={PostCodePage}
+          />
           <Route component={NotFoundPage} />
         </Switch>
       </>

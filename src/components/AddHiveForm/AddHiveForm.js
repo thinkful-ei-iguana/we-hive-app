@@ -4,7 +4,7 @@ import HiveApiService from "../../services/hive-api-service";
 import { Input, Button, Textarea, Required } from "../Utils/Utils";
 import "./AddHiveForm.css";
 
-export default class ActivityForm extends Component {
+export default class AddHiveForm extends Component {
   static defaultProps = {
     onAddHive: () => {}
   };

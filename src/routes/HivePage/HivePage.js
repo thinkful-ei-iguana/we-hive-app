@@ -11,33 +11,29 @@ export default class HivePage extends Component {
     match: { params: {} }
   };
   static contextType = HiveContext;
-
   componentDidMount() {
     const { hiveId } = this.props.match.params;
-    this.context.clearError();
+
     HiveApiService.getHive(hiveId)
       .then(this.context.setHive)
       .catch(this.context.setError);
-  }
-
-  componentWillUnmount() {
-    this.context.clearHive();
-  }
-  renderHiveDetail() {
-    const { hive } = this.context;
     return (
       <>
         <h2>
-          {hive.goal_type}
+          {this.context.hive.goal_type}
           {": "}
-          {hive.goal_description}
+          {this.context.hive.goal_description}
         </h2>
       </>
     );
   }
+  renderHiveDetail() {
+    const { hive } = this.context;
+  }
 
   render() {
     const { error, hive } = this.context;
+
     let detail;
     if (error) {
       detail =
@@ -46,8 +42,6 @@ export default class HivePage extends Component {
         ) : (
           <p className="red">Error.</p>
         );
-    } else if (!hive.id) {
-      detail = <div className="loading" />;
     } else {
       detail = this.renderHiveDetail();
     }
@@ -55,7 +49,13 @@ export default class HivePage extends Component {
       <>
         <TodaysDate />
         {detail}
-        <Button>Add members to hive</Button>
+
+        <Link to={`/myhives/${hive.id}/add-code`}>
+          <Button>Add members to hive</Button>
+        </Link>
+        <Link to={`/myhives/${hive.id}/hive-mind`}>
+          <Button>View hive-mind</Button>
+        </Link>
         <ActivityForm />
       </>
     );
