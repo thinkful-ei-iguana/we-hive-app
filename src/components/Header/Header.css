@@ -1,16 +1,21 @@
+* {
+  z-index: 30;
+}
+
 .Header {
-  height: 40px;
+  height: 60px;
   display: flex;
   align-items: normal;
   justify-content: space-between;
+  background-color: black;
 }
 
 .Header h1 {
-  margin: 0;
+  margin: 10px;
 }
 
 .Header a {
-  color: #444;
+  color: white;
   text-decoration: none;
 }
 
@@ -22,10 +27,8 @@
 }
 
 .Header__not-logged-in a:last-child {
-  /* background: rgb(255, 121, 121);
-  color: white; */
   padding: 5px 15px;
-  /* border-radius: 15px; */
+  border-radius: 15px;
   margin-left: 10px;
 }
 
@@ -33,6 +36,7 @@
   border: 1px solid rgba(0, 0, 0, 0.25);
   padding: 5px 15px;
   border-radius: 15px;
+  margin-left: 10px;
 }
 
 @media screen and (min-width: 450px) {

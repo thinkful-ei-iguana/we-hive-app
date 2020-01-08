@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
-
+import HiveContext from "../../context/HiveContext";
 import Header from "../Header/Header";
 import LandingPage from "../../routes/LandingPage/LandingPage";
 import LoginPage from "../../routes/LoginPage/LoginPage";
@@ -9,32 +9,29 @@ import NotFoundPage from "../../routes/NotFoundPage/NotFoundPage";
 import PrivateRoute from "../Utils/PrivateRoute";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
-import HivePage from "../../routes/HivePage/HivePage";
+import AddActivityPage from "../../routes/AddActivityPage/AddActivityPage";
 import PostCodePage from "../../routes/PostCodePage/PostCodePage";
 import "./App.css";
 import UserDashPage from "../../routes/UserDashPage/UserDashPage";
 import AddHivePage from "../../routes/AddHivePage/AddHivePage";
 import MemberNavList from "../../routes/MemberNavList/MemberNavList";
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      hasError: false
-    };
-  }
+import HiveMindPage from "../../routes/HiveMindPage/HiveMindPage";
 
-  handleAddHive = hive => {
-    this.setState({
-      hives: [...this.state.hives, hive]
-    });
+class App extends Component {
+  static defaultProps = {
+    match: { path: {} }
   };
+
+  state = { hasError: false };
+
+  static contextType = HiveContext;
 
   renderNavRoutes() {
     return (
       <>
         <Route exact path={"/myhives/"} component={HiveNavPage} />
-        <Route exact path={"/myhives/:hiveId"} component={HiveNavPage} />
-        <Route path={"/myhives/:hiveId/hive-mind"} component={MemberNavList} />
+        <Route path={"/myhives/:hiveId"} component={MemberNavList} />
+        <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
       </>
     );
   }
@@ -50,11 +47,19 @@ class App extends Component {
           <PublicOnlyRoute path={"/login"} component={LoginPage} />
           <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
-          <PrivateRoute exact path={"/add-hive"} component={AddHivePage} />
-          <PrivateRoute exact path={"/myhives/:hiveId"} component={HivePage} />
+          <PrivateRoute exact path={"/create"} component={AddHivePage} />
           <PrivateRoute
-            path={"/myhives/:hiveId/add-code"}
+            exact
+            path={"/myhives/:hiveId"}
+            component={AddActivityPage}
+          />
+          <PrivateRoute
+            path={"/myhives/:hiveId/code"}
             component={PostCodePage}
+          />
+          <PrivateRoute
+            path={"/myhives/:hiveId/hivemind"}
+            component={HiveMindPage}
           />
           <Route component={NotFoundPage} />
         </Switch>
@@ -68,10 +73,13 @@ class App extends Component {
         <header className="App__header">
           <Header />
         </header>
-        <div className="Hive_container">
-          <nav className="App__nav">{this.renderNavRoutes()}</nav>
-          <main className="App__main">{this.renderMainRoutes()}</main>
-        </div>
+
+        <main className="Hive_container wrapper">
+          <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>
+          <section className="App__main wrapper">
+            {this.renderMainRoutes()}
+          </section>
+        </main>
       </div>
     );
   }

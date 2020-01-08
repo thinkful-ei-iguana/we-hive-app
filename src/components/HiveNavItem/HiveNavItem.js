@@ -8,7 +8,7 @@ export default class HiveNavItem extends Component {
 
     return (
       <Link to={`/myhives/${hive.id}`} className="HiveNavItem">
-        <h4 className="HiveNavItem__heading">{hive.goal_description}</h4>
+        <button className="HiveNavItem__title">{hive.goal_description}</button>
       </Link>
     );
   }

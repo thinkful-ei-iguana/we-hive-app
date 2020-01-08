@@ -97,16 +97,6 @@ h1 {
   font-size: 40px;
 }
 
-section {
-  min-height: 200px;
-  padding: 30px 15px;
-  /* background-color: lightgrey; */
-}
-
-section:nth-child(even) {
-  /* background-color: darkgrey; */
-}
-
 #wrapper {
   width: 300px;
   height: 150px;

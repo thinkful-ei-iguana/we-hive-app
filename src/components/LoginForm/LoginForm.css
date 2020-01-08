@@ -1,0 +1,23 @@
+.LoginForm {
+  display: flex;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  height: 400px;
+  padding: 10px 0 10px 0;
+}
+label {
+  display: flex;
+  justify-content: left;
+}
+input {
+  padding: 10px;
+  border: none;
+  border-bottom: solid 1px gray;
+  background-color: rgb(255, 199, 158);
+}
+
+.Button .reg-button {
+  margin-top: 10px;
+}

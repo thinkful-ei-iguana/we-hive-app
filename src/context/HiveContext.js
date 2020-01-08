@@ -3,6 +3,7 @@ import React, { Component } from "react";
 export const nullHive = {};
 
 const HiveContext = React.createContext({
+  code: null,
   hive: nullHive,
   hives: [],
   activityList: [],
@@ -16,7 +17,7 @@ const HiveContext = React.createContext({
   clearHive: () => {},
   setActivity: () => {},
   addActivity: () => {},
-  addCode: () => {}
+  setCode: () => {}
 });
 
 export default HiveContext;
@@ -90,22 +91,22 @@ export class HiveProvider extends Component {
     this.setActivity([...this.state.activityList, activity]);
   };
 
-  addCode = code => {
+  setCode = code => {
     this.setState({ code });
   };
 
   setUsers = users => {
-    this.setState([...users]);
+    this.setState({ users });
   };
 
   render() {
     const value = {
+      code: this.state.code,
       hive: this.state.hive,
       hives: this.state.hives,
       users: this.state.users,
       activityList: this.state.activityList,
       error: this.state.error,
-      code: this.state.code,
       setError: this.setError,
       clearError: this.clearError,
       setHives: this.setHives,
@@ -115,7 +116,7 @@ export class HiveProvider extends Component {
       hiveTypes: this.state.hiveTypes,
       setActivity: this.setActivity,
       addActivity: this.addActivity,
-      addCode: this.addCode,
+      setCode: this.setCode,
       setUsers: this.setUsers
     };
     return (

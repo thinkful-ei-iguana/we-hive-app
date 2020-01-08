@@ -1,19 +1,39 @@
 .App {
-  padding-top: 20px;
-  padding-bottom: 20px;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
+  padding: 0;
+  box-sizing: border-box;
+  text-align: center;
 }
 
-.App__header {
-  padding-left: 20px;
-  padding-right: 20px;
+.App__nav {
+  background-color: darkgray;
+  display: block;
+  flex-direction: column;
 }
 
 .App__main {
-  margin-top: 20px;
+  margin: 0;
 }
 
-.Hive_container {
-  display: flex;
+/* set media queries */
+@media (min-width: 768px) {
+  .Hive_container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .App__main {
+    margin: 0;
+  }
+  .wrapper {
+    flex: 2;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0;
+  }
+
+  .App__nav {
+    justify-content: center;
+    align-items: center;
+  }
 }

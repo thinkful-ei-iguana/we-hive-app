@@ -1,12 +1,12 @@
 import React, { Component } from "react";
 import { NavLink, Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
-import { Button, Section } from "../../components/Utils/Utils";
+import { Button } from "../../components/Utils/Utils";
 import HiveNavItem from "../../components/HiveNavItem/HiveNavItem";
 import HiveApiService from "../../services/hive-api-service";
 import "./HiveNavPage.css";
 
-export default class HiveNav extends Component {
+export default class HiveNavPage extends Component {
   static contextType = HiveContext;
 
   componentDidMount() {
@@ -19,13 +19,13 @@ export default class HiveNav extends Component {
     const { hiveTypes } = this.context;
 
     return (
-      <div className="GoalTypeNav">
+      <div className="HiveNavPage">
         <h2>My Hives</h2>
-        <ul className="GoalTypeNav__list">
+        <ul className="HiveNavPage__list">
           {hiveTypes.map(hive => (
-            <li key={hive.id} className="goal-type">
+            <li key={hive.id} className="hive-type">
               <NavLink
-                className="GoalTypeNav__type-link"
+                className="HiveNavPage__type-link"
                 to={`/myhives/${hive.type}`}
               >
                 {hive.type}
@@ -36,24 +36,26 @@ export default class HiveNav extends Component {
       </div>
     );
   }
+
   renderHives() {
     const { hives = [] } = this.context;
     return hives.map(hive => (
-      <HiveNavItem key={hive.id} className="goal-type" hive={hive} />
+      <HiveNavItem key={hive.id} className="hive-type" hive={hive} />
     ));
   }
+
   render() {
-    const { error } = this.context;
     return (
-      <>
+      <div className="HiveNavPage__container">
+        <h3>My Hives</h3>
         {this.renderHives()}
-        <Link to={"/add-hive"}>
-          <Button className="add-goal">Add hive</Button>
+        <Link to={"/create"}>
+          <Button className="create">Add hive</Button>
         </Link>
-        <Link to={"/join-hive"}>
-          <Button className="add-goal">Join hive</Button>
+        <Link to={"/join"}>
+          <Button className="join">Join hive</Button>
         </Link>
-      </>
+      </div>
     );
   }
 }

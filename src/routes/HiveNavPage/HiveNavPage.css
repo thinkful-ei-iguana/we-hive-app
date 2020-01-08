@@ -1,33 +1,6 @@
-.GoalTypeNav {
+.HiveNavPage__container {
+  background-color: #292827;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  margin: 30px 10px 0;
-}
-
-.GoalTypeNav__list {
-  list-style-type: none;
-  margin: 10px 0 0;
-  padding: 10px;
-}
-
-.GoalTypeNav__type-link {
-  background-color: #030f1f;
-  color: #b5b3b3;
-  display: block;
-  font-size: 20px;
-  margin: 0 0 8px auto;
-  max-width: 220px;
-  padding: 8px 16px;
-  text-decoration: none;
-}
-
-.GoalTypeNav__type-link:hover {
-  color: #ffb72f;
-  cursor: pointer;
-}
-
-.GoalTypeNav__type-link.active {
-  background-color: #ffb72f;
-  color: #030f1f;
+  align-items: center;
 }

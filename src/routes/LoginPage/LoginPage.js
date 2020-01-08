@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import { Section } from "../../components/Utils/Utils";
-
+import "./LoginPage.css";
 export default class LoginPage extends Component {
   static defaultProps = {
     location: {},
@@ -22,7 +22,10 @@ export default class LoginPage extends Component {
       <Section className="LoginPage">
         <h2>Log in</h2>
         <h4>
-          Don't have an account? <Link to="/register">Sign up!</Link>
+          Don't have an account?{" "}
+          <Link to="/register" className="link">
+            Sign up!
+          </Link>
         </h4>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
       </Section>

@@ -2,28 +2,24 @@
   text-decoration: none;
 }
 
-.HiveNavItem__heading {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  margin: 30px 10px 0;
-  padding: 10px;
-  background-color: #030f1f;
-  color: #b5b3b3;
+.HiveNavItem__title {
   display: block;
-  font-size: 20px;
-  margin: 0 0 8px auto;
-  max-width: 220px;
+  font-size: 1em;
+  margin: 18px 0 8px auto;
+  width: 220px;
+  height: 60px;
   padding: 8px 16px;
   text-decoration: none;
+  color: rgb(237, 55, 48);
+  border: none;
 }
 
-.HiveNavItem__heading:hover {
+.HiveNavItem__title:hover {
   color: #ffb72f;
   cursor: pointer;
 }
 
-.HiveNavItem__heading.active {
+.HiveNavItem.active {
   background-color: #ffb72f;
   color: #030f1f;
 }

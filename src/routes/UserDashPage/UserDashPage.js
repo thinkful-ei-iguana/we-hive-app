@@ -11,12 +11,18 @@ import "./UserDashPage.css";
 export default class UserDashPage extends Component {
   render() {
     return (
-      <Section className="UserDashPage">
-        <GoalSummary></GoalSummary>
-        <HiveSummary></HiveSummary>
-        <Countdown></Countdown>
-        <ProgressReport></ProgressReport>
-      </Section>
+      <>
+        <h3>
+          "No matter how brilliant your mind or strategy, if you’re playing a
+          solo game, you’ll always lose out to a team." – Reid Hoffman
+        </h3>
+        <Section className="UserDashPage">
+          <GoalSummary></GoalSummary>
+          <HiveSummary></HiveSummary>
+          <Countdown></Countdown>
+          <ProgressReport></ProgressReport>
+        </Section>
+      </>
     );
   }
 }

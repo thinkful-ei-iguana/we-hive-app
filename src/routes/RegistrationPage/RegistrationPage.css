@@ -1,0 +1,15 @@
+.RegistrationPage {
+  margin: 0;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
+}
+
+.RegistrationPage__logo {
+  height: 120px;
+  width: 120px;
+  margin: 60px auto 120px;
+}

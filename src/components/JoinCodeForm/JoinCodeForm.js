@@ -3,7 +3,7 @@ import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Input, Button } from "../Utils/Utils";
 
-export default class PostCodeForm extends Component {
+export default class JoinCodeForm extends Component {
   static defaultProps = {
     onAddCode: () => {}
   };
@@ -15,7 +15,7 @@ export default class PostCodeForm extends Component {
     const { hiveId } = this.props;
     const { code } = ev.target;
 
-    HiveApiService.postCode(hiveId, code.value)
+    HiveApiService.joinCode(hiveId, code.value)
       .then(this.context.setCode)
       .then(() => {
         code.value = "";
@@ -25,7 +25,7 @@ export default class PostCodeForm extends Component {
   };
   render() {
     return (
-      <form className="PostCodeForm" onSubmit={this.handleCodeSubmit}>
+      <form className="JoinCodeForm" onSubmit={this.handleCodeSubmit}>
         <Input name="code" type="text" required />
         <Button type="submit">Save code</Button>
       </form>

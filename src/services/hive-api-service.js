@@ -46,7 +46,7 @@ const HiveApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-  postHiveActivity(hiveId, action, timer, notes) {
+  postHiveActivity(hiveId, action, notes) {
     return fetch(`${config.API_ENDPOINT}/activity`, {
       method: "POST",
       headers: {
@@ -56,7 +56,6 @@ const HiveApiService = {
       body: JSON.stringify({
         hive_id: hiveId,
         action,
-        timer,
         notes
       })
     }).then(res =>
@@ -64,15 +63,32 @@ const HiveApiService = {
     );
   },
   postCode(hiveId, code) {
-    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/add-code`, {
+    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/code`, {
       method: "PATCH",
       headers: {
         "content-type": "application/json",
         authorization: `bearer ${TokenService.getAuthToken()}`
       },
-      body: JSON.stringify({
-        code
-      })
+      body: JSON.stringify({ code })
+    }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
+  },
+  joinCode(hiveId, code, userId) {
+    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/code`, {
+      method: "POST",
+      headers: {
+        "content-type": "application/json",
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      },
+      body: JSON.stringify({ code })
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  },
+  getActivity(hiveId) {
+    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/activity`, {
+      headers: {
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
     }).then(res =>
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );

@@ -12,11 +12,11 @@ export default class PostCodePage extends Component {
 
   handleAddCode = code => {
     const { history } = this.props;
-
     history.goBack();
   };
 
   render() {
+    const { hiveId } = this.props.match.params;
     return (
       <Section className="PostCodePage">
         <h2>Create a Hive</h2>
@@ -24,7 +24,7 @@ export default class PostCodePage extends Component {
           To make your hive public, add a secret code below, save, and send the
           code to your friends.
         </p>
-        <PostCodeForm onAddCode={this.handleAddCode} />
+        <PostCodeForm onAddCode={this.handleAddCode} hiveId={hiveId} />
       </Section>
     );
   }

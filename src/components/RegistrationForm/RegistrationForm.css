@@ -1,0 +1,33 @@
+.RegistrationForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+  width: 200px;
+}
+label {
+  display: flex;
+  justify-content: flex-start;
+}
+
+input {
+  border: none;
+  border-bottom: solid 1px gray;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
+}
+input:focus {
+  background-color: white;
+}
+
+.link {
+  text-decoration: none;
+  color: orangered;
+}
+
+.link:hover {
+  color: rgb(255, 0, 60);
+}

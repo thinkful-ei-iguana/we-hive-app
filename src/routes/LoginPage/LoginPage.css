@@ -1,0 +1,19 @@
+.LoginPage {
+  background-color: rgb(255, 199, 158);
+}
+
+h2 {
+  margin-top: 40px;
+}
+
+h4 {
+  margin-bottom: 40px;
+}
+.link {
+  text-decoration: none;
+  color: orangered;
+}
+
+.link:hover {
+  color: rgb(255, 0, 60);
+}

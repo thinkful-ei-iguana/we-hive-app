@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TokenService from "../../services/token-service";
+import Logo from "../../images/WeHiveNav.png";
 import "./Header.css";
 
 export default class Header extends Component {
@@ -11,6 +12,7 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
+        <Link to="/myhives">My Hives</Link>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>

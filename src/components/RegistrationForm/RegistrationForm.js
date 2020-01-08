@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Button, Input, Required } from "../Utils/Utils";
 import AuthApiService from "../../services/auth-api-service";
+import "./RegistrationForm.css";
 
 export default class RegistrationForm extends Component {
   static defaultProps = {
@@ -41,48 +42,50 @@ export default class RegistrationForm extends Component {
           <label htmlFor="RegistrationForm__first_name">
             First name <Required />
           </label>
-          <Input
+          <input
             name="first_name"
             type="text"
             required
             id="RegistrationForm__first_name"
-          ></Input>
+          />
         </div>
         <div className="user_name">
           <label htmlFor="RegistrationForm__user_name">
             User name <Required />
           </label>
-          <Input
+          <input
             name="user_name"
             type="text"
             required
             id="RegistrationForm__user_name"
-          ></Input>
+          />
         </div>
         <div className="user_email">
           <label htmlFor="RegistrationForm__user_email">
             Email <Required />
           </label>
-          <Input
+          <input
             name="user_email"
             type="text"
             required
             id="RegistrationForm__user_email"
-          ></Input>
+          />
         </div>
         <div className="password">
           <label htmlFor="RegistrationForm__password">
             Password <Required />
           </label>
-          <Input
+          <input
             name="password"
             type="password"
             required
             id="RegistrationForm__password"
-          ></Input>
+          />
         </div>
 
-        <Button type="submit">Join the Hive</Button>
+        <Button type="submit" id="reg-button">
+          Join the Hive
+        </Button>
       </form>
     );
   }
