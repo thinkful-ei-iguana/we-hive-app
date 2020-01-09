@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
-import HiveApiService from "../../services/hive-api-service";
+
 import ActivityForm from "../../components/ActivityForm/ActivityForm";
 import AddActivityItem from "../../components/AddActivityItem/AddActivityItem";
 
@@ -22,18 +22,9 @@ export default class AddActivityPage extends Component {
   static contextType = HiveContext;
 
   handlePosts = activity => {
-    const { history } = this.props;
-    const { hiveId } = this.props.match.params;
+    // const { history } = this.props;
+    // const { hiveId } = this.props.match.params;
   };
-
-  componentDidMount() {
-    const { hiveId } = this.props.match.params;
-    this.context.clearError();
-    HiveApiService.getHive(hiveId)
-      .then(this.context.setHive)
-      .catch(this.context.setError)
-      .then(console.log(this.hive));
-  }
 
   renderError() {
     const { error } = this.context;
@@ -44,9 +35,8 @@ export default class AddActivityPage extends Component {
     }
   }
 
-  renderHiveHeading() {
-    const { hive } = this.context;
-
+  renderHiveHeading(hive) {
+    if (!hive) return "";
     return (
       <AddActivityItem
         key={hive.id}
@@ -60,12 +50,15 @@ export default class AddActivityPage extends Component {
   render() {
     const { error } = this.context;
     const { hiveId } = this.props.match.params;
+
+    const hive = this.context.hives.find(x => x.id === Number(hiveId));
+
     if (error) {
       return this.renderError();
     } else {
       return (
         <div className="ActPage__main">
-          {this.renderHiveHeading()}
+          {this.renderHiveHeading(hive)}
 
           <Link to={`/myhives/${hiveId}/hivemind`}>
             <Button>View Hive Mind</Button>

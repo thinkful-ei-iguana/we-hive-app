@@ -17,6 +17,7 @@ export default class PostCodePage extends Component {
 
   render() {
     const { hiveId } = this.props.match.params;
+
     return (
       <Section className="PostCodePage">
         <h2>Create a Hive</h2>

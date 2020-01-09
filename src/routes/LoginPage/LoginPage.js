@@ -21,7 +21,9 @@ export default class LoginPage extends Component {
   render() {
     return (
       <Section className="LoginPage">
-        <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+        <Link to="/">
+          <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+        </Link>
         <h2 className="login-header">Log in</h2>
         <h4>
           Don't have an account?{" "}

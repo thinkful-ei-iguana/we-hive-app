@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import TokenService from "../../services/token-service";
 import AuthApiService from "../../services/auth-api-service";
-import HiveApiService from "../../services/hive-api-service";
+
 import { Button } from "../Utils/Utils";
-import HiveContext from "../../context/HiveContext";
+
 import "./LoginForm.css";
 
 export default class LoginForm extends Component {

@@ -10,6 +10,7 @@ export default class UserService extends Component {
       .then(this.context.setUser)
       .catch(this.context.setError);
   }
+
   render() {
     return <>{this.props.children}</>;
   }

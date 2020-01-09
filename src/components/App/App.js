@@ -30,9 +30,13 @@ class App extends Component {
   renderNavRoutes() {
     return (
       <>
+        {this.state.hasError && (
+          <p className="red">Something went wrong. Please try again later.</p>
+        )}
         <div className="Nav_flex">
           <Route path={"/myhives"} component={HiveNavPage} />
           <Route path={"/join"} component={HiveNavPage} />
+          <Route path={"/create"} component={HiveNavPage} />
           <Route path={"/myhives/:hiveId"} component={MemberNavList} />
         </div>
         <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
@@ -40,6 +44,23 @@ class App extends Component {
     );
   }
 
+  renderPublicRoutes() {
+    return (
+      <>
+        {this.state.hasError && (
+          <p className="red">Something went wrong. Please try again later.</p>
+        )}
+        <header className="App__header">
+          <Header />
+        </header>
+        <Switch>
+          <Route exact path={"/"} component={LandingPage} />
+          <PublicOnlyRoute exact path={"/login"} component={LoginPage} />
+          <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
+        </Switch>
+      </>
+    );
+  }
   renderMainRoutes() {
     return (
       <>
@@ -48,8 +69,7 @@ class App extends Component {
         )}
         <Switch>
           <Route exact path={"/"} component={LandingPage} />
-          <PublicOnlyRoute path={"/login"} component={LoginPage} />
-          <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
+
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
           <PrivateRoute exact path={"/create"} component={AddHivePage} />
           <PrivateRoute path={"/join"} component={JoinCodePage} />
@@ -76,10 +96,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <header className="App__header">
-          <Header />
-        </header>
-
+        {this.renderPublicRoutes()}
         <main className="Hive_container wrapper">
           <div className="Nav_flex wrapper">
             <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>

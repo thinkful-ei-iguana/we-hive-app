@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { NavLink, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import { Button } from "../../components/Utils/Utils";
 import HiveNavItem from "../../components/HiveNavItem/HiveNavItem";
@@ -16,22 +16,21 @@ export default class HiveNavPage extends Component {
       .then(this.context.setHives)
       .catch(this.context.setError);
   }
+
   renderTypes() {
     const { hiveTypes } = this.context;
+    const { hives = [] } = this.context;
 
     return (
       <div className="HiveNavPage">
-        <h2>My Hives</h2>
         <ul className="HiveNavPage__list">
-          {hiveTypes.map(hive => (
-            <li key={hive.id} className="hive-type">
-              <HiveTypeAccordion title={hive.type} />
-              <NavLink
-                className="HiveNavPage__type-link"
-                to={`/myhives/${hive.type}`}
-              >
-                {hive.type}
-              </NavLink>
+          {hiveTypes.map(hiveType => (
+            <li key={hiveType.id} className="hive-type">
+              <HiveTypeAccordion
+                id={hiveType.id}
+                type={hiveType.type}
+                goals={hives}
+              />
             </li>
           ))}
         </ul>
@@ -41,7 +40,6 @@ export default class HiveNavPage extends Component {
 
   renderHives() {
     const { hives = [] } = this.context;
-
     return hives.map(hive => (
       <HiveNavItem
         key={hive.id}

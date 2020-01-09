@@ -29,9 +29,6 @@ export default class HiveMindPage extends Component {
       .then(this.context.setActivity)
       .catch(this.context.setError);
   }
-  componentWillUnmount() {
-    this.context.clearHive();
-  }
 
   renderHiveActivity() {
     const { activityList } = this.context;
@@ -67,7 +64,7 @@ function HiveActivity({ activityList = [] }) {
           {activity.action && (
             <div className="HiveMindPage__activity-label">
               {activity.user} created some buzz on{" "}
-              <Moment format="ddd MM/DD">{activity.date_added}</Moment>
+              <Moment format="MM/DD/YYYY">{activity.date_added}</Moment>
             </div>
           )}
           {activity.action && (
@@ -76,7 +73,7 @@ function HiveActivity({ activityList = [] }) {
           {activity.notes && (
             <div className="HiveMindPage__activity-label">
               {activity.user} made a comment on{" "}
-              <Moment format="ddd MM/DD">{activity.date_added}</Moment>
+              <Moment format="MM/DD/YYYY">{activity.date_added}</Moment>
             </div>
           )}
           {activity.notes && (
