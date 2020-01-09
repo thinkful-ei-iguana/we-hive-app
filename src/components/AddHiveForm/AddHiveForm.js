@@ -52,9 +52,8 @@ export default class AddHiveForm extends Component {
             <option value="1">Event</option>
             <option value="2">Current Goal</option>
             <option value="3">Stretch Goal</option>
-            <option value="4">Future Goal</option>
-            <option value="5">Dream Goal</option>
-            <option value="6">Completed Goal</option>
+            <option value="4">Dream Goal</option>
+            <option value="5">Completed Goal</option>
           </select>
         </div>
         <div className="goal_description">
