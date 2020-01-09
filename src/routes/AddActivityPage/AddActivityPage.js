@@ -1,10 +1,11 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import Moment from "react-moment";
-import { Button, Section } from "../../components/Utils/Utils";
+import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import ActivityForm from "../../components/ActivityForm/ActivityForm";
+import AddActivityItem from "../../components/AddActivityItem/AddActivityItem";
+
 import "./AddActivityPage.css";
 
 export default class AddActivityPage extends Component {
@@ -14,13 +15,34 @@ export default class AddActivityPage extends Component {
 
   static contextType = HiveContext;
 
+  // static getDerivedStateFromProps(nextProps, prevState) {
+  //   // Store prevUserId in state so we can compare when props change.
+  //   // Clear out any previously-loaded user data (so we don't render stale stuff).
+  //   if (nextProps.userId !== prevState.prevUserId) {
+  //     return {
+  //       prevUserId: nextProps.userId,
+  //       hive: null
+  //     };
+  //   }
+  //   return null;
+  // }
+
   componentDidMount() {
     const { hiveId } = this.props.match.params;
-
+    this.context.clearError();
     HiveApiService.getHive(hiveId)
       .then(this.context.setHive)
-      .catch(this.context.setError);
+      .catch(this.context.setError)
+      .then(console.log(this.hive));
   }
+  // componentDidUpdate(prevHive) {
+  //   const { hive } = this.context;
+  //   const { hiveId } = this.props.match.params;
+  //   this.context.clearError();
+  //   HiveApiService.getHive(hiveId)
+  //     .then(this.context.setHive)
+  //     .catch(this.context.setError);
+  // }
 
   renderError() {
     const { error } = this.context;
@@ -31,36 +53,30 @@ export default class AddActivityPage extends Component {
     }
   }
 
-  renderHiveDesc() {
+  renderHiveHeading() {
     const { hive } = this.context;
 
     return (
-      <>
-        <Section className="ActPage__hive_desc">
-          <h2>
-            {hive.goal_type}
-            {": "}
-            {hive.goal_description}
-          </h2>
-        </Section>
-        <Section className="ActPage__target_date">
-          <p className="hive_desc">Countdown to Target Date: </p>
-          <Moment fromNow>{hive.target_date}</Moment>
-        </Section>
-      </>
+      <AddActivityItem
+        key={hive.id}
+        className="hive-heading"
+        hive={hive}
+        hiveId={hive.id}
+      />
     );
   }
 
   render() {
-    const { hive, error } = this.context;
+    const { error } = this.context;
+    const { hiveId } = this.props.match.params;
     if (error) {
       return this.renderError();
     } else {
       return (
         <div className="ActPage__main">
-          {this.renderHiveDesc()}
+          {this.renderHiveHeading()}
 
-          <Link to={`/myhives/${hive.id}/hivemind`}>
+          <Link to={`/myhives/${hiveId}/hivemind`}>
             <Button>View Hive Mind</Button>
           </Link>
           <ActivityForm />

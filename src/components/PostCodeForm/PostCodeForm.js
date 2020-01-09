@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
-import { Input, Button } from "../Utils/Utils";
+import { Button } from "../Utils/Utils";
 
 export default class PostCodeForm extends Component {
   static defaultProps = {
@@ -26,8 +26,8 @@ export default class PostCodeForm extends Component {
   render() {
     return (
       <form className="PostCodeForm" onSubmit={this.handleCodeSubmit}>
-        <Input name="code" type="text" required />
-        <Button type="submit">Save code</Button>
+        <input name="code" type="text" required />
+        <Button type="submit">Save password</Button>
       </form>
     );
   }

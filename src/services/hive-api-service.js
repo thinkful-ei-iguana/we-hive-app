@@ -72,8 +72,8 @@ const HiveApiService = {
       body: JSON.stringify({ code })
     }).then(res => (!res.ok ? res.json().then(e => Promise.reject(e)) : null));
   },
-  joinCode(hiveId, code, userId) {
-    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/code`, {
+  joinCode(code, userId) {
+    return fetch(`${config.API_ENDPOINT}/hives/code`, {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -16,6 +16,7 @@ import UserDashPage from "../../routes/UserDashPage/UserDashPage";
 import AddHivePage from "../../routes/AddHivePage/AddHivePage";
 import MemberNavList from "../../routes/MemberNavList/MemberNavList";
 import HiveMindPage from "../../routes/HiveMindPage/HiveMindPage";
+import JoinCodeForm from "../JoinCodeForm/JoinCodeForm";
 
 class App extends Component {
   static defaultProps = {
@@ -29,8 +30,11 @@ class App extends Component {
   renderNavRoutes() {
     return (
       <>
-        <Route exact path={"/myhives/"} component={HiveNavPage} />
-        <Route path={"/myhives/:hiveId"} component={MemberNavList} />
+        <div className="Nav_flex">
+          <Route path={"/myhives"} component={HiveNavPage} />
+          <Route path={"/join"} component={HiveNavPage} />
+          <Route path={"/myhives/:hiveId"} component={MemberNavList} />
+        </div>
         <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
       </>
     );
@@ -48,6 +52,7 @@ class App extends Component {
           <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
           <PrivateRoute exact path={"/create"} component={AddHivePage} />
+          <PrivateRoute path={"/join"} component={JoinCodeForm} />
           <PrivateRoute
             exact
             path={"/myhives/:hiveId"}
@@ -57,6 +62,7 @@ class App extends Component {
             path={"/myhives/:hiveId/code"}
             component={PostCodePage}
           />
+
           <PrivateRoute
             path={"/myhives/:hiveId/hivemind"}
             component={HiveMindPage}
@@ -75,7 +81,9 @@ class App extends Component {
         </header>
 
         <main className="Hive_container wrapper">
-          <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>
+          <div className="Nav_flex wrapper">
+            <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>
+          </div>
           <section className="App__main wrapper">
             {this.renderMainRoutes()}
           </section>

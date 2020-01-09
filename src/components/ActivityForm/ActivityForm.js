@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
-import { Input, Button, Textarea } from "../Utils/Utils";
+import { Button, Textarea } from "../Utils/Utils";
 
 export default class ActivityForm extends Component {
   static defaultProps = {
@@ -29,12 +29,12 @@ export default class ActivityForm extends Component {
     return (
       <form className="ActivityForm" onSubmit={this.handleActSubmit}>
         <div className="action">
-          <label htmlFor="ActForm__action">Action</label>
-          <Input name="action" id="ActForm__action"></Input>
+          <label htmlFor="ActForm__action">Add Action Taken</label>
+          <Textarea name="action" id="ActForm__action"></Textarea>
         </div>
 
         <div className="notes">
-          <label htmlFor="ActForm__notes">Comments</label>
+          <label htmlFor="ActForm__notes">Add a comment</label>
           <Textarea
             aria-label="Add notes"
             name="notes"

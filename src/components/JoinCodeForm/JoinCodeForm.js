@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
-import { Input, Button } from "../Utils/Utils";
+import { Button } from "../Utils/Utils";
 
 export default class JoinCodeForm extends Component {
   static defaultProps = {
@@ -12,11 +12,10 @@ export default class JoinCodeForm extends Component {
 
   handleCodeSubmit = ev => {
     ev.preventDefault();
-    const { hiveId } = this.props;
+
     const { code } = ev.target;
 
-    HiveApiService.joinCode(hiveId, code.value)
-      .then(this.context.setCode)
+    HiveApiService.joinCode(code, 1)
       .then(() => {
         code.value = "";
         this.props.onAddCode();
@@ -26,8 +25,8 @@ export default class JoinCodeForm extends Component {
   render() {
     return (
       <form className="JoinCodeForm" onSubmit={this.handleCodeSubmit}>
-        <Input name="code" type="text" required />
-        <Button type="submit">Save code</Button>
+        <input name="code" type="text" required />
+        <Button type="submit">Join new hive</Button>
       </form>
     );
   }

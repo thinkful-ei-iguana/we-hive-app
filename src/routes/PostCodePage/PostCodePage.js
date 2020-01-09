@@ -21,8 +21,8 @@ export default class PostCodePage extends Component {
       <Section className="PostCodePage">
         <h2>Create a Hive</h2>
         <p>
-          To make your hive public, add a secret code below, save, and send the
-          code to your friends.
+          To make your hive public, add a password below, save, and share with
+          your friends.
         </p>
         <PostCodeForm onAddCode={this.handleAddCode} hiveId={hiveId} />
       </Section>

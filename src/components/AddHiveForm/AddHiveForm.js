@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
-import { Input, Button, Textarea, Required } from "../Utils/Utils";
+import { Button, Textarea, Required } from "../Utils/Utils";
 import "./AddHiveForm.css";
 
 export default class AddHiveForm extends Component {
@@ -13,7 +13,7 @@ export default class AddHiveForm extends Component {
 
   handleAddSubmit = event => {
     event.preventDefault();
-    const { hive } = this.context;
+
     const {
       goal_type,
       goal_description,
@@ -61,7 +61,7 @@ export default class AddHiveForm extends Component {
           <label htmlFor="AddForm__goal_description">
             Goal Description <Required />
           </label>
-          <Input
+          <input
             required
             type="text"
             name="goal_description"
@@ -72,7 +72,7 @@ export default class AddHiveForm extends Component {
           <label htmlFor="AddForm__target_date">
             Target date <Required />
           </label>
-          <Input type="date" name="target_date" id="AddForm__target_date" />
+          <input type="date" name="target_date" id="AddForm__target_date" />
         </div>
         <div className="group_message">
           <label htmlFor="AddForm__group_message">Message to the group</label>

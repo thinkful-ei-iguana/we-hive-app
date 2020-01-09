@@ -9,10 +9,6 @@ export function Hyph() {
   return <span className="Hyph">{" - "}</span>;
 }
 
-export function Input({ className, ...props }) {
-  return <Input className={["Input", className].join(" ")} {...props} />;
-}
-
 export function Required({ className, ...props }) {
   return (
     <span className={["Required", className].join(" ")} {...props}>

@@ -22,6 +22,9 @@
     display: flex;
     flex-wrap: wrap;
   }
+  .Nav_flex {
+    display: flex;
+  }
   .App__main {
     margin: 0;
   }

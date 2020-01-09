@@ -39,20 +39,26 @@ export default class HiveNavPage extends Component {
 
   renderHives() {
     const { hives = [] } = this.context;
+
     return hives.map(hive => (
-      <HiveNavItem key={hive.id} className="hive-type" hive={hive} />
+      <HiveNavItem
+        key={hive.id}
+        className="hive-type"
+        hive={hive}
+        hiveId={hive.id}
+      />
     ));
   }
 
   render() {
     return (
       <div className="HiveNavPage__container">
-        <h3>My Hives</h3>
+        <h2>My Hives</h2>
         {this.renderHives()}
         <Link to={"/create"}>
           <Button className="create">Add hive</Button>
         </Link>
-        <Link to={"/join"}>
+        <Link to={`/join`}>
           <Button className="join">Join hive</Button>
         </Link>
       </div>

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HiveApiService from "../../services/hive-api-service";
 import HiveContext from "../../context/HiveContext";
 import { Button } from "../../components/Utils/Utils";
+import "./MemberNavList.css";
 
 export default class MemberNavList extends Component {
   static defaultProps = {
@@ -20,7 +21,7 @@ export default class MemberNavList extends Component {
   render() {
     const { hive, users = [] } = this.context;
     return (
-      <>
+      <div className="Member_container">
         <h4 className="MemberNavList__heading">Hive Members</h4>
         <ul>
           {users.map(user => (
@@ -32,7 +33,7 @@ export default class MemberNavList extends Component {
         <Link to={`/myhives/${hive.id}/code`}>
           <Button>Add members to hive</Button>
         </Link>
-      </>
+      </div>
     );
   }
 }
