@@ -6,7 +6,9 @@ import { Button, Textarea } from "../Utils/Utils";
 
 export default class ActivityForm extends Component {
   static defaultProps = {
-    onAddHiveActivity: () => {}
+    onAddHiveActivity: () => {},
+    onPost: () => {},
+    match: { params: {} }
   };
 
   static contextType = HiveContext;
@@ -21,11 +23,13 @@ export default class ActivityForm extends Component {
       .then(() => {
         action.value = "";
         notes.value = "";
+        this.props.onPost();
       })
       .catch(this.context.setError);
   };
 
   render() {
+    const { onHandlePosts } = this.props;
     return (
       <form className="ActivityForm" onSubmit={this.handleActSubmit}>
         <div className="action">
@@ -40,8 +44,9 @@ export default class ActivityForm extends Component {
             name="notes"
             id="ActForm__notes"
           ></Textarea>
-
-          <Button type="submit">Create some buzz</Button>
+          <Button type="submit" onClick={this.props.onHandlePosts()}>
+            Create some buzz
+          </Button>
         </div>
       </form>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Moment from "react-moment";
+
 import { Link } from "react-router-dom";
 import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
@@ -8,7 +9,12 @@ import "./HiveMindPage.css";
 
 export default class HiveMindPage extends Component {
   static defaultProps = {
-    match: { params: {} }
+    match: {
+      params: {}
+    },
+    history: {
+      goForward: () => {}
+    }
   };
 
   static contextType = HiveContext;
@@ -46,7 +52,7 @@ export default class HiveMindPage extends Component {
         <h2>Hive Mind</h2>
         {this.renderHiveActivity()}
         <Link to={`/myhives/${hive.id}`}>
-          <Button>Add Activity</Button>
+          <Button type="submit">Add Activity</Button>
         </Link>
       </>
     );
@@ -58,25 +64,24 @@ function HiveActivity({ activityList = [] }) {
     <ul className="HiveMindPage__activity-list">
       {activityList.map(activity => (
         <li key={activity.id} className="HiveMindPage__activity">
-          <div className="HiveMindPage__activity-text">
-            {activity.user} created some buzz.
-            <FontAwesomeIcon
-              size="lg"
-              icon="quote-left"
-              className="HiveMindPage__quote-icon orange"
-            />
-          </div>
-          <div className="HiveMindPage__activity-text">{activity.action}</div>
-          <p>
-            {activity.user} made a comment.{" "}
-            <FontAwesomeIcon
-              size="lg"
-              icon="quote-left"
-              className="HiveMindPage__quote-icon orange"
-            />
-            {activity.notes}
-          </p>
-          <p>{activity.date_added}</p>
+          {activity.action && (
+            <div className="HiveMindPage__activity-label">
+              {activity.user} created some buzz on{" "}
+              <Moment format="ddd MM/DD">{activity.date_added}</Moment>
+            </div>
+          )}
+          {activity.action && (
+            <div className="HiveMindPage__activity-text">{activity.action}</div>
+          )}
+          {activity.notes && (
+            <div className="HiveMindPage__activity-label">
+              {activity.user} made a comment on{" "}
+              <Moment format="ddd MM/DD">{activity.date_added}</Moment>
+            </div>
+          )}
+          {activity.notes && (
+            <div className="HiveMindPage__activity-text">{activity.notes}</div>
+          )}
         </li>
       ))}
     </ul>

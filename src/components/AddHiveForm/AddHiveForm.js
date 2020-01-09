@@ -3,6 +3,7 @@ import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button, Textarea, Required } from "../Utils/Utils";
 import "./AddHiveForm.css";
+import TargetDate from "../Date/TargetDate";
 
 export default class AddHiveForm extends Component {
   static defaultProps = {
@@ -30,7 +31,6 @@ export default class AddHiveForm extends Component {
       .then(this.context.addHive)
       .then(() => {
         goal_description.value = "";
-        target_date.value = "";
         group_message.value = "";
         this.props.onAddHive();
       });
@@ -72,7 +72,11 @@ export default class AddHiveForm extends Component {
           <label htmlFor="AddForm__target_date">
             Target date <Required />
           </label>
-          <input type="date" name="target_date" id="AddForm__target_date" />
+          <TargetDate
+            name="target_date"
+            id="AddForm__target_date"
+            onAddHive={this.props.onAddHive}
+          />
         </div>
         <div className="group_message">
           <label htmlFor="AddForm__group_message">Message to the group</label>

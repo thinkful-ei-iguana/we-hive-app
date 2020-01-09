@@ -10,6 +10,7 @@ const HiveContext = React.createContext({
   user: null,
   users: [],
   error: null,
+  date: null,
   setError: () => {},
   clearError: () => {},
   setHives: () => {},
@@ -31,6 +32,7 @@ export class HiveProvider extends Component {
     users: [],
     hive: nullHive,
     user: null,
+    date: null,
     hiveTypes: [
       {
         id: 1,
@@ -97,6 +99,10 @@ export class HiveProvider extends Component {
     this.setState({ code });
   };
 
+  setDate = date => {
+    this.setState({ date });
+  };
+
   setUser = user => {
     this.setState({ user });
   };
@@ -107,6 +113,7 @@ export class HiveProvider extends Component {
 
   render() {
     const value = {
+      date: this.state.date,
       code: this.state.code,
       hive: this.state.hive,
       hives: this.state.hives,
@@ -125,7 +132,8 @@ export class HiveProvider extends Component {
       addActivity: this.addActivity,
       setCode: this.setCode,
       setUser: this.setUser,
-      setUsers: this.setUsers
+      setUsers: this.setUsers,
+      setDate: this.setDate
     };
     return (
       <HiveContext.Provider value={value}>

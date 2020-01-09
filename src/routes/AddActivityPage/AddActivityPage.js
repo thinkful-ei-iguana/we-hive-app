@@ -10,10 +10,21 @@ import "./AddActivityPage.css";
 
 export default class AddActivityPage extends Component {
   static defaultProps = {
-    match: { params: {} }
+    location: {},
+    match: {
+      params: {}
+    },
+    history: {
+      goForward: () => {}
+    }
   };
 
   static contextType = HiveContext;
+
+  handlePosts = activity => {
+    const { history } = this.props;
+    const { hiveId } = this.props.match.params;
+  };
 
   componentDidMount() {
     const { hiveId } = this.props.match.params;
@@ -23,14 +34,6 @@ export default class AddActivityPage extends Component {
       .catch(this.context.setError)
       .then(console.log(this.hive));
   }
-  // componentDidUpdate(prevHive) {
-  //   const { hive } = this.context;
-  //   const { hiveId } = this.props.match.params;
-  //   this.context.clearError();
-  //   HiveApiService.getHive(hiveId)
-  //     .then(this.context.setHive)
-  //     .catch(this.context.setError);
-  // }
 
   renderError() {
     const { error } = this.context;
@@ -67,7 +70,7 @@ export default class AddActivityPage extends Component {
           <Link to={`/myhives/${hiveId}/hivemind`}>
             <Button>View Hive Mind</Button>
           </Link>
-          <ActivityForm />
+          <ActivityForm hiveId={hiveId} onHandlePosts={this.handlePosts} />
         </div>
       );
     }
