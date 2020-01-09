@@ -16,7 +16,7 @@ import UserDashPage from "../../routes/UserDashPage/UserDashPage";
 import AddHivePage from "../../routes/AddHivePage/AddHivePage";
 import MemberNavList from "../../routes/MemberNavList/MemberNavList";
 import HiveMindPage from "../../routes/HiveMindPage/HiveMindPage";
-import JoinCodeForm from "../JoinCodeForm/JoinCodeForm";
+import JoinCodePage from "../../routes/JoinCodePage/JoinCodePage";
 
 class App extends Component {
   static defaultProps = {
@@ -52,7 +52,7 @@ class App extends Component {
           <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
           <PrivateRoute exact path={"/create"} component={AddHivePage} />
-          <PrivateRoute path={"/join"} component={JoinCodeForm} />
+          <PrivateRoute path={"/join"} component={JoinCodePage} />
           <PrivateRoute
             exact
             path={"/myhives/:hiveId"}

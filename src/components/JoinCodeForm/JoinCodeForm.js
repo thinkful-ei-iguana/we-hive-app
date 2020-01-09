@@ -12,10 +12,10 @@ export default class JoinCodeForm extends Component {
 
   handleCodeSubmit = ev => {
     ev.preventDefault();
-
+    const { user } = this.context;
     const { code } = ev.target;
 
-    HiveApiService.joinCode(code, 1)
+    HiveApiService.joinCode(code.value, user.id)
       .then(() => {
         code.value = "";
         this.props.onAddCode();

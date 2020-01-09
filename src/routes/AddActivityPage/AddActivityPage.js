@@ -15,18 +15,6 @@ export default class AddActivityPage extends Component {
 
   static contextType = HiveContext;
 
-  // static getDerivedStateFromProps(nextProps, prevState) {
-  //   // Store prevUserId in state so we can compare when props change.
-  //   // Clear out any previously-loaded user data (so we don't render stale stuff).
-  //   if (nextProps.userId !== prevState.prevUserId) {
-  //     return {
-  //       prevUserId: nextProps.userId,
-  //       hive: null
-  //     };
-  //   }
-  //   return null;
-  // }
-
   componentDidMount() {
     const { hiveId } = this.props.match.params;
     this.context.clearError();
