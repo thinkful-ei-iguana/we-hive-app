@@ -1,5 +1,14 @@
+.AddHiveForm {
+  margin-top: 100px;
+}
+
 label {
   display: flex;
-  justify-content: space-evenly;
-  margin-top: 10px;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Textarea {
+  width: 200px;
+  height: 100px;
 }

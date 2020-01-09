@@ -1,19 +1,23 @@
 .LoginPage {
-  background-color: rgb(255, 199, 158);
+  margin: 0;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
 }
 
-h2 {
-  margin-top: 40px;
-}
-
-h4 {
-  margin-bottom: 40px;
-}
 .link {
   text-decoration: none;
-  color: orangered;
+  color: rgb(255, 0, 0);
 }
 
 .link:hover {
-  color: rgb(255, 0, 60);
+  color: rgba(248, 181, 0, 0.83);
+}
+
+.login-header {
+  font-family: "Calistoga", cursive;
+  color: rgb(255, 0, 0);
 }

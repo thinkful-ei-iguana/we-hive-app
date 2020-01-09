@@ -11,5 +11,21 @@
 .RegistrationPage__logo {
   height: 120px;
   width: 120px;
-  margin: 60px auto 120px;
+  margin: 60px auto 80px;
+}
+
+.Section {
+  padding-bottom: 40px;
+}
+.tagline {
+  font-family: "Calistoga", cursive;
+  color: rgb(255, 0, 0);
+}
+
+@media (min-width: 768px) {
+  .RegistrationPage__logo {
+    height: 220px;
+    width: 220px;
+    margin: 60px auto 60px;
+  }
 }

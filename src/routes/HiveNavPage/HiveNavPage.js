@@ -4,6 +4,7 @@ import HiveContext from "../../context/HiveContext";
 import { Button } from "../../components/Utils/Utils";
 import HiveNavItem from "../../components/HiveNavItem/HiveNavItem";
 import HiveApiService from "../../services/hive-api-service";
+import HiveTypeAccordion from "../../components/HiveTypeAccordion/HiveTypeAccordion";
 import "./HiveNavPage.css";
 
 export default class HiveNavPage extends Component {
@@ -24,6 +25,7 @@ export default class HiveNavPage extends Component {
         <ul className="HiveNavPage__list">
           {hiveTypes.map(hive => (
             <li key={hive.id} className="hive-type">
+              <HiveTypeAccordion title={hive.type} />
               <NavLink
                 className="HiveNavPage__type-link"
                 to={`/myhives/${hive.type}`}
@@ -54,7 +56,8 @@ export default class HiveNavPage extends Component {
     return (
       <div className="HiveNavPage__container">
         <h2>My Hives</h2>
-        {this.renderHives()}
+
+        {this.renderTypes()}
         <Link to={"/create"}>
           <Button className="create">Add hive</Button>
         </Link>

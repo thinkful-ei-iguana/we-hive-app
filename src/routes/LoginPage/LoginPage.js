@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import { Section } from "../../components/Utils/Utils";
 import "./LoginPage.css";
+import Logo from "../../images/WeHiveNav.png";
 export default class LoginPage extends Component {
   static defaultProps = {
     location: {},
@@ -20,7 +21,8 @@ export default class LoginPage extends Component {
   render() {
     return (
       <Section className="LoginPage">
-        <h2>Log in</h2>
+        <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+        <h2 className="login-header">Log in</h2>
         <h4>
           Don't have an account?{" "}
           <Link to="/register" className="link">

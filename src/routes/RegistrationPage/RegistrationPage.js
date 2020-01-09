@@ -22,7 +22,7 @@ export default class RegistrationPage extends Component {
       <Section className="RegistrationPage">
         <img src={Logo} alt="logo" className="RegistrationPage__logo" />
 
-        <h3>Connections before success.</h3>
+        <h2 className="tagline">Connections > success.</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />

@@ -84,6 +84,7 @@ export default class AddHiveForm extends Component {
             aria-label="Type a message to your hive"
             name="group_message"
             id="AddForm__group_message"
+            placeholder="Write a message to the hive..."
           />
         </div>
         <Button type="submit">Save hive</Button>
