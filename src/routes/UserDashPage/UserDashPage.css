@@ -5,7 +5,10 @@
 }
 
 .user-welcome-heading {
-  height: fit-content;
+  padding: 0;
+  margin: 20px auto 40px;
+  color: gold;
+  font-size: 80px;
 }
 
 .orange {

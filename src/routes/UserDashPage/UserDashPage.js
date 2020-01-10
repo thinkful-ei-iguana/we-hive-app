@@ -23,7 +23,7 @@ export default class UserDashPage extends Component {
       <>
         <HeaderMain />
         <div className="hex-flex">
-          <h1 className="user-welcome-heading">Welcome to WeHive!</h1>
+          <h2 className="user-welcome-heading">Welcome to WeHive!</h2>
           {!hives.length && (
             <h3 className="no-hives-msg">
               You don't have any hives...yet. Click on{" "}

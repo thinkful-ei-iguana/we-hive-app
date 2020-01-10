@@ -58,6 +58,9 @@
   padding-top: 80px;
 }
 
-h1 {
-  color: rgb(255, 196, 0);
+.hivemind-hdr {
+  padding: 0;
+  margin: 20px auto 40px;
+  color: gold;
+  font-size: 80px;
 }

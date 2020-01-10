@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
-import Header from "../Header/Header";
+
 import LandingPage from "../../routes/LandingPage/LandingPage";
 import LoginPage from "../../routes/LoginPage/LoginPage";
 import HiveNavPage from "../../routes/HiveNavPage/HiveNavPage";

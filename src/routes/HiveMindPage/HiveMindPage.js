@@ -45,7 +45,7 @@ export default class HiveMindPage extends Component {
 
     return (
       <>
-        <h1>Hive Mind</h1>
+        <h2 className="hivemind-hdr">Hive Mind</h2>
         <h2 className="hive-goal">Our Goal: {hive.goal_description}</h2>
         {hive.group_message && <h4>Message to group: {hive.group_message}</h4>}
 

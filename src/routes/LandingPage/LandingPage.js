@@ -12,10 +12,12 @@ export default function LandingPage() {
       </header>
       <section className="pre-demo">
         <div className="wrapper">
-          <h1>
-            <span className="landing__tagline"></span>
-            <h1>Together</h1>
-          </h1>
+          <Link to="/myhives">
+            <h1>
+              <span className="landing__tagline"></span>
+              <h1>Together</h1>
+            </h1>
+          </Link>
         </div>
       </section>
 
@@ -49,12 +51,12 @@ export default function LandingPage() {
         <h2 className="landing__title">Focus on what matters</h2>
         <h3 className="landing__subtitle">With people who matter</h3>
       </section>
-      <section className="exp">
+      <section className="post-demo">
         <h2 className="landing__title-exp">How it Works</h2>
         <div className="sub-wrapper">
           <h3 className="landing__subtitle">
             <h3>Set Goals</h3>
-            <h3>Join the Hive</h3>
+            {/* <h3>Join the Hive</h3> */}
             <h3>Achieve Together</h3>
           </h3>
         </div>
