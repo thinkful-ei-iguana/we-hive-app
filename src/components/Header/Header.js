@@ -35,7 +35,7 @@ export default class Header extends Component {
         <nav className="Header">
           <h1>
             <Link to="/myhives">
-              <img src={Logo} alt="logo" className="nav-icon" />
+              {/* <img src={Logo} alt="logo" className="nav-icon" /> */}
             </Link>
           </h1>
           {TokenService.hasAuthToken()

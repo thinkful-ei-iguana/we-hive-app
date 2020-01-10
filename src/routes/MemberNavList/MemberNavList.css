@@ -18,3 +18,9 @@ li {
   color: #1a1c24;
   margin-top: 40vh;
 }
+
+@media (min-width: 768) {
+  .Member_container {
+    flex-grow: 1;
+  }
+}

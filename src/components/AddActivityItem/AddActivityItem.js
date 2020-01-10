@@ -9,7 +9,7 @@ export default class AddActivityItem extends Component {
       <>
         <div className="ActItem__hive_heading">
           <div className="ActItem__target_date">
-            <h1 className="hive_date">Days until Target Date: </h1>
+            <h1 className="hive_date">Target Date: </h1>
             <h2>
               {" "}
               <Moment fromNow>{hive.target_date}</Moment>

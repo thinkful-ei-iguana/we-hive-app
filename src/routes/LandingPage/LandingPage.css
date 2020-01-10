@@ -12,27 +12,120 @@
 
 .wrapper h1 {
   padding: 0;
-  margin: 0;
+  margin: 50px auto 100px;
   color: gold;
-  text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5);
-  font-size: 60px;
+  height: 100vh;
+
+  /* text-shadow: 0 2px 0 rgba(0, 0, 0, 0.5); */
+  font-size: 180px;
+  /* display: flex;
+  flex-direction: column;
+  justify-content: flex-end; */
   margin-left: auto;
   margin-right: auto;
 }
 
+section,
+.pre-demo {
+  height: 50vh;
+  width: 100%;
+  animation: pulse 5s infinite;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0% {
+    background-color: #fff5d4;
+  }
+  50% {
+    background-color: rgb(255, 196, 0);
+  }
+}
+
 .landing__tagline:before {
   content: "";
-  animation: animate infinite 10s;
-  transition: ease-in;
+  animation: animate infinite 8s;
+  animation-timing-function: ease-out;
+  animation-delay: 0s;
+  animation-direction: alternate;
+  animation-iteration-count: infinite;
 }
 @keyframes animate {
   0% {
     content: "WeHive";
   }
-  50% {
+  100% {
     content: "Achieve";
   }
-  100% {
-    content: "WeHive";
-  }
+}
+
+.landing__content {
+  font-size: 30px;
+  line-height: 1.9;
+  width: 1200px;
+  text-align: justify;
+}
+.hdg {
+  font-size: 40px;
+  color: orangered;
+  font-style: italic;
+  line-height: 2.4;
+  /* margin-left: 8vw; */
+}
+.left {
+  margin-left: 25vw;
+}
+.right {
+  margin-left: 10vw;
+  text-align: right;
+}
+.bold {
+  font-weight: 900;
+  color: orangered;
+}
+
+.ldg-btn {
+  width: 100%;
+  height: 80px;
+  margin-top: -10px;
+  font-size: 22px;
+}
+
+.ldg-btn:hover {
+  background: white;
+}
+
+.landing__title {
+  font-size: 30px;
+  line-height: 1.9;
+  width: 1200px;
+  text-align: justify;
+}
+.landing__subtitle {
+  font-size: 30px;
+  line-height: 1.9;
+  width: 1200px;
+  text-align: justify;
+}
+.landing__title {
+  font-size: 20px;
+  margin-left: 30px;
+  color: thistle;
+  /* position: absolute; */
+}
+
+.landing__subtitle {
+  font-size: 100px;
+  color: orangered;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: right;
+}
+
+section,
+.post-demo {
+  background-color: white;
 }

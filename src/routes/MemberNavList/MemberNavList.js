@@ -19,9 +19,10 @@ export default class MemberNavList extends Component {
       .catch(this.context.setError);
   }
   render() {
-    const { hive, users = [] } = this.context;
-    // const { hiveId } = this.props.match.params;
-    // const hive = hives.find(n => n.id === Number(hiveId));
+    const { hive, users = [], hives = [] } = this.context;
+    const { hiveId } = this.props.match.params;
+
+    const hiveS = hives.find(n => n.id === Number(hiveId));
 
     return (
       <div className="Member_container">
@@ -33,7 +34,7 @@ export default class MemberNavList extends Component {
             </li>
           ))}
         </ul>
-        <Link to={`/myhives/${hive.id}/code`}>
+        <Link to={`/myhives/${hiveId}/code`}>
           <Button>Add members to hive</Button>
         </Link>
       </div>

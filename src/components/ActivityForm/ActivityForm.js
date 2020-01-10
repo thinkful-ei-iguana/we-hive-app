@@ -7,7 +7,7 @@ import { Button, Textarea } from "../Utils/Utils";
 export default class ActivityForm extends Component {
   static defaultProps = {
     onAddHiveActivity: () => {},
-    // onPost: () => {},
+
     match: { params: {} }
   };
 
@@ -23,7 +23,6 @@ export default class ActivityForm extends Component {
       .then(() => {
         action.value = "";
         notes.value = "";
-        // this.props.onPost();
       })
       .catch(this.context.setError);
   };

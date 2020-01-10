@@ -1,0 +1,9 @@
+.HeaderMain__logged-in a {
+  float: right;
+  padding: 5px 15px;
+  border-radius: 15px;
+  margin: 10px;
+  text-decoration: none;
+  background-color: orangered;
+  color: gold;
+}
