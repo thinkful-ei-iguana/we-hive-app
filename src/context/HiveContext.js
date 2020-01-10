@@ -39,18 +39,15 @@ export class HiveProvider extends Component {
     hiveTypes: [
       {
         id: 1,
-        type: "Events",
-        expanded: false
+        type: "Events"
       },
       {
         id: 2,
-        type: "Current Goals",
-        expanded: false
+        type: "Current Goals"
       },
       {
         id: 3,
-        type: "Stretch Goals",
-        expanded: false
+        type: "Stretch Goals"
       },
       {
         id: 4,
