@@ -1,13 +1,18 @@
 .HiveNavPage__container {
-  background-color: #292827;
+  background-color: black;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 220px;
 }
 
-h2 {
-  margin-bottom: 30px;
-  color: rgba(248, 181, 0);
+.Nav_heading {
+  margin-bottom: 20px;
+  color: rgba(255, 196, 0);
+}
+.Accordion__section {
+  width: 220px;
 }

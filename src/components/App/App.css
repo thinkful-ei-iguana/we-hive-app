@@ -21,6 +21,10 @@
     flex-wrap: wrap;
   }
 
+  .Nav_flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .App__nav {
     background-color: darkgray;
     display: block;

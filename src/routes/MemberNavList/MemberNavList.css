@@ -1,3 +1,20 @@
 li {
   list-style-type: none;
 }
+
+.Member_container {
+  background: rgb(255, 245, 212);
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 100vh;
+  width: 220px;
+}
+
+.MemberNavList__heading {
+  margin-bottom: 20px;
+  color: #1a1c24;
+  margin-top: 40vh;
+}

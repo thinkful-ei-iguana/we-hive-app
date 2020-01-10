@@ -22,7 +22,7 @@ export default class MemberNavList extends Component {
     const { hive, users = [] } = this.context;
     return (
       <div className="Member_container">
-        <h4 className="MemberNavList__heading">Hive Members</h4>
+        <h3 className="MemberNavList__heading">Hive Members</h3>
         <ul>
           {users.map(user => (
             <li key={user.id} className="hive-member" user={user.first_name}>

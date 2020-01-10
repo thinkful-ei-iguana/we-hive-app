@@ -19,10 +19,6 @@ import HiveMindPage from "../../routes/HiveMindPage/HiveMindPage";
 import JoinCodePage from "../../routes/JoinCodePage/JoinCodePage";
 
 class App extends Component {
-  static defaultProps = {
-    match: { path: {} }
-  };
-
   state = { hasError: false };
 
   static contextType = HiveContext;
@@ -30,48 +26,28 @@ class App extends Component {
   renderNavRoutes() {
     return (
       <>
-        {this.state.hasError && (
-          <p className="red">Something went wrong. Please try again later.</p>
-        )}
         <div className="Nav_flex">
           <Route path={"/myhives"} component={HiveNavPage} />
           <Route path={"/join"} component={HiveNavPage} />
           <Route path={"/create"} component={HiveNavPage} />
           <Route path={"/myhives/:hiveId"} component={MemberNavList} />
+          <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
         </div>
-        <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
       </>
     );
   }
 
-  renderPublicRoutes() {
-    return (
-      <>
-        {this.state.hasError && (
-          <p className="red">Something went wrong. Please try again later.</p>
-        )}
-        <header className="App__header">
-          <Header />
-        </header>
-        <Switch>
-          <Route exact path={"/"} component={LandingPage} />
-          <PublicOnlyRoute exact path={"/login"} component={LoginPage} />
-          <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
-        </Switch>
-      </>
-    );
-  }
   renderMainRoutes() {
     return (
       <>
-        {this.state.hasError && (
-          <p className="red">Something went wrong. Please try again later.</p>
-        )}
         <Switch>
           <Route exact path={"/"} component={LandingPage} />
 
+          <PublicOnlyRoute path={"/login"} component={LoginPage} />
+          <PublicOnlyRoute path={"/register"} component={RegistrationPage} />
+
           <PrivateRoute exact path={"/myhives"} component={UserDashPage} />
-          <PrivateRoute exact path={"/create"} component={AddHivePage} />
+          <PrivateRoute path={"/create"} component={AddHivePage} />
           <PrivateRoute path={"/join"} component={JoinCodePage} />
           <PrivateRoute
             exact
@@ -87,6 +63,7 @@ class App extends Component {
             path={"/myhives/:hiveId/hivemind"}
             component={HiveMindPage}
           />
+
           <Route component={NotFoundPage} />
         </Switch>
       </>
@@ -96,9 +73,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        {this.renderPublicRoutes()}
+        <header className="App__header"></header>
+
         <main className="Hive_container wrapper">
-          <div className="Nav_flex wrapper">
+          {this.state.hasError && (
+            <p className="red">Something went wrong. Please try again later.</p>
+          )}
+          <div className="Nav_flex">
             <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>
           </div>
           <section className="App__main wrapper">

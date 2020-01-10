@@ -5,6 +5,7 @@ import { Button } from "../../components/Utils/Utils";
 import HiveNavItem from "../../components/HiveNavItem/HiveNavItem";
 import HiveApiService from "../../services/hive-api-service";
 import HiveTypeAccordion from "../../components/HiveTypeAccordion/HiveTypeAccordion";
+import Logo from "../../images/WeHiveNav.png";
 import "./HiveNavPage.css";
 
 export default class HiveNavPage extends Component {
@@ -53,7 +54,10 @@ export default class HiveNavPage extends Component {
   render() {
     return (
       <div className="HiveNavPage__container">
-        <h2>My Hives</h2>
+        <Link to="/">
+          <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+        </Link>
+        <h2 className="Nav_heading">My Hives</h2>
 
         {this.renderTypes()}
         <Link to={"/create"}>

@@ -4,8 +4,13 @@
 }
 
 .Accordion {
-  background-color: #eee;
-  color: #444;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
+  color: #1a1c24;
   cursor: pointer;
   padding: 18px;
   display: flex;

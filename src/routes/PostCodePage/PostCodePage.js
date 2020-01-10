@@ -2,7 +2,7 @@ import React, { Component } from "react";
 
 import { Section } from "../../components/Utils/Utils";
 import PostCodeForm from "../../components/PostCodeForm/PostCodeForm";
-
+import "./PostCodePage.css";
 export default class PostCodePage extends Component {
   static defaultProps = {
     history: {
@@ -20,7 +20,7 @@ export default class PostCodePage extends Component {
 
     return (
       <Section className="PostCodePage">
-        <h2>Create a Hive</h2>
+        <h2 className="mainpage_title">Create a Hive</h2>
         <p>
           To make your hive public, add a password below, save, and share with
           your friends.

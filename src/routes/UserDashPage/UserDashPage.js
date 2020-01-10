@@ -1,15 +1,14 @@
 import React, { Component } from "react";
 // import { Link } from "react-router-dom";
-
-import HiveContext from "../../context/HiveContext";
-
+// import HiveContext from "../../context/HiveContext";
+import Hexagon from "../../components/Hexagon/Hexagon";
 import "./UserDashPage.css";
 export default class UserDashPage extends Component {
-  static contextType = HiveContext;
+  // static contextType = HiveContext;
 
   render() {
-    const user = this.context.user;
-    if (!user) return null;
+    // const user = this.context.user;
+    // if (!user) return null;
 
     return (
       <>
@@ -21,6 +20,7 @@ export default class UserDashPage extends Component {
           wants to join your hive. Have a password? Click on Join Hive to enter.
           Have fun!
         </h4>
+        <Hexagon />
       </>
     );
   }

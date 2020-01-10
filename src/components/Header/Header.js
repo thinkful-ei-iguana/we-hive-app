@@ -12,7 +12,6 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
-        <Link to="/myhives">My Hives</Link>
         <Link onClick={this.handleLogoutClick} to="/">
           Logout
         </Link>

@@ -23,11 +23,22 @@
 }
 
 .Button {
-  background-color: rgba(248, 181, 0);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
+  color: #1a1c24;
+  cursor: pointer;
   font-size: 1em;
-  border-radius: 4px;
-  padding: 8px 12px;
-  margin: 20px;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-top: 30px;
+  text-decoration: none;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .Required {
