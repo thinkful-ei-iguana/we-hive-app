@@ -1,11 +1,10 @@
 .HiveNavItem {
   text-decoration: none;
 }
-
 .HiveNavItem__title {
   display: block;
   font-size: 1em;
-  width: 220px;
+  width: 320px;
   height: 60px;
   padding: 8px 8px;
   text-decoration: none;

@@ -6,7 +6,7 @@
   align-items: center;
   justify-content: flex-start;
   min-height: 100vh;
-  width: 220px;
+  width: 320px;
 }
 
 .Nav_heading {
@@ -14,5 +14,5 @@
   color: rgba(255, 196, 0);
 }
 .Accordion__section {
-  width: 220px;
+  width: 320px;
 }
