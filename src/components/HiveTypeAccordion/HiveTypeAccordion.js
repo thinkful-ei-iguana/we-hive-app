@@ -45,7 +45,11 @@ export default class HiveTypeAccordion extends Component {
       <ul className="HiveType__list">
         {goalFilter.map(goal => (
           <li key={goal.id} className="goal-desc">
-            <AccordionItem id={goal.id} goalTitle={goal.goal_description} />
+            <AccordionItem
+              id={goal.id}
+              goalTitle={goal.goal_description}
+              noHive="No Hives Yet!"
+            />
           </li>
         ))}
       </ul>

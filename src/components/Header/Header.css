@@ -33,7 +33,7 @@
 
 @media screen and (min-width: 450px) {
   .Header {
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: normal;
     justify-content: space-between;
@@ -43,4 +43,9 @@
   .Header h1 {
     font-size: 22pt;
   }
+}
+
+.nav-icon {
+  height: 80px;
+  margin-left: 80px;
 }

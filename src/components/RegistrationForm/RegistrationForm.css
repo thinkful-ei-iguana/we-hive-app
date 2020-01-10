@@ -9,7 +9,8 @@ label {
   justify-content: flex-start;
 }
 
-input {
+input,
+textarea {
   border: none;
   border-bottom: solid 1px gray;
   background: -webkit-linear-gradient(

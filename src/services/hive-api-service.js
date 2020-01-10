@@ -11,6 +11,15 @@ const HiveApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
+  getHive(hiveId) {
+    return fetch(`${config.API_ENDPOINT}/hives/${hiveId}`, {
+      headers: {
+        authorization: `bearer ${TokenService.getAuthToken()}`
+      }
+    }).then(res =>
+      !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
+    );
+  },
   getUser(userId) {
     return fetch(`${config.API_ENDPOINT}/hives/user`, {
       headers: {

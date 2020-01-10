@@ -2,9 +2,15 @@
   list-style-type: none;
   padding: 0;
 }
+.HiveMindPage__activity-label-buzz {
+  text-align: left;
+  margin-left: 120px;
+}
 
-.HiveMindPage__activity {
-  position: relative;
+.HiveMindPage__activity-label-notes {
+  text-align: right;
+  margin-right: 120px;
+  padding-top: 10px;
 }
 
 .HiveMindPage__activity::before {
@@ -20,14 +26,38 @@
   right: 7px;
 }
 
-.HiveMindPage__quote-icon {
-  font-size: 12pt;
-  margin-right: 10px;
-  vertical-align: super;
-}
 .HiveMindPage__activity-text {
-  background: #f5f5f5;
-  padding: 8px;
+  background: rgb(255, 245, 212);
+  padding: 10px 8px;
   margin-bottom: 4px;
   border-radius: 4px;
+}
+
+.buzz-text {
+  text-align: left;
+  margin-left: 220px;
+  max-height: 120px;
+}
+
+.notes-text {
+  text-align: right;
+  margin-right: 220px;
+  max-height: 120px;
+}
+
+.bee {
+  height: 24px;
+}
+
+.buzz {
+  font-size: 2rem;
+  color: rgb(255, 196, 0);
+}
+
+.hive-goal {
+  padding-top: 80px;
+}
+
+h1 {
+  color: rgb(255, 196, 0);
 }

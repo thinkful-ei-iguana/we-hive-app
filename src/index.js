@@ -9,7 +9,9 @@ import App from "./components/App/App";
 ReactDOM.render(
   <BrowserRouter>
     <HiveProvider>
-      <App />
+      <UserService>
+        <App />
+      </UserService>
     </HiveProvider>
   </BrowserRouter>,
   document.getElementById("root")

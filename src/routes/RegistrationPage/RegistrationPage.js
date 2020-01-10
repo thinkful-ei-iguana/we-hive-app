@@ -20,13 +20,14 @@ export default class RegistrationPage extends Component {
   render() {
     return (
       <Section className="RegistrationPage">
-        <img src={Logo} alt="logo" className="RegistrationPage__logo" />
-
+        <Link to="/">
+          <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+        </Link>
         <h2 className="tagline">Connections > success.</h2>
         <RegistrationForm
           onRegistrationSuccess={this.handleRegistrationSuccess}
         />
-        <h4>
+        <h4 className="user-link">
           Already a member?{" "}
           <Link to="/login" className="link">
             Sign in!

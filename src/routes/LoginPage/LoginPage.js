@@ -25,7 +25,7 @@ export default class LoginPage extends Component {
           <img src={Logo} alt="logo" className="RegistrationPage__logo" />
         </Link>
         <h2 className="login-header">Log in</h2>
-        <h4>
+        <h4 className="user-link">
           Don't have an account?{" "}
           <Link to="/register" className="link">
             Sign up!

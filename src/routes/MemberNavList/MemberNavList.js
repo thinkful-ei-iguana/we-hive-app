@@ -20,6 +20,9 @@ export default class MemberNavList extends Component {
   }
   render() {
     const { hive, users = [] } = this.context;
+    // const { hiveId } = this.props.match.params;
+    // const hive = hives.find(n => n.id === Number(hiveId));
+
     return (
       <div className="Member_container">
         <h3 className="MemberNavList__heading">Hive Members</h3>

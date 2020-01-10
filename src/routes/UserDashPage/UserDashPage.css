@@ -1,0 +1,13 @@
+.hex-flex {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.right {
+  margin-left: 200px;
+}
+
+.user-welcome {
+  position: absolute;
+}

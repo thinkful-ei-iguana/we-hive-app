@@ -42,7 +42,12 @@ export default class LoginForm extends Component {
 
         <div className="user_email">
           <label htmlFor="LoginForm__user_email">Email</label>
-          <input required name="user_email" id="LoginForm__user_email" />
+          <input
+            required
+            type="email"
+            name="user_email"
+            id="LoginForm__user_email"
+          />
         </div>
         <div className="password">
           <label htmlFor="LoginForm__password">Password</label>

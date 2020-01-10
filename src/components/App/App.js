@@ -31,7 +31,6 @@ class App extends Component {
           <Route path={"/join"} component={HiveNavPage} />
           <Route path={"/create"} component={HiveNavPage} />
           <Route path={"/myhives/:hiveId"} component={MemberNavList} />
-          <Route path={"/myhives/:hiveId/hivemind"} component={MemberNavList} />
         </div>
       </>
     );

@@ -8,12 +8,15 @@ export default class AddActivityItem extends Component {
     return (
       <>
         <div className="ActItem__hive_heading">
-          <h2 className="ActItem__title">Goal: {hive.goal_description}</h2>
+          <div className="ActItem__target_date">
+            <h1 className="hive_date">Days until Target Date: </h1>
+            <h2>
+              {" "}
+              <Moment fromNow>{hive.target_date}</Moment>
+            </h2>
+          </div>
         </div>
-        <div className="ActItem__target_date">
-          <p className="hive_date">Countdown to Target Date: </p>
-          <Moment fromNow>{hive.target_date}</Moment>
-        </div>
+        <h2 className="ActItem__title">Goal: {hive.goal_description}</h2>
       </>
     );
   }

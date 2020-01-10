@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import TokenService from "../../services/token-service";
+import Logo from "../../images/WeHiveNav.png";
 
 import "./Header.css";
 
@@ -33,7 +34,9 @@ export default class Header extends Component {
       <>
         <nav className="Header">
           <h1>
-            <Link to="/">WeHive</Link>
+            <Link to="/myhives">
+              <img src={Logo} alt="logo" className="nav-icon" />
+            </Link>
           </h1>
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()
