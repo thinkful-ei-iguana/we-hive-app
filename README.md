@@ -1,4 +1,12 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#WeHive
+
+My users will jive together like a beehive using WeHive.
+
+Studies show that people who act collaboratively stick to their task 64% longer than those working alone. Groups of people working toward a common goal report higher engagement levels, lower fatigue levels and higher success rates.
+
+Users can use my app to create accountability groups amongst their peers.
+
+They can create a list of their goals and invite friends to join their "hives". Within their hives, they can post their action items on comment on the hive's activity.
 
 ## Available Scripts
 
