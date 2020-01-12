@@ -71,7 +71,7 @@ const HiveApiService = {
       !res.ok ? res.json().then(e => Promise.reject(e)) : res.json()
     );
   },
-  postCode(hiveId, code) {
+  postCode(hiveId, userId, code) {
     return fetch(`${config.API_ENDPOINT}/hives/${hiveId}/code`, {
       method: "PATCH",
       headers: {

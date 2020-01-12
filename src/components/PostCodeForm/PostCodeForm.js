@@ -13,9 +13,10 @@ export default class PostCodeForm extends Component {
   handleCodeSubmit = ev => {
     ev.preventDefault();
     const { hiveId } = this.props;
+    const { user } = this.context;
     const { code } = ev.target;
 
-    HiveApiService.postCode(hiveId, code.value)
+    HiveApiService.postCode(hiveId, user.id, code.value)
       .then(this.context.setCode)
       .then(() => {
         code.value = "";
