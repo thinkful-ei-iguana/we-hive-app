@@ -1,8 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button } from "../../components/Utils/Utils";
+
 import Header from "../../components/Header/Header";
+import Hexagon from "../../components/Hexagon/Hexagon";
 import "./LandingPage.css";
+import Hex from "../../images/Hexbg.png";
 
 export default function LandingPage() {
   return (
@@ -14,8 +16,9 @@ export default function LandingPage() {
         <div className="wrapper">
           <Link to="/myhives">
             <h1>
+              <img src={Hex} alt="hex graphic" />
               <span className="landing__tagline"></span>
-              <h1>Together</h1>
+              <div>Together</div>
             </h1>
           </Link>
         </div>
@@ -23,8 +26,7 @@ export default function LandingPage() {
 
       <section className="pre-demo">
         <div className="landing__content left">
-          <span className="hdg">The research is in, and it says,</span>
-          <br />
+          <div className="hdg">The research is in, and it says,</div>
           “The results showed that simply feeling like you’re part of a{" "}
           <span className="bold">team</span> of people working on a task makes
           people <span className="bold">more motivated</span> as they take on{" "}
@@ -41,31 +43,43 @@ export default function LandingPage() {
           <span className="bold">lower fatigue levels</span> and{" "}
           <span className="bold">higher success rates</span>.
         </div>
+        <button className="ldg-btn" type="submit">
+          WeHive Demo
+        </button>
       </section>
 
-      <Button className="ldg-btn" type="submit">
-        WeHive Demo
-      </Button>
-
       <section className="post-demo">
-        <h2 className="landing__title">Focus on what matters</h2>
-        <h3 className="landing__subtitle">With people who matter</h3>
+        <div className="landing__title">Focus on what matters</div>
+        <h3 className="landing__subtitle">
+          with{""}
+          <span className="bold-text">people</span> who{" "}
+          <span className="bold-text">matter</span>
+        </h3>
       </section>
       <section className="post-demo">
         <h2 className="landing__title-exp">How it Works</h2>
         <div className="sub-wrapper">
           <h3 className="landing__subtitle">
-            <h3>Set Goals</h3>
-            {/* <h3>Join the Hive</h3> */}
-            <h3>Achieve Together</h3>
+            <div className="step-box">
+              <p className="step">Set Goals</p>
+              <Hexagon />
+            </div>
+            <div className="step-box">
+              <p className="step">Invite Others</p>
+              <Hexagon />
+            </div>
+            <div className="step-box">
+              <p className="step">Achieve Together</p>
+              <Hexagon />
+            </div>
           </h3>
         </div>
+        <Link to="/register">
+          <button type="submit" className="ldg-btn">
+            Join the Hive
+          </button>
+        </Link>
       </section>
-      <Link to="/register">
-        <Button type="submit" className="ldg-btn">
-          Join the Hive
-        </Button>
-      </Link>
     </>
   );
 }

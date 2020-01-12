@@ -1,5 +1,10 @@
+.Nav_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .App {
-  margin: 0 auto;
+  margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
@@ -21,10 +26,6 @@
     flex-wrap: wrap;
   }
 
-  .Nav_flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
   .App__nav {
     background-color: darkgray;
     display: block;
