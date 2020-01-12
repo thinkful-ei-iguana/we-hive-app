@@ -1,13 +1,24 @@
 .LoginPage {
   margin: 0;
+  height: 100vh;
   background: -webkit-linear-gradient(
     top,
     rgba(252, 234, 187, 1) 0%,
     rgba(248, 181, 0, 0.83) 83%,
     rgba(251, 223, 147, 0.8) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
 }
-
+.LoginPage__logo {
+  z-index: 1;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 40px auto;
+}
 .link {
   text-decoration: none;
   color: rgb(255, 0, 0);
@@ -18,9 +29,6 @@
 }
 
 .login-header {
-  font-family: "Calistoga", cursive;
+  margin-top: 60px;
   color: rgb(255, 0, 0);
-}
-.user-link {
-  text-align: center;
 }

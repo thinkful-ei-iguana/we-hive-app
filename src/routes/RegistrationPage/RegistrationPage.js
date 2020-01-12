@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { Section } from "../../components/Utils/Utils";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
 import Logo from "../../images/WeHiveNav.png";
 import "./RegistrationPage.css";
@@ -19,7 +18,7 @@ export default class RegistrationPage extends Component {
 
   render() {
     return (
-      <Section className="RegistrationPage">
+      <section className="RegistrationPage">
         <Link to="/">
           <img src={Logo} alt="logo" className="RegistrationPage__logo" />
         </Link>
@@ -33,7 +32,7 @@ export default class RegistrationPage extends Component {
             Sign in!
           </Link>
         </h4>
-      </Section>
+      </section>
     );
   }
 }

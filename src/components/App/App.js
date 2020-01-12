@@ -30,10 +30,10 @@ class App extends Component {
     return (
       <>
         <div className="Nav_flex">
-          <Route exact path={"/myhives"} component={HiveNavPage} />
-          <Route exact path={"/join"} component={HiveNavPage} />
-          <Route exact path={"/create"} component={HiveNavPage} />
-          <Route exact path={"/myhives/:hiveId"} component={MemberNavList} />
+          <Route path={"/myhives"} component={HiveNavPage} />
+          <Route path={"/join"} component={HiveNavPage} />
+          <Route path={"/create"} component={HiveNavPage} />
+          <Route path={"/myhives/:hiveId"} component={MemberNavList} />
         </div>
       </>
     );

@@ -59,7 +59,7 @@ export default function LandingPage() {
       <section className="post-demo">
         <h2 className="landing__title-exp">How it Works</h2>
         <div className="sub-wrapper">
-          <h3 className="landing__subtitle">
+          <h3 className="landing__subtitle hex-exp">
             <div className="step-box">
               <p className="step">Set Goals</p>
               <Hexagon />

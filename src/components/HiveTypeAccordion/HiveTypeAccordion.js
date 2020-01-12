@@ -9,7 +9,6 @@ export default class HiveTypeAccordion extends Component {
   };
 
   state = {
-    // activeTypeIndex: null
     expanded: false
   };
 
@@ -42,17 +41,20 @@ export default class HiveTypeAccordion extends Component {
     const goalFilter = goals.filter(goal => goal.goal_type === id);
 
     return (
-      <ul className="HiveType__list">
-        {goalFilter.map(goal => (
-          <li key={goal.id} className="goal-desc">
-            <AccordionItem
-              id={goal.id}
-              goalTitle={goal.goal_description}
-              noHive="No Hives Yet!"
-            />
+      <>
+        <ul className="HiveType__list">
+          <li className="goal-desc">
+            {!goalFilter.length && <AccordionItem goalTitle="No hives yet." />}
           </li>
-        ))}
-      </ul>
+        </ul>
+        <ul className="HiveType__list">
+          {goalFilter.map(goal => (
+            <li key={goal.id} className="goal-desc">
+              <AccordionItem id={goal.id} goalTitle={goal.goal_description} />
+            </li>
+          ))}
+        </ul>
+      </>
     );
   }
 

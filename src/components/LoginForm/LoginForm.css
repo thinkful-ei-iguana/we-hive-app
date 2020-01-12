@@ -1,23 +1,29 @@
 .LoginForm {
   display: flex;
   flex-direction: column;
-  margin-left: auto;
-  margin-right: auto;
+  align-items: center;
   width: 200px;
   height: 400px;
   padding: 10px 0 10px 0;
 }
-label {
+.LoginForm__label {
   display: flex;
-  justify-content: left;
 }
-input {
+.LoginForm__input {
   padding: 10px;
   border: none;
   border-bottom: solid 1px gray;
-  background-color: rgb(255, 199, 158);
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
 }
 
-.Button .reg-button {
+.LoginForm__input:focus {
+  background-color: rgb(255, 245, 212);
+}
+.Button {
   margin-top: 10px;
 }

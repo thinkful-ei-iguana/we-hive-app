@@ -1,6 +1,9 @@
 .Accordion__section {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: flex-start;
+  width: 100vw;
 }
 
 .Accordion {

@@ -39,7 +39,10 @@ export default class RegistrationForm extends Component {
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="first_name">
-          <label htmlFor="RegistrationForm__first_name">
+          <label
+            htmlFor="RegistrationForm__first_name"
+            className="RegForm__label"
+          >
             First name <Required />
           </label>
           <input
@@ -47,10 +50,14 @@ export default class RegistrationForm extends Component {
             type="text"
             required
             id="RegistrationForm__first_name"
+            className="RegForm__input"
           />
         </div>
         <div className="user_email">
-          <label htmlFor="RegistrationForm__user_email">
+          <label
+            htmlFor="RegistrationForm__user_email"
+            className="RegForm__label"
+          >
             Email <Required />
           </label>
           <input
@@ -58,10 +65,14 @@ export default class RegistrationForm extends Component {
             type="email"
             required
             id="RegistrationForm__user_email"
+            className="RegForm__input"
           />
         </div>
         <div className="user_name">
-          <label htmlFor="RegistrationForm__user_name">
+          <label
+            htmlFor="RegistrationForm__user_name"
+            className="RegForm__label"
+          >
             User name <Required />
           </label>
           <input
@@ -69,11 +80,15 @@ export default class RegistrationForm extends Component {
             type="text"
             required
             id="RegistrationForm__user_name"
+            className="RegForm__input"
           />
         </div>
 
         <div className="password">
-          <label htmlFor="RegistrationForm__password">
+          <label
+            htmlFor="RegistrationForm__password"
+            className="RegForm__label"
+          >
             Password <Required />
           </label>
           <input
@@ -81,6 +96,7 @@ export default class RegistrationForm extends Component {
             type="password"
             required
             id="RegistrationForm__password"
+            className="RegForm__input"
           />
         </div>
 

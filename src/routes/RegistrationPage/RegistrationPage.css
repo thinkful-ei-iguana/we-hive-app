@@ -1,25 +1,27 @@
 .RegistrationPage {
   margin: 0;
+  height: 100vh;
   background: -webkit-linear-gradient(
     top,
     rgba(252, 234, 187, 1) 0%,
     rgba(248, 181, 0, 0.83) 83%,
     rgba(251, 223, 147, 0.8) 100%
   );
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .RegistrationPage__logo {
-  height: 120px;
-  width: 120px;
-  margin-top: 100px;
-  margin-bottom: 120px;
+  z-index: 1;
+  height: 200px;
+  width: 200px;
+  position: relative;
+  margin: 18px auto 18px;
 }
 
-.Section {
-  padding-bottom: 40px;
-}
 .tagline {
-  font-family: "Calistoga", cursive;
   color: rgb(255, 0, 0);
 }
 
@@ -27,6 +29,6 @@
   .RegistrationPage__logo {
     height: 220px;
     width: 220px;
-    /* margin: 60px auto 60px; */
+    margin: 20px auto 80px;
   }
 }

@@ -41,20 +41,22 @@ export default class LoginForm extends Component {
         <div role="alert">{error && <p className="red">{error}</p>}</div>
 
         <div className="user_email">
-          <label htmlFor="LoginForm__user_email">Email</label>
+          <label htmlFor="LoginForm__label user_email">Email</label>
           <input
             required
             type="email"
             name="user_email"
+            className="LoginForm__input"
             id="LoginForm__user_email"
           />
         </div>
         <div className="password">
-          <label htmlFor="LoginForm__password">Password</label>
+          <label htmlFor="LoginForm__label password">Password</label>
           <input
             required
             name="password"
             type="password"
+            className="LoginForm__input"
             id="LoginForm__password"
           />
         </div>

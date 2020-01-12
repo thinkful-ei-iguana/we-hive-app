@@ -20,9 +20,9 @@ export default class LoginPage extends Component {
 
   render() {
     return (
-      <Section className="LoginPage">
+      <section className="LoginPage">
         <Link to="/">
-          <img src={Logo} alt="logo" className="RegistrationPage__logo" />
+          <img src={Logo} alt="logo" className="LoginPage__logo" />
         </Link>
         <h2 className="login-header">Log in</h2>
         <h4 className="user-link">
@@ -32,7 +32,7 @@ export default class LoginPage extends Component {
           </Link>
         </h4>
         <LoginForm onLoginSuccess={this.handleLoginSuccess} />
-      </Section>
+      </section>
     );
   }
 }
