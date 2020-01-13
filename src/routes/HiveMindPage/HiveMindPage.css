@@ -45,8 +45,10 @@
   max-height: 120px;
 }
 
-.bee {
+.bee,
+img {
   height: 24px;
+  width: 24px;
 }
 
 .buzz {

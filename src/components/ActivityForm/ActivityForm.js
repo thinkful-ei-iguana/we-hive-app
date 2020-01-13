@@ -42,12 +42,14 @@ export default class ActivityForm extends Component {
             name="notes"
             id="ActForm__notes"
           ></Textarea>
-          <Link
+          {/* <Link
             onClick={this.props.onHandlePosts()}
             to={`/myhives/${this.props.hiveId}/hivemind`}
-          >
-            <Button type="submit">Create some buzz</Button>
-          </Link>
+          > */}
+          <Button type="submit" onClick={this.props.onHandlePosts()}>
+            Create some buzz
+          </Button>
+          {/* </Link> */}
         </div>
       </form>
     );
