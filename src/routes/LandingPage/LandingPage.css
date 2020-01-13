@@ -40,16 +40,17 @@ img {
   animation-delay: 0s;
   animation-direction: alternate;
   animation-iteration-count: infinite;
+  z-index: -1;
 }
 
-/* @keyframes pulse {
+@keyframes pulse {
   0% {
     background-color: #fff5d4;
   }
   50% {
     background-color: rgb(255, 196, 0);
   }
-} */
+}
 
 .landing__tagline:before {
   content: "";
@@ -150,8 +151,9 @@ img {
   img {
     width: 100%;
   }
+
   .wrapper h1 {
-    height: 100vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -167,9 +169,13 @@ img {
   img {
     width: 100%;
   }
+  .pre-demo,
+  .post-demo {
+    height: 65vh;
+  }
   .wrapper h1 {
     font-size: 100px;
-    height: 100vh;
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: center;

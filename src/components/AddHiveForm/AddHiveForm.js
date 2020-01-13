@@ -46,6 +46,7 @@ export default class AddHiveForm extends Component {
           <select
             required
             aria-label="Select goal type"
+            className="add-form-input"
             name="goal_type"
             id="AddForm__goal_type"
           >
@@ -63,6 +64,7 @@ export default class AddHiveForm extends Component {
           <input
             required
             type="text"
+            className="add-form-input"
             name="goal_description"
             id="AddForm__goal_description"
           />
@@ -72,6 +74,7 @@ export default class AddHiveForm extends Component {
             Target date <Required />
           </label>
           <TargetDate
+            className="add-form-input"
             name="target_date"
             id="AddForm__target_date"
             onAddHive={this.props.onAddHive}
@@ -81,6 +84,7 @@ export default class AddHiveForm extends Component {
           <label htmlFor="AddForm__group_message">Message to the group</label>
           <Textarea
             aria-label="Type a message to your hive"
+            className="add-form-input"
             name="group_message"
             id="AddForm__group_message"
             placeholder="Write a message to the hive..."

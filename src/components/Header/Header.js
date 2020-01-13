@@ -32,9 +32,6 @@ export default class Header extends Component {
   render() {
     return (
       <>
-        <Link to="/myhives">
-          <img src={Logo} alt="logo" className="nav-icon" />
-        </Link>
         <div className="Header">
           {TokenService.hasAuthToken()
             ? this.renderLogoutLink()

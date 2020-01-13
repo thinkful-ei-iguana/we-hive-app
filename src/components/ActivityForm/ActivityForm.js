@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button, Textarea } from "../Utils/Utils";
@@ -42,9 +42,12 @@ export default class ActivityForm extends Component {
             name="notes"
             id="ActForm__notes"
           ></Textarea>
-          <Button type="submit" onClick={this.props.onHandlePosts()}>
-            Create some buzz
-          </Button>
+          <Link
+            onClick={this.props.onHandlePosts()}
+            to={`/myhives/${this.props.hiveId}/hivemind`}
+          >
+            <Button type="submit">Create some buzz</Button>
+          </Link>
         </div>
       </form>
     );

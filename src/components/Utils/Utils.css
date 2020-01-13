@@ -15,13 +15,19 @@
 }
 
 .Textarea::placeholder {
-  color: #ccc;
+  color: black;
 }
 
 .Textarea {
   height: 200px;
 }
-
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-around;
+  margin: 40px 0 40px;
+}
 .Button {
   background: -webkit-linear-gradient(
     top,
@@ -31,14 +37,12 @@
   );
   color: #1a1c24;
   cursor: pointer;
-  font-size: 1em;
   border-radius: 10px;
   padding: 10px 12px;
-  margin-top: 30px;
   text-decoration: none;
   font-family: "Open Sans", sans-serif;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 20px;
 }
 
 .Required {

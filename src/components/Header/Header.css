@@ -4,8 +4,11 @@
   height: 60px;
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
   background-color: black;
+  /* position: fixed; */
 }
 
 .Header,
@@ -14,9 +17,9 @@
   margin: 0;
   padding: 0;
 }
-/* img {
+img {
   z-index: 1;
-} */
+}
 .Header a {
   color: rgb(255, 153, 0);
   text-decoration: none;
@@ -26,15 +29,15 @@
 
 .Header__not-logged-in,
 .Header__logged-in {
+  /* position: fixed; */
   display: flex;
-  flex: 1;
+  flex-direction: row;
   align-items: center;
-  justify-content: flex-end;
-  margin-left: 40px;
+  justify-content: center;
+  margin-right: 10px;
 }
 .Header__not-logged-in a:last-child {
-  padding: 5px 15px;
-  margin-right: 30px;
+  margin-left: 30px;
 }
 
 @media screen and (min-width: 425px) {

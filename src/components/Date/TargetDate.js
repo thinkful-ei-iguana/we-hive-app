@@ -10,7 +10,12 @@ export default class TargetDate extends Component {
     const { date } = this.context;
     const { name } = this.props;
     return (
-      <DatePicker selected={date} onChange={this.context.setDate} name={name} />
+      <DatePicker
+        className="add-form-input"
+        selected={date}
+        onChange={this.context.setDate}
+        name={name}
+      />
     );
   }
 }

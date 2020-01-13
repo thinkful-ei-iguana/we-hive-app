@@ -58,14 +58,15 @@ export default class HiveNavPage extends Component {
           <img src={Logo} alt="logo" className="RegistrationPage__logo" />
         </Link>
         <h2 className="Nav_heading">My Hives</h2>
-
-        {this.renderTypes()}
-        <Link to={"/create"}>
-          <Button className="create">Add hive</Button>
-        </Link>
-        <Link to={`/join`}>
-          <Button className="join">Join hive</Button>
-        </Link>
+        <div className="Types__container">{this.renderTypes()}</div>
+        <div className="btn-container">
+          <Link to={"/create"}>
+            <Button className="create">Add hive</Button>
+          </Link>
+          <Link to={`/join`}>
+            <Button className="join">Join hive</Button>
+          </Link>
+        </div>
       </div>
     );
   }

@@ -1,9 +1,13 @@
 .HeaderMain__logged-in a {
-  float: right;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  width: 60px;
   padding: 5px 15px;
   border-radius: 15px;
   margin: 10px;
   text-decoration: none;
   background-color: orangered;
   color: gold;
+  font-size: 20px;
 }

@@ -30,7 +30,6 @@ export default class HiveTypeAccordion extends Component {
         >
           <p className="Accordion__title">{type}</p>
         </button>
-        {/* fix this so that render "No hives yet" */}
         {expanded && this.renderTitles()}
       </div>
     );
@@ -44,7 +43,7 @@ export default class HiveTypeAccordion extends Component {
       <>
         <ul className="HiveType__list">
           <li className="goal-desc">
-            {!goalFilter.length && <AccordionItem goalTitle="No hives yet." />}
+            {!goalFilter.length && <AccordionItem goalTitle="No hives yet" />}
           </li>
         </ul>
         <ul className="HiveType__list">

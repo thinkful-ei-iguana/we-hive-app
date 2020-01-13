@@ -12,3 +12,19 @@ label {
   width: 200px;
   height: 100px;
 }
+
+.add-form-input {
+  display: flex;
+  flex-direction: column;
+  width: 240px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  background: -webkit-linear-gradient(
+    top,
+    rgba(252, 234, 187, 1) 0%,
+    rgba(248, 181, 0, 0.83) 83%,
+    rgba(251, 223, 147, 0.8) 100%
+  );
+}
