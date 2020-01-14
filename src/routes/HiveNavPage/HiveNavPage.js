@@ -2,13 +2,15 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import { Button } from "../../components/Utils/Utils";
-import HiveNavItem from "../../components/HiveNavItem/HiveNavItem";
 import HiveApiService from "../../services/hive-api-service";
 import HiveTypeAccordion from "../../components/HiveTypeAccordion/HiveTypeAccordion";
 import Logo from "../../images/WeHiveNav.png";
 import "./HiveNavPage.css";
 
 export default class HiveNavPage extends Component {
+  state = {
+    showMenu: false
+  };
   static contextType = HiveContext;
 
   componentDidMount() {
@@ -17,6 +19,12 @@ export default class HiveNavPage extends Component {
       .then(this.context.setHives)
       .catch(this.context.setError);
   }
+
+  handleToggleMenu = () => {
+    this.setState(prevState => ({
+      showMenu: !prevState.showMenu
+    }));
+  };
 
   renderTypes() {
     const { hiveTypes } = this.context;
@@ -31,6 +39,7 @@ export default class HiveNavPage extends Component {
                 id={hiveType.id}
                 type={hiveType.type}
                 goals={hives}
+                noHives=""
               />
             </li>
           ))}
@@ -39,32 +48,28 @@ export default class HiveNavPage extends Component {
     );
   }
 
-  renderHives() {
-    const { hives = [] } = this.context;
-    return hives.map(hive => (
-      <HiveNavItem
-        key={hive.id}
-        className="hive-type"
-        hive={hive}
-        hiveId={hive.id}
-      />
-    ));
-  }
-
   render() {
+    const { showMenu } = this.state;
     return (
       <div className="HiveNavPage__container">
-        <Link to="/">
-          <img src={Logo} alt="logo" className="RegistrationPage__logo" />
-        </Link>
-        <h2 className="Nav_heading">My Hives</h2>
-        <div className="Types__container">{this.renderTypes()}</div>
+        <div className="Nav__menu-container">
+          <h2 className="Nav_heading">My Hives</h2>
+          <Button className="Nav__menu" onClick={() => this.handleToggleMenu()}>
+            My Hives
+          </Button>
+          <Link to="/">
+            <img src={Logo} alt="logo" className="HiveNavPage__logo" />
+          </Link>
+        </div>
+        {showMenu && (
+          <div className="Types__container">{this.renderTypes()}</div>
+        )}
         <div className="btn-container">
           <Link to={"/create"}>
-            <Button className="create">Add hive</Button>
+            <Button className="Nav__button">Add hive</Button>
           </Link>
           <Link to={`/join`}>
-            <Button className="join">Join hive</Button>
+            <Button className="Nav__button">Join hive</Button>
           </Link>
         </div>
       </div>

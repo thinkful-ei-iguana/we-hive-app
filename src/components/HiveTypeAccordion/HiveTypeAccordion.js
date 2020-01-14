@@ -1,11 +1,12 @@
 import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
+import { Button } from "../../components/Utils/Utils";
 import AccordionItem from "../../components/AccordionItem/AccordionItem";
 import "./HiveTypeAccordion.css";
 
 export default class HiveTypeAccordion extends Component {
   static defaultProps = {
-    types: []
+    goals: []
   };
 
   state = {
@@ -24,12 +25,12 @@ export default class HiveTypeAccordion extends Component {
     const { type } = this.props;
     return (
       <div className="Accordion__section">
-        <button
+        <Button
           className="Accordion"
           onClick={() => this.handleSetActiveType()}
         >
           <p className="Accordion__title">{type}</p>
-        </button>
+        </Button>
         {expanded && this.renderTitles()}
       </div>
     );
@@ -43,7 +44,9 @@ export default class HiveTypeAccordion extends Component {
       <>
         <ul className="HiveType__list">
           <li className="goal-desc">
-            {!goalFilter.length && <AccordionItem goalTitle="No hives yet" />}
+            {!goalFilter.length && (
+              <AccordionItem goalTitle="No hives yet" id="" />
+            )}
           </li>
         </ul>
         <ul className="HiveType__list">

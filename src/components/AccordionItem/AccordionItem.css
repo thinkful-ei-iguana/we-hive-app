@@ -1,0 +1,30 @@
+.HiveNavItem__title {
+  height: 40px;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  background-color: black;
+  color: rgb(255, 245, 212);
+  font-size: 18px;
+  border-bottom: solid 1px rgb(255, 245, 212);
+}
+
+.HiveNavItem__title:hover {
+  font-weight: 800;
+}
+
+.HiveNavItem__title:active {
+  font-weight: 800;
+}
+/* .HiveNavItem__title:nth-child(even) {
+  position: relative;
+  margin-left: 0px;
+  margin-top: 15px;
+}
+.HiveNavItem__title:nth-child(odd) {
+  position: relative;
+  margin-left: 40px;
+  margin-top: 25px;
+} */
