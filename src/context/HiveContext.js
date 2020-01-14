@@ -3,24 +3,47 @@ import React, { Component } from "react";
 export const nullHive = {};
 
 const HiveContext = React.createContext({
+  activityList: [],
   code: null,
+  date: null,
+  error: null,
   hive: nullHive,
   hives: [],
-  activityList: [],
+  hiveTypes: [
+    {
+      id: 1,
+      type: "Events"
+    },
+    {
+      id: 2,
+      type: "Current Goals"
+    },
+    {
+      id: 3,
+      type: "Stretch Goals"
+    },
+    {
+      id: 4,
+      type: "Dream Goals"
+    },
+    {
+      id: 5,
+      type: "Completed Goals"
+    }
+  ],
   user: null,
   users: [],
-  error: null,
-  date: null,
-  setError: () => {},
-  clearError: () => {},
-  setHives: () => {},
-  setHive: () => {},
+  addActivity: () => {},
   addHive: () => {},
+  clearError: () => {},
   clearHive: () => {},
   clearUser: () => {},
   setActivity: () => {},
-  addActivity: () => {},
   setCode: () => {},
+  setDate: () => {},
+  setError: () => {},
+  setHive: () => {},
+  setHives: () => {},
   setUser: () => {},
   setUsers: () => {}
 });
@@ -29,13 +52,11 @@ export default HiveContext;
 
 export class HiveProvider extends Component {
   state = {
+    activityList: [],
     code: null,
-    error: null,
-    hives: [],
-    users: [],
-    hive: nullHive,
-    user: null,
     date: null,
+    error: null,
+    hive: nullHive,
     hiveTypes: [
       {
         id: 1,
@@ -57,34 +78,29 @@ export class HiveProvider extends Component {
         id: 5,
         type: "Completed Goals"
       }
-    ]
+    ],
+    hives: [],
+    user: null,
+    users: []
   };
 
-  setError = error => {
-    console.error(error);
-    this.setState({ error });
-  };
-
-  clearError = () => {
-    this.setState({ error: null });
-  };
-
-  setHives = hives => {
-    this.setState({ hives });
-  };
-
-  setHive = hive => {
-    this.setState({ hive });
+  addActivity = activity => {
+    this.setActivity([...this.state.activityList, activity]);
   };
 
   addHive = hive => {
     this.setHives([...this.state.hives, hive]);
   };
 
+  clearError = () => {
+    this.setState({ error: null });
+  };
+
   clearHive = () => {
     this.setHive(nullHive);
     this.setActivity([]);
   };
+
   clearUser = () => {
     this.setUser({ user: null });
   };
@@ -93,16 +109,25 @@ export class HiveProvider extends Component {
     this.setState({ activityList });
   };
 
-  addActivity = activity => {
-    this.setActivity([...this.state.activityList, activity]);
-  };
-
   setCode = code => {
     this.setState({ code });
   };
 
   setDate = date => {
     this.setState({ date });
+  };
+
+  setError = error => {
+    console.error(error);
+    this.setState({ error });
+  };
+
+  setHive = hive => {
+    this.setState({ hive });
+  };
+
+  setHives = hives => {
+    this.setState({ hives });
   };
 
   setUser = user => {
@@ -115,28 +140,28 @@ export class HiveProvider extends Component {
 
   render() {
     const value = {
-      date: this.state.date,
+      activityList: this.state.activityList,
       code: this.state.code,
+      date: this.state.date,
+      error: this.state.error,
       hive: this.state.hive,
+      hiveTypes: this.state.hiveTypes,
       hives: this.state.hives,
       user: this.state.user,
       users: this.state.users,
-      activityList: this.state.activityList,
-      error: this.state.error,
-      setError: this.setError,
-      clearError: this.clearError,
-      setHives: this.setHives,
-      setHive: this.setHive,
+      addActivity: this.addActivity,
       addHive: this.addHive,
+      clearError: this.clearError,
       clearHive: this.clearHive,
       clearUser: this.clearUser,
-      hiveTypes: this.state.hiveTypes,
       setActivity: this.setActivity,
-      addActivity: this.addActivity,
       setCode: this.setCode,
+      setDate: this.setDate,
+      setError: this.setError,
+      setHive: this.setHive,
+      setHives: this.setHives,
       setUser: this.setUser,
-      setUsers: this.setUsers,
-      setDate: this.setDate
+      setUsers: this.setUsers
     };
     return (
       <HiveContext.Provider value={value}>

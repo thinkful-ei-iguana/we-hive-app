@@ -5,10 +5,6 @@ export function Button({ className, ...props }) {
   return <button className={["Button", className].join(" ")} {...props} />;
 }
 
-export function Hyph() {
-  return <span className="Hyph">{" - "}</span>;
-}
-
 export function Required({ className, ...props }) {
   return (
     <span className={["Required", className].join(" ")} {...props}>

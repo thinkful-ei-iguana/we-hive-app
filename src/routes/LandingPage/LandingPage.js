@@ -14,17 +14,17 @@ export default function LandingPage() {
       </header>
       <section className="pre-demo">
         <div className="wrapper">
+          <img src={Hex} className="hex-graphic" alt="hex graphic" />
           <Link to="/myhives">
             <h1>
-              <img src={Hex} alt="hex graphic" />
-              <span className="landing__tagline"></span>
+              <p className="landing__tagline"></p>
               <div>Together</div>
             </h1>
           </Link>
         </div>
       </section>
 
-      <section className="pre-demo">
+      <section className="taglines">
         <div className="landing__content left">
           <div className="hdg">The research is in, and it says,</div>
           “The results showed that simply feeling like you’re part of a{" "}
@@ -34,7 +34,7 @@ export default function LandingPage() {
         </div>
       </section>
 
-      <section className="pre-demo">
+      <section className="taglines">
         <div className="landing__content right">
           Research indicates that people who act collaboratively stick to their
           task 64% longer than those working alone. Groups of people working
