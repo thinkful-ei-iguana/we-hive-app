@@ -1,11 +1,19 @@
 .AddHiveForm {
-  margin-top: 100px;
+  margin-top: 120px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 label {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+}
+.AddForm__goal_label::before {
+  content: "*";
+  color: red;
 }
 
 .Textarea {
@@ -16,15 +24,13 @@ label {
 .add-form-input {
   display: flex;
   flex-direction: column;
-  width: 240px;
-  height: 40px;
   justify-content: center;
   align-items: center;
+  width: 300px;
+  height: 20px;
   margin: 20px;
-  background: -webkit-linear-gradient(
-    top,
-    rgba(252, 234, 187, 1) 0%,
-    rgba(248, 181, 0, 0.83) 83%,
-    rgba(251, 223, 147, 0.8) 100%
-  );
+  padding: 10px;
+  background: rgb(255, 245, 212);
+  border: none;
+  border-bottom: solid 1px grey;
 }

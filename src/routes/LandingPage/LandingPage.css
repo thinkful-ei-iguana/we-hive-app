@@ -42,7 +42,7 @@ a {
   flex-direction: column;
   justify-content: center;
   height: 140vh;
-  animation: pulse 8s infinite;
+  animation: pulse 5s infinite;
   animation-timing-function: ease-out;
   animation-delay: 0s;
   animation-direction: alternate;
@@ -60,17 +60,17 @@ a {
 }
 
 .landing__tagline::before {
-  content: "we hive";
-  animation: animate infinite 10s;
-  animation-duration: 5s;
+  content: "WeHive";
+  animation: animate infinite 2s;
+  animation-duration: 6s;
   animation-direction: alternate;
-  animation-timing-function: ease-in-out;
+  animation-timing-function: ease;
   animation-iteration-count: infinite;
 }
 
 @keyframes animate {
   0% {
-    text-transform: lowercase;
+    text-transform: capitalize;
     letter-spacing: 0.2em;
   }
   100% {

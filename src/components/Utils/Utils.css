@@ -1,8 +1,3 @@
-.Hyph {
-  margin-right: 5px;
-  margin-left: 5px;
-}
-
 .Textarea {
   border: 1px solid #ddd;
   display: block;
@@ -15,40 +10,11 @@
 }
 
 .Textarea::placeholder {
-  color: black;
+  color: (255, 245, 212);
 }
 
 .Textarea {
   height: 200px;
-}
-.btn-container {
-  display: flex;
-  flex-direction: row;
-  width: 320px;
-  justify-content: space-around;
-  margin: 40px 0 40px;
-}
-.Button {
-  background: -webkit-linear-gradient(
-    top,
-    rgba(252, 234, 187, 1) 0%,
-    rgba(248, 181, 0, 0.83) 83%,
-    rgba(251, 223, 147, 0.8) 100%
-  );
-  color: #1a1c24;
-  cursor: pointer;
-  border-radius: 10px;
-  padding: 10px 12px;
-  text-decoration: none;
-  font-family: "Open Sans", sans-serif;
-  font-weight: 600;
-  font-size: 20px;
-}
-
-.Required {
-  color: #ca1551;
-  font-family: Arial;
-  font-weight: bold;
 }
 
 .Section {
@@ -58,4 +24,73 @@
 .Section--list {
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-around;
+  margin: 40px 0 40px;
+}
+
+.Button {
+  background: rgba(255, 0, 0, 80%);
+  color: rgb(255, 245, 212);
+  cursor: pointer;
+  z-index: 10;
+  border: none;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-weight: 600;
+  font-size: 20px;
+  position: relative;
+  width: 120px;
+  height: 69.28px;
+  background-color: rgb(255, 0, 0);
+  margin: 34.64px 0;
+}
+
+.Button:hover {
+  background: rgb(255, 245, 212);
+  color: rgb(255, 0, 0);
+}
+
+.Button::before,
+.Button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 84.85px;
+  height: 84.85px;
+  -webkit-transform: scaleY(0.5774) rotate(-45deg);
+  -ms-transform: scaleY(0.5774) rotate(-45deg);
+  transform: scaleY(0.5774) rotate(-45deg);
+  background-color: rgb(255, 0, 0);
+  left: 17.5736px;
+}
+
+.Button:hover::before,
+.Button:hover::after {
+  background: rgb(255, 245, 212);
+  color: rgb(255, 0, 0);
+}
+
+.Button::before {
+  top: -42.4264px;
+}
+
+.Button::after {
+  bottom: -42.4264px;
+}
+
+.Button span {
+  display: block;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  width: 120px;
+  height: 69.282px;
+  z-index: 2;
+  background: inherit;
 }

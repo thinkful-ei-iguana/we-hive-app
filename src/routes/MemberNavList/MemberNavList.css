@@ -21,6 +21,6 @@ li {
 
 @media (min-width: 768) {
   .Member_container {
-    flex-grow: 1;
+    width: 384px;
   }
 }

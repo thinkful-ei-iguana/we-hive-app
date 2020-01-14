@@ -39,64 +39,67 @@ export default class RegistrationForm extends Component {
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="first_name">
-          <label
+          {/* <label
             htmlFor="RegistrationForm__first_name"
             className="RegForm__label"
           >
             First name <Required />
-          </label>
+          </label> */}
           <input
             name="first_name"
             type="text"
             required
             id="RegistrationForm__first_name"
             className="RegForm__input"
+            placeholder="First name"
           />
         </div>
         <div className="user_email">
-          <label
+          {/* <label
             htmlFor="RegistrationForm__user_email"
             className="RegForm__label"
           >
             Email <Required />
-          </label>
+          </label> */}
           <input
             name="user_email"
             type="email"
             required
             id="RegistrationForm__user_email"
             className="RegForm__input"
+            placeholder="Email"
           />
         </div>
         <div className="user_name">
-          <label
+          {/* <label
             htmlFor="RegistrationForm__user_name"
             className="RegForm__label"
           >
             User name <Required />
-          </label>
+          </label> */}
           <input
             name="user_name"
             type="text"
             required
             id="RegistrationForm__user_name"
             className="RegForm__input"
+            placeholder="User name"
           />
         </div>
-
         <div className="password">
-          <label
+          {/* <label
             htmlFor="RegistrationForm__password"
             className="RegForm__label"
           >
             Password <Required />
-          </label>
+          </label> */}
           <input
             name="password"
             type="password"
             required
             id="RegistrationForm__password"
             className="RegForm__input"
+            placeholder="Password"
           />
         </div>
 

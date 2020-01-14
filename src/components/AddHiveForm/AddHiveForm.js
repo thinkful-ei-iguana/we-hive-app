@@ -40,9 +40,7 @@ export default class AddHiveForm extends Component {
     return (
       <form className="AddHiveForm" onSubmit={this.handleAddSubmit}>
         <div className="goal_type">
-          <label htmlFor="AddForm__goal_type">
-            Type of Goal <Required />
-          </label>
+          <label htmlFor="AddForm__goal_label">Type of Goal</label>
           <select
             required
             aria-label="Select goal type"
@@ -58,9 +56,7 @@ export default class AddHiveForm extends Component {
           </select>
         </div>
         <div className="goal_description">
-          <label htmlFor="AddForm__goal_description">
-            Goal Description <Required />
-          </label>
+          <label htmlFor="AddForm__goal_label">Goal Description</label>
           <input
             required
             type="text"
@@ -70,9 +66,7 @@ export default class AddHiveForm extends Component {
           />
         </div>
         <div className="target_date">
-          <label htmlFor="AddForm__target_date">
-            Target date <Required />
-          </label>
+          <label htmlFor="AddForm__goal_label">Target date</label>
           <TargetDate
             className="add-form-input"
             name="target_date"
