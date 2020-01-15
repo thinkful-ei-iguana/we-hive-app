@@ -11,7 +11,8 @@ label {
   justify-content: center;
   margin-top: 20px;
 }
-.AddForm__goal_label::before {
+
+.AddForm-required::before {
   content: "*";
   color: red;
 }
@@ -20,13 +21,17 @@ label {
   width: 200px;
   height: 100px;
 }
-
+select {
+  width: 280px;
+  height: 20px;
+  background: rgb(255, 245, 212);
+}
 .add-form-input {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 300px;
+  width: 280px;
   height: 20px;
   margin: 20px;
   padding: 10px;

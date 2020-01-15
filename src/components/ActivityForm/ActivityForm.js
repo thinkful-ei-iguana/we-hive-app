@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button, Textarea } from "../Utils/Utils";
+import "./ActivityForm.css";
 
 export default class ActivityForm extends Component {
   static defaultProps = {
@@ -46,7 +47,11 @@ export default class ActivityForm extends Component {
             onClick={this.props.onHandlePosts()}
             to={`/myhives/${this.props.hiveId}/hivemind`}
           > */}
-          <Button type="submit" onClick={this.props.onHandlePosts()}>
+          <Button
+            className="Act-button"
+            type="submit"
+            onClick={this.props.onHandlePosts()}
+          >
             Create some buzz
           </Button>
           {/* </Link> */}

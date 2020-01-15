@@ -1,10 +1,10 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import Moment from "react-moment";
 import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import ActivityForm from "../../components/ActivityForm/ActivityForm";
-import AddActivityItem from "../../components/AddActivityItem/AddActivityItem";
 import HeaderMain from "../../components/HeaderMain/HeaderMain";
 import "./AddActivityPage.css";
 
@@ -45,12 +45,22 @@ export default class AddActivityPage extends Component {
   renderHiveHeading(hive) {
     if (!hive) return "";
     return (
-      <AddActivityItem
-        key={hive.id}
-        className="hive-heading"
-        hive={hive}
-        hiveId={hive.id}
-      />
+      <>
+        <div className="ActItem__hive_heading">
+          <h2 className="ActItem__title">
+            <span className="Goal-desc">{hive.goal_description}</span>
+          </h2>
+
+          <div className="ActItem__target_date">
+            <h2 className="hive_date">
+              Target Date:{" "}
+              <Moment fromNow className="orange">
+                {hive.target_date}
+              </Moment>
+            </h2>
+          </div>
+        </div>
+      </>
     );
   }
 

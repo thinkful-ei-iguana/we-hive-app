@@ -41,16 +41,15 @@
 }
 
 @media (min-width: 768px) {
-  .HiveNavPage__container {
-    background-color: black;
+  .Types__container {
+    margin: 0;
+    width: 384px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     justify-content: flex-start;
-    min-height: 100vh;
-    width: 100vw;
-    /* width: 384px; */
+    min-height: auto;
   }
 
   .Nav_heading {

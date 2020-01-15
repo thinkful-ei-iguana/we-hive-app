@@ -1,0 +1,19 @@
+.JoinCodeForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.JoinCodeForm__input {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 280px;
+  height: 20px;
+  margin: 20px;
+  padding: 10px;
+  background: rgb(255, 245, 212);
+  border: none;
+  border-bottom: solid 1px grey;
+}

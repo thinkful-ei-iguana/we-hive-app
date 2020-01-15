@@ -26,8 +26,13 @@ export default class PostCodeForm extends Component {
   };
   render() {
     return (
-      <form className="PostCodeForm" onSubmit={this.handleCodeSubmit}>
-        <input name="code" type="text" required />
+      <form className="JoinCodeForm" onSubmit={this.handleCodeSubmit}>
+        <input
+          className="JoinCodeForm__input"
+          name="code"
+          type="text"
+          required
+        />
         <Button type="submit">Save password</Button>
       </form>
     );

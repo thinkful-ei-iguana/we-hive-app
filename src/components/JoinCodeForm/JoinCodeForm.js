@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button } from "../Utils/Utils";
-
+import "./JoinCodeForm.css";
 export default class JoinCodeForm extends Component {
   static defaultProps = {
     onAddCode: () => {}
@@ -25,7 +25,12 @@ export default class JoinCodeForm extends Component {
   render() {
     return (
       <form className="JoinCodeForm" onSubmit={this.handleCodeSubmit}>
-        <input name="code" type="text" required />
+        <input
+          className="JoinCodeForm__input"
+          name="code"
+          type="text"
+          required
+        />
         <Button type="submit">Join new hive</Button>
       </form>
     );

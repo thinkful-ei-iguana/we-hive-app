@@ -28,9 +28,11 @@ export default class UserDashPage extends Component {
           <h2 className="user-welcome-heading">Welcome to WeHive!</h2>
           {!hives.length && (
             <div className="dash-flex">
-              <h3 className="dash-welcome">
-                You don't have any hives...yet. Click here to create one.
-              </h3>
+              <Link to="/create">
+                <h3 className="dash-welcome">
+                  You don't have any hives...yet. Click here to create one.
+                </h3>
+              </Link>
               <Link to="/create">
                 <div>
                   <Hexagon className="dash-left" />
@@ -40,11 +42,14 @@ export default class UserDashPage extends Component {
           )}
           {!!hives.length && (
             <div className="dash-flex">
-              <h4 className="dash-welcome">
-                Life is more fun with others. Click here to create a hive. Then,
-                click <span className="orange">Add members to hive</span>. Set a
-                password and share it with your friends!
-              </h4>
+              <Link to="/create">
+                <h4 className="dash-welcome">
+                  Life is more fun with others. Click here to create a hive.
+                  Then, click{" "}
+                  <span className="orange">Add members to hive</span>. Set a
+                  password and share it with your friends!
+                </h4>
+              </Link>
               <Link to="/create">
                 <div className="dash-right">
                   <Hexagon />
@@ -53,10 +58,12 @@ export default class UserDashPage extends Component {
             </div>
           )}
           <div className="dash-flex">
-            <h4 className="dash-welcome">
-              Have a password? Click here, add code, and immediately begin
-              collaborating with friends.
-            </h4>
+            <Link to="/join">
+              <h4 className="dash-welcome">
+                Have a password? Click here, add code, and immediately begin
+                collaborating with friends.
+              </h4>
+            </Link>
             <Link to="/join">
               <div className="dash-left">
                 <Hexagon />

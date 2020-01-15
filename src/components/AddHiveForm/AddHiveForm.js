@@ -40,11 +40,12 @@ export default class AddHiveForm extends Component {
     return (
       <form className="AddHiveForm" onSubmit={this.handleAddSubmit}>
         <div className="goal_type">
-          <label htmlFor="AddForm__goal_label">Type of Goal</label>
+          <label htmlFor="AddForm__goal_type" className="AddForm-required">
+            Type of Goal
+          </label>
           <select
             required
-            aria-label="Select goal type"
-            className="add-form-input"
+            aria-label="Select type of goal"
             name="goal_type"
             id="AddForm__goal_type"
           >
@@ -56,18 +57,27 @@ export default class AddHiveForm extends Component {
           </select>
         </div>
         <div className="goal_description">
-          <label htmlFor="AddForm__goal_label">Goal Description</label>
+          <label
+            htmlFor="AddForm__goal_description"
+            className="AddForm-required"
+          >
+            Goal Description
+          </label>
           <input
             required
             type="text"
+            aria-label="Goal description"
             className="add-form-input"
             name="goal_description"
             id="AddForm__goal_description"
           />
         </div>
         <div className="target_date">
-          <label htmlFor="AddForm__goal_label">Target date</label>
+          <label htmlFor="AddForm__target_date" className="AddForm-required">
+            Target date
+          </label>
           <TargetDate
+            aria-label="Target date"
             className="add-form-input"
             name="target_date"
             id="AddForm__target_date"
@@ -77,7 +87,7 @@ export default class AddHiveForm extends Component {
         <div className="group_message">
           <label htmlFor="AddForm__group_message">Message to the group</label>
           <Textarea
-            aria-label="Type a message to your hive"
+            aria-label="Write a message to your hive"
             className="add-form-input"
             name="group_message"
             id="AddForm__group_message"

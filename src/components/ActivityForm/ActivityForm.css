@@ -1,0 +1,10 @@
+.ActivityForm,
+.notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.Textarea {
+  background: rgb(255, 245, 212);
+}

@@ -1,1 +1,27 @@
+.ActItem__hive_heading {
+}
+.Goal-desc {
+  background: rgb(255, 245, 212);
+  text-transform: uppercase;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
 
+.ActPage__main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.ActItem__hive_heading {
+  padding: 100px 10px;
+  font-family: "Oswald", sans-serif;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-align: center;
+}
+
+.ActItem__title {
+}

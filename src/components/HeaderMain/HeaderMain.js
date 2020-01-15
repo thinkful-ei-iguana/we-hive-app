@@ -11,20 +11,11 @@ export default class HeaderMain extends Component {
     return (
       <div className="HeaderMain__logged-in">
         <Link onClick={this.handleLogoutClick} to="/">
-          Logout
+          <div>Logout</div>
         </Link>
       </div>
     );
   }
-
-  // renderLoginLink() {
-  //   return (
-  //     <div className="Header__not-logged-in">
-  //       <Link to="/login">Log in</Link>
-  //       <Link to="/register">Register</Link>
-  //     </div>
-  //   );
-  // }
 
   render() {
     return <>{TokenService.hasAuthToken() && this.renderLogoutLink()}</>;

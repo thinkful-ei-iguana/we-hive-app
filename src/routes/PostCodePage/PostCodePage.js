@@ -19,8 +19,8 @@ export default class PostCodePage extends Component {
     const { hiveId } = this.props.match.params;
 
     return (
-      <Section className="PostCodePage">
-        <h2 className="mainpage_title">Create a Hive</h2>
+      <Section className="JoinCodePage">
+        <h2 className="join-hive">Create a Hive</h2>
         <p>
           To make your hive public, add a password below, save, and share with
           your friends.

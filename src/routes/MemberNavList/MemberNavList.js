@@ -35,7 +35,7 @@ export default class MemberNavList extends Component {
           ))}
         </ul>
         <Link to={`/myhives/${hiveId}/code`}>
-          <Button>Add members to hive</Button>
+          <Button>Add members</Button>
         </Link>
       </div>
     );
