@@ -10,7 +10,7 @@ li {
   align-items: center;
   justify-content: flex-start;
   padding: 40px 10px 80px;
-  height: 50vh;
+  height: auto;
   width: 100%;
 }
 

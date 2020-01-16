@@ -12,9 +12,6 @@ export default class HiveMindPage extends Component {
   static defaultProps = {
     match: {
       params: {}
-    },
-    history: {
-      goForward: () => {}
     }
   };
 
@@ -40,9 +37,6 @@ export default class HiveMindPage extends Component {
     );
   }
 
-  redirectToTarget = () => {
-    this.props.history.push(`/hivemind`);
-  };
   render() {
     const { hive } = this.context;
 
@@ -59,9 +53,7 @@ export default class HiveMindPage extends Component {
 
         {this.renderHiveActivity()}
         <Link to={`/myhives/${hive.id}`}>
-          <Button type="submit" onClick={this.redirectToTarget}>
-            Add Activity
-          </Button>
+          <Button type="submit">Add Activity</Button>
         </Link>
       </Section>
     );

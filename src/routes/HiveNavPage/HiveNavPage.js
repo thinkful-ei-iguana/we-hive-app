@@ -40,6 +40,7 @@ export default class HiveNavPage extends Component {
                 type={hiveType.type}
                 goals={hives}
                 noHives=""
+                showMenu={this.handleToggleMenu}
               />
             </li>
           ))}

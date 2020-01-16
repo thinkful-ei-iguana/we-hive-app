@@ -37,7 +37,8 @@ export default class HiveTypeAccordion extends Component {
   }
 
   renderTitles() {
-    const { goals, id } = this.props;
+    const { goals, id, showMenu } = this.props;
+
     const goalFilter = goals.filter(goal => goal.goal_type === id);
 
     return (
@@ -45,14 +46,22 @@ export default class HiveTypeAccordion extends Component {
         <ul className="HiveType__list">
           <li className="goal-desc">
             {!goalFilter.length && (
-              <AccordionItem goalTitle="No hives yet" id="" />
+              <AccordionItem
+                goalTitle="No hives yet"
+                id=""
+                showMenu={showMenu}
+              />
             )}
           </li>
         </ul>
         <ul className="HiveType__list">
           {goalFilter.map(goal => (
             <li key={goal.id} className="goal-desc">
-              <AccordionItem id={goal.id} goalTitle={goal.goal_description} />
+              <AccordionItem
+                id={goal.id}
+                goalTitle={goal.goal_description}
+                showMenu={showMenu}
+              />
             </li>
           ))}
         </ul>

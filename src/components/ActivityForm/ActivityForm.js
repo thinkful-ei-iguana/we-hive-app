@@ -7,9 +7,8 @@ import "./ActivityForm.css";
 
 export default class ActivityForm extends Component {
   static defaultProps = {
-    onAddHiveActivity: () => {},
-
-    match: { params: {} }
+    match: { params: {} },
+    onRedirect: () => {}
   };
 
   static contextType = HiveContext;
@@ -24,11 +23,13 @@ export default class ActivityForm extends Component {
       .then(() => {
         action.value = "";
         notes.value = "";
+        this.props.onRedirect(hive.id);
       })
       .catch(this.context.setError);
   };
 
   render() {
+    const { hiveId } = this.props;
     return (
       <form className="ActivityForm" onSubmit={this.handleActSubmit}>
         <div className="action">
@@ -43,18 +44,14 @@ export default class ActivityForm extends Component {
             name="notes"
             id="ActForm__notes"
           ></Textarea>
-          {/* <Link
-            onClick={this.props.onHandlePosts()}
-            to={`/myhives/${this.props.hiveId}/hivemind`}
-          > */}
-          <Button
-            className="Act-button"
-            type="submit"
-            onClick={this.props.onHandlePosts()}
-          >
-            Create some buzz
-          </Button>
-          {/* </Link> */}
+          <div className="btn-container">
+            <Button className="Act-button" type="submit">
+              Create some buzz
+            </Button>
+            <Link to={`/myhives/${hiveId}/hivemind`}>
+              <Button>View Hive Mind</Button>
+            </Link>
+          </div>
         </div>
       </form>
     );

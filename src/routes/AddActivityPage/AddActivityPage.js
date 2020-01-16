@@ -10,20 +10,19 @@ import "./AddActivityPage.css";
 
 export default class AddActivityPage extends Component {
   static defaultProps = {
-    location: {},
     match: {
       params: {}
     },
     history: {
-      goForward: () => {}
+      push: () => {}
     }
   };
 
   static contextType = HiveContext;
 
-  handlePosts = activity => {
+  redirectToTarget = hiveId => {
     const { history } = this.props;
-    const { hiveId } = this.props.match.params;
+    history.push(`/myhives/${hiveId}/hivemind`);
   };
 
   componentDidMount() {
@@ -78,10 +77,7 @@ export default class AddActivityPage extends Component {
           <HeaderMain />
           {this.renderHiveHeading(hive)}
 
-          <Link to={`/myhives/${hiveId}/hivemind`}>
-            <Button>View Hive Mind</Button>
-          </Link>
-          <ActivityForm hiveId={hiveId} onHandlePosts={this.handlePosts} />
+          <ActivityForm hiveId={hiveId} onRedirect={this.redirectToTarget} />
         </div>
       );
     }
