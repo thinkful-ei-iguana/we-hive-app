@@ -221,6 +221,7 @@ a {
     font-size: 60px;
   }
 }
+
 @media (min-width: 1440px) {
   .wrapper h1 {
     font-size: 160px;
@@ -234,23 +235,28 @@ a {
   }
 
   .left {
-    margin-left: 400px;
+    margin-left: 300px;
   }
 
   .right {
-    margin-left: 200px;
+    margin-left: 500px;
   }
 }
 
-@media (min-width: 1440px) {
+@media (min-width: 2560px) {
   .post-demo {
     height: 100vh;
   }
+
+  .landing__content {
+    font-size: 26px;
+  }
+
   .left {
     margin-left: 500px;
   }
   .right {
-    margin-left: 700px;
+    margin-left: 1000px;
   }
   .ldg-btn {
     height: 70px;

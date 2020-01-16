@@ -5,7 +5,7 @@ import "./AccordionItem.css";
 export default class AccordionItem extends Component {
   render() {
     const { goalTitle, id, showMenu } = this.props;
-    console.log(showMenu);
+
     return (
       <>
         <Link to={`/myhives/${id}`}>

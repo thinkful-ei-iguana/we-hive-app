@@ -1,3 +1,66 @@
+.navigation {
+  width: 100%;
+}
+
+.hive-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  float: left;
+}
+
+.logout,
+.login {
+  font-size: 1.1em;
+  font-family: "Oswald", sans-serif;
+  position: relative;
+  right: -18px;
+  bottom: -4px;
+  overflow: hidden;
+  letter-spacing: 3px;
+  opacity: 0;
+  transition: opacity 0.55s;
+  -webkit-transition: opacity 0.45s;
+}
+
+.log-button {
+  text-decoration: none;
+  float: right;
+  padding: 12px;
+  margin: 15px;
+  color: white;
+  width: 35px;
+  transition: width 0.35s;
+  -webkit-transition: width 0.35s;
+  overflow: hidden;
+}
+
+.log-button:hover,
+.log-button:active,
+.Header__logged-in {
+  width: 100px;
+  color: white;
+}
+
+.log-button:hover,
+.log-button:active,
+.Header__not-logged-in {
+  width: 180px;
+  color: white;
+}
+
+.log-button:hover,
+.log-button:active,
+.logout,
+.login {
+  opacity: 0.9;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(255, 245, 212);
+}
+
 .Header {
   margin: 0;
   padding: 0;
@@ -7,64 +70,21 @@
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  background-color: black;
-  /* position: fixed; */
+  background-color: #ff940d;
 }
 
-.Header,
-.nav-icon {
-  height: 60px;
-  margin: 0;
-  padding: 0;
-}
-img {
-  z-index: 1;
-}
-.Header a {
-  color: rgb(255, 153, 0);
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-.Header__not-logged-in,
-.Header__logged-in {
-  /* position: fixed; */
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  margin-right: 10px;
-}
 .Header__not-logged-in a:last-child {
   margin-left: 30px;
 }
 
-@media screen and (min-width: 425px) {
-  .Header,
-  .nav-icon {
+@media (min-width: 2560px) {
+  .Header {
+    height: 80px;
+  }
+  .hive-icon {
+    width: 60px;
     height: 60px;
-  }
-  .nav-icon {
-    margin-left: 40px;
-  }
-  .Header__not-logged-in a:last-child {
-    padding-right: 0;
-    padding-left: 0px;
-  }
-  .Header__logged-in a {
-    padding-right: 25px;
-    padding-left: 15px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .Header__not-logged-in,
-  .Header__logged-in {
-    font-size: 14px;
-  }
-
-  .Header__not-logged-in a:last-child {
-    margin-left: 20px;
+    border-radius: 50px;
+    float: left;
   }
 }

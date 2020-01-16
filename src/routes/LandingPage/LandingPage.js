@@ -1,7 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Header from "../../components/Header/Header";
 import Hexagon from "../../components/Hexagon/Hexagon";
 import "./LandingPage.css";
 import Hex from "../../images/Hexbg.png";
@@ -9,9 +8,6 @@ import Hex from "../../images/Hexbg.png";
 export default function LandingPage() {
   return (
     <>
-      <header>
-        <Header />
-      </header>
       <section className="pre-demo">
         <div className="wrapper">
           <img src={Hex} className="hex-graphic" alt="hex graphic" />

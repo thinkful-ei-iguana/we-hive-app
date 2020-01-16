@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Route, Switch } from "react-router-dom";
 
 import HiveContext from "../../context/HiveContext";
-
+import Header from "../../components/Header/Header";
 import PublicOnlyRoute from "../Utils/PublicOnlyRoute";
 import LandingPage from "../../routes/LandingPage/LandingPage";
 import RegistrationPage from "../../routes/RegistrationPage/RegistrationPage";
@@ -75,6 +75,7 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+        <Header />
         <main className="Hive_container wrapper">
           {this.state.hasError && (
             <p className="red">Something went wrong. Please try again later.</p>

@@ -8,22 +8,28 @@
   min-height: auto;
   width: 100vw;
 }
-.Nav__menu-container {
-  display: flex;
-  width: 100vw;
-  flex-direction: row;
-  justify-content: space-around;
-}
+
 .HiveNavPage__logo {
-  /* visibility: hidden; */
   margin: 10px;
   width: 100px;
   height: 100px;
+}
+.logo-container {
+  display: flex;
+  flex-direction: row;
+  width: 320px;
+  justify-content: space-around;
+  margin: 40px 0 40px;
 }
 
 .Nav_heading {
   display: none;
 }
+
+.Types__container {
+  display: none;
+}
+
 .Nav__menu {
   margin-top: 33px;
   margin-bottom: 10px;
@@ -41,24 +47,48 @@
 }
 
 @media (min-width: 768px) {
-  .Types__container {
-    margin: 0;
-    width: 384px;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    min-height: auto;
+  .HiveNavPage__container {
+    width: 50vw;
   }
 
   .Nav_heading {
     margin-bottom: 20px;
     color: rgba(255, 196, 0);
   }
-  .hive-type {
-    display: flex;
-    flex-wrap: wrap;
+
+  .hive-type:nth-child(odd) {
+    position: relative;
+    margin-left: 0px;
+    margin-top: -38px;
+  }
+  .hive-type:nth-child(even) {
+    position: relative;
+    margin-left: -60px;
+    margin-top: -38px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .HiveNavPage__container {
+    width: 30vw;
+  }
+
+  .Nav_heading {
+    display: block;
+  }
+  .Types__container {
+    display: block;
+  }
+
+  .Nav__menu {
+    display: none;
+  }
+
+  .HiveNavPage__logo {
+    width: 200px;
+    height: 200px;
+  }
+  .logo-container {
     flex-direction: column;
     align-items: center;
   }

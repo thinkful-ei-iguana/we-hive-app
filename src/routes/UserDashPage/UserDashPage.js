@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import Hexagon from "../../components/Hexagon/Hexagon";
-import HeaderMain from "../../components/HeaderMain/HeaderMain";
+
 import "./UserDashPage.css";
 export default class UserDashPage extends Component {
   static contextType = HiveContext;
@@ -23,7 +23,6 @@ export default class UserDashPage extends Component {
     // </Link>
     return (
       <>
-        <HeaderMain />
         <div className="hex-flex">
           <h2 className="user-welcome-heading">Welcome to WeHive!</h2>
           {!hives.length && (

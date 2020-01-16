@@ -10,7 +10,7 @@
 }
 
 .App__nav {
-  background-color: darkgray;
+  background-color: black;
   display: block;
   flex-direction: column;
 }
@@ -27,7 +27,7 @@
   }
 
   .App__nav {
-    background-color: darkgray;
+    background-color: black;
     display: block;
     flex-direction: column;
   }

@@ -4,6 +4,8 @@
   justify-content: center;
   align-items: center;
   height: auto;
+  width: 100vw;
+  overflow: hidden;
 }
 
 .sub-heading {
@@ -31,35 +33,38 @@
 }
 .HiveMindPage__activity-label-buzz {
   text-align: left;
-  margin-left: 10px;
-  margin-bottom: 10px;
-  font-size: 12px;
+  margin: 0 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  height: auto;
 }
 
 .HiveMindPage__activity-label-notes {
   text-align: right;
-  margin-right: 10px;
-  margin-bottom: 10px;
-  padding-top: 10px;
-  font-size: 12px;
+  margin: 0 20px;
+  padding: 10px 20px;
+  font-size: 14px;
+  height: auto;
 }
 
 .HiveMindPage__activity-text {
   background: rgb(255, 245, 212);
-  padding: 10px 8px;
+  padding: 10px 10px;
+  margin: 10px 20px;
   margin-bottom: 10px;
   border-radius: 4px;
+  width: 100vw;
 }
 
 .buzz-text {
   text-align: left;
-  margin-left: 50px;
+  margin-left: 90px;
   max-height: 120px;
 }
 
 .notes-text {
   text-align: right;
-  margin-right: 50px;
+  margin-right: 90px;
   max-height: 120px;
 }
 
@@ -70,31 +75,27 @@ img {
 }
 
 .buzz {
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(255, 196, 0);
 }
 
-/* 
-@media () {
+@media (min-width: 768px) {
+  .HiveMindPage__activity-label-buzz {
+    text-align: center;
+    font-size: 16px;
+  }
+  .HiveMindPage__activity-label-notes {
+    text-align: center;
+    font-size: 16px;
+  }
 
-.HiveMindPage__activity-label-buzz {
-  text-align: left;
-  margin-left: 120px;
-}
-.HiveMindPage__activity-label-notes {
-  text-align: right;
-  margin-right: 120px;
-  padding-top: 10px;
-}
+  .buzz-text {
+    margin-left: 220px;
+    max-height: 120px;
+  }
 
-.buzz-text {
-  text-align: left;
-  margin-left: 220px;
-  max-height: 120px;
+  .notes-text {
+    margin-right: 220px;
+    max-height: 120px;
+  }
 }
-.notes-text {
-  text-align: right;
-  margin-right: 220px;
-  max-height: 120px;
-}
-} */

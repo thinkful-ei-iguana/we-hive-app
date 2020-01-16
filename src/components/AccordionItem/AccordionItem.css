@@ -1,6 +1,6 @@
 .HiveNavItem__title {
   height: 40px;
-  width: 220px;
+  width: 200px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -11,14 +11,12 @@
   border-bottom: solid 1px rgb(255, 245, 212);
 }
 
-.HiveNavItem__title:hover {
-  font-weight: 800;
-}
-
+.HiveNavItem__title:hover,
 .HiveNavItem__title:active {
   font-weight: 800;
 }
-/* .HiveNavItem__title:nth-child(even) {
+
+.HiveNavItem__title:nth-child(even) {
   position: relative;
   margin-left: 0px;
   margin-top: 15px;
@@ -27,4 +25,13 @@
   position: relative;
   margin-left: 40px;
   margin-top: 25px;
-} */
+}
+
+@media (min-width: 768px) {
+  .HiveNavItem__title {
+    height: 40px;
+    width: 220px;
+    margin-bottom: 40px;
+    font-size: 22px;
+  }
+}

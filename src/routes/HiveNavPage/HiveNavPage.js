@@ -52,26 +52,32 @@ export default class HiveNavPage extends Component {
   render() {
     const { showMenu } = this.state;
     return (
-      <div className="HiveNavPage__container">
-        <div className="Nav__menu-container">
-          <h2 className="Nav_heading">My Hives</h2>
-          <Button className="Nav__menu" onClick={() => this.handleToggleMenu()}>
-            My Hives
-          </Button>
-          <Link to="/">
-            <img src={Logo} alt="logo" className="HiveNavPage__logo" />
-          </Link>
-        </div>
-        {showMenu && (
+      <div className="App__main wrapper">
+        <div className="HiveNavPage__container">
+          <div className="logo-container">
+            <Link to="/">
+              <img src={Logo} alt="logo" className="HiveNavPage__logo" />
+            </Link>
+            <h2 className="Nav_heading">My Hives</h2>
+            <Button
+              className="Nav__menu"
+              onClick={() => this.handleToggleMenu()}
+            >
+              My Hives
+            </Button>
+          </div>
+          {showMenu && <div>{this.renderTypes()}</div>}
+
           <div className="Types__container">{this.renderTypes()}</div>
-        )}
-        <div className="btn-container">
-          <Link to={"/create"}>
-            <Button className="Nav__button">Add hive</Button>
-          </Link>
-          <Link to={`/join`}>
-            <Button className="Nav__button">Join hive</Button>
-          </Link>
+
+          <div className="btn-container">
+            <Link to={"/create"}>
+              <Button className="Nav__button">Add hive</Button>
+            </Link>
+            <Link to={`/join`}>
+              <Button className="Nav__button">Join hive</Button>
+            </Link>
+          </div>
         </div>
       </div>
     );

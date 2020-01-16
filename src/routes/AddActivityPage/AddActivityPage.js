@@ -1,11 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import Moment from "react-moment";
-import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import ActivityForm from "../../components/ActivityForm/ActivityForm";
-import HeaderMain from "../../components/HeaderMain/HeaderMain";
+
 import "./AddActivityPage.css";
 
 export default class AddActivityPage extends Component {
@@ -74,7 +72,6 @@ export default class AddActivityPage extends Component {
     } else {
       return (
         <div className="ActPage__main">
-          <HeaderMain />
           {this.renderHiveHeading(hive)}
 
           <ActivityForm hiveId={hiveId} onRedirect={this.redirectToTarget} />
