@@ -16,11 +16,7 @@ export default class UserDashPage extends Component {
   }
   render() {
     const { hives } = this.context;
-    // const user = this.context.user;
-    // if (!user) return null;
-    //   <Link onClick={this.handleLogoutClick} to="/">
-    //   Logout
-    // </Link>
+
     return (
       <>
         <div className="hex-flex">

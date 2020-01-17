@@ -3,16 +3,8 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: auto;
-  width: 100vw;
-  overflow: hidden;
-}
-
-.sub-heading {
-  padding: 20px;
-  text-align: center;
-  font-family: "Oswald", sans-serif;
-  font-weight: 500;
+  /* height: auto;
+  width: 100vw; */
 }
 
 .group-message {
@@ -31,42 +23,42 @@
   list-style-type: none;
   padding: 0;
 }
-.HiveMindPage__activity-label-buzz {
+/* .HiveMindPage__activity-label-buzz {
   text-align: left;
   margin: 0 20px;
   padding: 10px 20px;
   font-size: 14px;
   height: auto;
-}
-
+} */
+/* 
 .HiveMindPage__activity-label-notes {
   text-align: right;
   margin: 0 20px;
   padding: 10px 20px;
   font-size: 14px;
   height: auto;
-}
+} */
 
 .HiveMindPage__activity-text {
   background: rgb(255, 245, 212);
-  padding: 10px 10px;
-  margin: 10px 20px;
-  margin-bottom: 10px;
+  padding: 10px 0 10px;
+  margin: 10px 0 20px;
+  /* margin-bottom: 10px; */
   border-radius: 4px;
-  width: 100vw;
+  /* width: 100vw; */
 }
 
-.buzz-text {
+/* .buzz-text {
   text-align: left;
   margin-left: 90px;
   max-height: 120px;
-}
+} */
 
-.notes-text {
+/* .notes-text {
   text-align: right;
   margin-right: 90px;
   max-height: 120px;
-}
+} */
 
 .bee,
 img {
@@ -88,7 +80,7 @@ img {
     text-align: center;
     font-size: 16px;
   }
-
+  /* 
   .buzz-text {
     margin-left: 220px;
     max-height: 120px;
@@ -97,5 +89,17 @@ img {
   .notes-text {
     margin-right: 220px;
     max-height: 120px;
+  } */
+}
+
+@media (min-width: 1440px) {
+  .HiveMind__page {
+    margin: 0;
+    padding: 0;
+    /* width: 50vw;
+    height: 100vh; */
+  }
+  .HiveMindPage__activity-text {
+    /* width: 50vw; */
   }
 }

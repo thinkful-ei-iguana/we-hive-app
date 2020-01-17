@@ -13,15 +13,11 @@ export default class Header extends Component {
   renderLogoutLink() {
     return (
       <div className="Header__logged-in">
-        <div class="navigation">
-          <a href="/" className="log-button">
+        <div className="navigation">
+          <Link to="/" className="log-button" onClick={this.handleLogoutClick}>
             <img src={Icon} alt="Hive icon" className="hive-icon" />
-            <div className="logout">
-              <Link onClick={this.handleLogoutClick} to="/">
-                Logout
-              </Link>
-            </div>
-          </a>
+            <div className="logout">Logout</div>
+          </Link>
         </div>
       </div>
     );
@@ -30,14 +26,17 @@ export default class Header extends Component {
   renderLoginLink() {
     return (
       <div className="Header__not-logged-in">
-        <div class="navigation">
-          <a href="/login" className="log-button">
+        <div className="navigation">
+          <div className="nav__not-logged-in">
             <img src={Icon} alt="Hive icon" className="hive-icon" />
-            <div className="login">
-              <Link to="/login">Log in</Link>
-              <Link to="/register">Register</Link>
-            </div>
-          </a>
+
+            <Link to="/login" className="log-button">
+              <div className="login">Log in</div>
+            </Link>
+            <Link to="/register" className="log-button">
+              <div className="register">Register</div>
+            </Link>
+          </div>
         </div>
       </div>
     );

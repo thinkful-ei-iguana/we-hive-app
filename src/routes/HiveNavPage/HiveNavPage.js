@@ -66,7 +66,9 @@ export default class HiveNavPage extends Component {
               My Hives
             </Button>
           </div>
-          {showMenu && <div>{this.renderTypes()}</div>}
+          {showMenu && (
+            <div className="mobile-dropdown">{this.renderTypes()}</div>
+          )}
 
           <div className="Types__container">{this.renderTypes()}</div>
 

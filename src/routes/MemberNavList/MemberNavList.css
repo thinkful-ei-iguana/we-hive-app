@@ -13,6 +13,14 @@ li {
   padding: 50px 0;
   width: 100%;
 }
+.MemberNavList__heading {
+  padding: 20px;
+}
+
+.hive-member {
+  padding: 10px;
+  text-align: center;
+}
 
 @media (min-width: 768px) {
   .Member_container {
@@ -25,5 +33,7 @@ li {
   .Member_container {
     width: 25vw;
     height: auto;
+    justify-content: flex-start;
+    padding-top: 260px;
   }
 }

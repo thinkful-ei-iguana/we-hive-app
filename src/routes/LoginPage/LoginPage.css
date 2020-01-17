@@ -21,7 +21,7 @@
 }
 .link {
   text-decoration: none;
-  color: rgb(255, 0, 0);
+  color: #ff4500;
 }
 
 .link:hover {
@@ -31,7 +31,7 @@
 .login-header {
   margin-top: 60px;
   margin-bottom: 10px;
-  color: rgb(255, 0, 0);
+  color: #ff4500;
 }
 
 @media (min-width: 768px) {

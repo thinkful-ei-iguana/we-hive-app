@@ -14,7 +14,7 @@
   font-size: 1.1em;
   font-family: "Oswald", sans-serif;
   position: relative;
-  right: -18px;
+  right: -10px;
   bottom: -4px;
   overflow: hidden;
   letter-spacing: 3px;
@@ -36,16 +36,19 @@
 }
 
 .log-button:hover,
-.log-button:active,
-.Header__logged-in {
-  width: 100px;
+.log-button:active {
+  width: 400px;
+}
+
+.log-button:hover,
+.log-button:active .Header__logged-in {
+  opacity: 0.9;
   color: white;
 }
 
 .log-button:hover,
-.log-button:active,
-.Header__not-logged-in {
-  width: 180px;
+.log-button:active .Header__not-logged-in {
+  width: 0px;
   color: white;
 }
 

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import Moment from "react-moment";
 import { Link } from "react-router-dom";
 
-import { Button, Section } from "../../components/Utils/Utils";
+import { Button } from "../../components/Utils/Utils";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import BeeIcon from "../../images/bee-icon.png";
@@ -42,13 +42,11 @@ export default class HiveMindPage extends Component {
 
     return (
       <>
-      
-        <Section className="HiveMind__page">
+        <div className="HiveMind__page">
           <h2 className="user-welcome-heading">Hive Mind</h2>
           <h2 className="Goal-desc"> {hive.goal_description}</h2>
           {hive.group_message && (
             <>
-              <h4 className="sub-heading">Message from hive admin</h4>
               <div className="group-message">{hive.group_message}</div>
             </>
           )}
@@ -57,7 +55,7 @@ export default class HiveMindPage extends Component {
           <Link to={`/myhives/${hive.id}`}>
             <Button type="submit">Add Activity</Button>
           </Link>
-        </Section>
+        </div>
       </>
     );
   }

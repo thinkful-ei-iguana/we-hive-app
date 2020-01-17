@@ -15,18 +15,10 @@
 }
 
 .orange {
-  color: #ff003c;
+  color: #ff4500;
 }
 
-/* .dash-flex {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-} */
-
 .dash-welcome {
-  /* flex-direction: column; */
-  /* width: 220px; */
   text-align: center;
   margin: 140px 10px;
   width: 280px;
@@ -53,39 +45,5 @@
 @media (min-width: 768px) {
   .hex-flex {
     margin: 10px;
-  }
-}
-
-@media (min-width: 1440px) {
-  .dash-flex {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .dash-welcome {
-    flex-direction: column;
-    width: 300px;
-    margin: 100px;
-    font-size: 16px;
-    line-height: 1.9;
-    font-family: "Open Sans", sans-serif;
-    font-weight: 600;
-    justify-content: space-between;
-    position: absolute;
-    z-index: 1;
-  }
-
-  .right {
-    position: absolute;
-  }
-
-  .left {
-    position: absolute;
-  }
-
-  .join-container {
-    padding: 180px;
-    margin-left: auto;
-    margin-right: auto;
   }
 }

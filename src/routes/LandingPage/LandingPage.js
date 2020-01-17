@@ -39,9 +39,11 @@ export default function LandingPage() {
           <span className="bold">lower fatigue levels</span> and{" "}
           <span className="bold">higher success rates</span>.
         </div>
-        <button className="ldg-btn" type="submit">
-          WeHive Demo
-        </button>
+        <Link to="/register">
+          <button type="submit" className="ldg-btn">
+            Join the Hive
+          </button>
+        </Link>
       </section>
 
       <section className="post-demo">

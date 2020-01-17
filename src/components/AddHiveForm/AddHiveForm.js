@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
-import { Button, Textarea, Required } from "../Utils/Utils";
+import { Button, Textarea } from "../Utils/Utils";
 import "./AddHiveForm.css";
 import TargetDate from "../Date/TargetDate";
 

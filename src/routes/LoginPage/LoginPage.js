@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import LoginForm from "../../components/LoginForm/LoginForm";
 import "./LoginPage.css";
-import Logo from "../../images/WeHiveNav.png";
+import Login from "../../images/WeHiveUser.png";
 export default class LoginPage extends Component {
   static defaultProps = {
     location: {},
@@ -21,7 +21,7 @@ export default class LoginPage extends Component {
     return (
       <section className="LoginPage">
         <Link to="/">
-          <img src={Logo} alt="logo" className="LoginPage__logo" />
+          <img src={Login} alt="logo" className="LoginPage__logo" />
         </Link>
         <h2 className="login-header">Log in</h2>
         <h4 className="user-link">

@@ -35,7 +35,7 @@
 }
 
 .Button {
-  background: rgba(255, 0, 0, 80%);
+  background: #ff940d;
   color: rgb(255, 245, 212);
   cursor: pointer;
   z-index: 10;
@@ -47,14 +47,13 @@
   position: relative;
   width: 80px;
   height: 46.19px;
-  background-color: rgb(255, 0, 0);
+  background-color: #ff940d;
   line-height: 1.1;
-  /* margin-bottom: 20px; */
 }
 
 .Button:hover {
   background: rgb(255, 245, 212);
-  color: rgb(255, 0, 0);
+  color: #ff940d;
 }
 
 .Button::before,
@@ -67,22 +66,26 @@
   -webkit-transform: scaleY(0.5774) rotate(-45deg);
   -ms-transform: scaleY(0.5774) rotate(-45deg);
   transform: scaleY(0.5774) rotate(-45deg);
-  background-color: rgb(255, 0, 0);
+  background-color: #ff940d;
   left: 11.7157px;
 }
 
 .Button:hover::before,
 .Button:hover::after {
   background: rgb(255, 245, 212);
-  color: rgb(255, 0, 0);
+  color: #ff940d;
 }
 
 .Button::before {
   top: -28.2843px;
+  border-top: solid 1.4142px black;
+  border-right: solid 1.4142px black;
 }
 
 .Button::after {
   bottom: -28.2843px;
+  border-bottom: solid 1.4142px black;
+  border-left: solid 1.4142px black;
 }
 
 .Button span {
@@ -98,7 +101,7 @@
 
 @media (min-width: 768px) {
   .Button {
-    background: rgba(255, 0, 0, 80%);
+    background: #ff940d;
     color: rgb(255, 245, 212);
     cursor: pointer;
     z-index: 10;
@@ -110,13 +113,13 @@
     position: relative;
     width: 120px;
     height: 69.28px;
-    background-color: rgb(255, 0, 0);
+    background-color: #ff940d;
     margin: 34.64px 0;
   }
 
   .Button:hover {
     background: rgb(255, 245, 212);
-    color: rgb(255, 0, 0);
+    color: #ff940d;
   }
 
   .Button::before,
@@ -129,14 +132,14 @@
     -webkit-transform: scaleY(0.5774) rotate(-45deg);
     -ms-transform: scaleY(0.5774) rotate(-45deg);
     transform: scaleY(0.5774) rotate(-45deg);
-    background-color: rgb(255, 0, 0);
+    background-color: #ff940d;
     left: 17.5736px;
   }
 
   .Button:hover::before,
   .Button:hover::after {
     background: rgb(255, 245, 212);
-    color: rgb(255, 0, 0);
+    color: #ff940d;
   }
 
   .Button::before {

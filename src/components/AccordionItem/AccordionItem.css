@@ -5,14 +5,15 @@
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
-  background-color: black;
-  color: rgb(255, 245, 212);
+  background-color: rgb(255, 196, 0);
+  color: black;
   font-size: 18px;
-  border-bottom: solid 1px rgb(255, 245, 212);
+  border-bottom: solid 1px black;
 }
 
 .HiveNavItem__title:hover,
 .HiveNavItem__title:active {
+  color: rgb(255, 245, 212);
   font-weight: 800;
 }
 
@@ -29,9 +30,23 @@
 
 @media (min-width: 768px) {
   .HiveNavItem__title {
-    height: 40px;
-    width: 220px;
+    width: 240px;
     margin-bottom: 40px;
-    font-size: 22px;
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .HiveNavItem__title {
+    width: 280px;
+    font-size: 20px;
+  }
+}
+@media (min-width: 1440px) {
+  .HiveNavItem__title {
+    height: 60px;
+    width: 180px;
+    font-size: 20px;
+    text-align: right;
   }
 }

@@ -3,7 +3,7 @@
   "name": "we-hive-app",
   "alias": "we-hive-app-iguana",
   "routes": [
-    { "handle": "filesystem" },
-    { "src": "/.*", "dest": "/index.html" }
+    { "src": "^/static/(.*)", "dest": "/static/$1" },
+    { "src": ".*", "dest": "/index.html" }
   ]
 }

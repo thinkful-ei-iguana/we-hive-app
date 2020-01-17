@@ -17,14 +17,14 @@
 }
 
 .LoginForm__input::placeholder {
-  color: rgb(255, 0, 0);
+  color: #ff4500;
   font-weight: 700;
   font-size: 16px;
 }
 
 .LoginForm__input:focus {
   background-color: rgb(255, 245, 212);
-  color: rgb(255, 0, 0);
+  color: #ff4500;
   font-weight: 400;
   font-size: 16px;
 }

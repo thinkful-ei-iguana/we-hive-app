@@ -1,16 +1,16 @@
-.Nav_flex {
-  display: flex;
-  flex-wrap: wrap;
-}
-
 .App {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+.Nav_flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .App__nav {
-  background-color: black;
+  background-color: #ffc400;
   display: block;
   flex-direction: column;
 }
@@ -19,7 +19,6 @@
   margin: 0;
 }
 
-/* set media queries */
 @media (min-width: 768px) {
   .Hive_container {
     display: flex;
@@ -27,7 +26,7 @@
   }
 
   .App__nav {
-    background-color: black;
+    background-color: #ffc400;
     display: block;
     flex-direction: column;
   }

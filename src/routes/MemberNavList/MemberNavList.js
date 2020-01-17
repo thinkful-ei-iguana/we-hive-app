@@ -18,22 +18,29 @@ export default class MemberNavList extends Component {
       .then(this.context.setUsers)
       .catch(this.context.setError);
   }
+
+  renderHiveMembers(hiveMembers) {
+    if (!hiveMembers) return "";
+    return (
+      <ul>
+        {hiveMembers.map(user => (
+          <li key={user.id} className="hive-member" user={user.first_name}>
+            {user.user_name} ({user.first_name})
+          </li>
+        ))}
+      </ul>
+    );
+  }
   render() {
-    const { users = [], hives = [] } = this.context;
+    const { users = [] } = this.context;
     const { hiveId } = this.props.match.params;
 
-    // const hiveFind = hives.find(n => n.id === Number(hiveId));
+    const hiveMembers = users.filter(user => user.hive_id === Number(hiveId));
 
     return (
       <div className="Member_container">
         <h3 className="MemberNavList__heading">Hive Members</h3>
-        <ul>
-          {users.map(user => (
-            <li key={user.id} className="hive-member" user={user.first_name}>
-              {user.user_name} ({user.first_name})
-            </li>
-          ))}
-        </ul>
+        {this.renderHiveMembers(hiveMembers)}
         <Link to={`/myhives/${hiveId}/code`}>
           <Button>Add members</Button>
         </Link>

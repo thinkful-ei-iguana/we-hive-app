@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import RegistrationForm from "../../components/RegistrationForm/RegistrationForm";
-import Logo from "../../images/WeHiveNav.png";
+import Logo from "../../images/WeHiveUser.png";
 import "./RegistrationPage.css";
 
 export default class RegistrationPage extends Component {
