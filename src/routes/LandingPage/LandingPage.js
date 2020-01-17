@@ -21,25 +21,25 @@ export default function LandingPage() {
       </section>
 
       <section className="taglines">
-        <div className="landing__content left">
-          <div className="hdg">The research is in, and it says,</div>
-          “The results showed that simply feeling like you’re part of a{" "}
-          <span className="bold">team</span> of people working on a task makes
-          people <span className="bold">more motivated</span> as they take on{" "}
-          <span className="bold">challenges</span>."
-        </div>
-      </section>
+        <div className="landing__content">
+          <div className="left">
+            <div className="hdg">The research is in, and it says,</div>
+            “The results showed that simply feeling like you’re part of a{" "}
+            <span className="bold">team</span> of people working on a task makes
+            people <span className="bold">more motivated</span> as they take on{" "}
+            <span className="bold">challenges</span>."
+          </div>
 
-      <section className="taglines">
-        <div className="landing__content right">
-          Research indicates that people who act collaboratively stick to their
-          task 64% longer than those working alone. Groups of people working
-          toward a common goal report{" "}
-          <span className="bold">higher engagement levels</span>,{" "}
-          <span className="bold">lower fatigue levels</span> and{" "}
-          <span className="bold">higher success rates</span>.
+          <div className="right">
+            Research indicates that people who act collaboratively stick to
+            their task 64% longer than those working alone. Groups of people
+            working toward a common goal report{" "}
+            <span className="bold">higher engagement levels</span>,{" "}
+            <span className="bold">lower fatigue levels</span> and{" "}
+            <span className="bold">higher success rates</span>.
+          </div>
         </div>
-        <Link to="/register">
+        <Link to="/myhives">
           <button type="submit" className="ldg-btn">
             Join the Hive
           </button>
@@ -72,7 +72,7 @@ export default function LandingPage() {
             </div>
           </h3>
         </div>
-        <Link to="/register">
+        <Link to="/myhives">
           <button type="submit" className="ldg-btn">
             Join the Hive
           </button>

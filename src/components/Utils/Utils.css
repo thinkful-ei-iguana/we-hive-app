@@ -6,24 +6,13 @@
   padding: 6px;
   text-align: left;
   width: 80%;
+  height: 200px;
   border-radius: 4px;
+  background-color: rgb(255, 245, 212);
 }
 
 .Textarea::placeholder {
   color: (255, 245, 212);
-}
-
-.Textarea {
-  height: 200px;
-}
-
-.Section {
-  margin-left: 0px;
-  margin-right: 0px;
-}
-.Section--list {
-  margin-left: 10px;
-  margin-right: 10px;
 }
 
 .btn-container {
@@ -95,7 +84,7 @@
   left: 0;
   width: 80px;
   height: 46.188px;
-  z-index: 2;
+  /* z-index: 2; */
   background: inherit;
 }
 

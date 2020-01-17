@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 import "./AccordionItem.css";
 export default class AccordionItem extends Component {
@@ -8,11 +7,11 @@ export default class AccordionItem extends Component {
 
     return (
       <>
-        <Link to={`/myhives/${id}`}>
+        <a href={`/myhives/${id}`}>
           <div className={"HiveNavItem__title"} onClick={() => showMenu()}>
             {goalTitle}
           </div>
-        </Link>
+        </a>
       </>
     );
   }

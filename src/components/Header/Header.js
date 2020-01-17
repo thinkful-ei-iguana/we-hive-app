@@ -14,9 +14,11 @@ export default class Header extends Component {
     return (
       <div className="Header__logged-in">
         <div className="navigation">
-          <Link to="/" className="log-button" onClick={this.handleLogoutClick}>
+          <Link to="/" className="log-button">
             <img src={Icon} alt="Hive icon" className="hive-icon" />
-            <div className="logout">Logout</div>
+            <div className="logout" onClick={this.handleLogoutClick}>
+              Logout
+            </div>
           </Link>
         </div>
       </div>
@@ -27,16 +29,10 @@ export default class Header extends Component {
     return (
       <div className="Header__not-logged-in">
         <div className="navigation">
-          <div className="nav__not-logged-in">
+          <Link to="/login" className="log-button">
             <img src={Icon} alt="Hive icon" className="hive-icon" />
-
-            <Link to="/login" className="log-button">
-              <div className="login">Log in</div>
-            </Link>
-            <Link to="/register" className="log-button">
-              <div className="register">Register</div>
-            </Link>
-          </div>
+            <div className="login">Login</div>
+          </Link>
         </div>
       </div>
     );

@@ -2,7 +2,6 @@ import React, { Component } from "react";
 import HiveContext from "../../context/HiveContext";
 import { Button } from "../../components/Utils/Utils";
 import AccordionItem from "../../components/AccordionItem/AccordionItem";
-import "./HiveTypeAccordion.css";
 
 export default class HiveTypeAccordion extends Component {
   static defaultProps = {

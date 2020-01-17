@@ -39,12 +39,6 @@ export default class RegistrationForm extends Component {
       <form className="RegistrationForm" onSubmit={this.handleSubmit}>
         <div role="alert">{error && <p className="red">{error}</p>}</div>
         <div className="first_name">
-          {/* <label
-            htmlFor="RegistrationForm__first_name"
-            className="RegForm__label"
-          >
-            First name <Required />
-          </label> */}
           <input
             name="first_name"
             type="text"
@@ -55,12 +49,6 @@ export default class RegistrationForm extends Component {
           />
         </div>
         <div className="user_email">
-          {/* <label
-            htmlFor="RegistrationForm__user_email"
-            className="RegForm__label"
-          >
-            Email <Required />
-          </label> */}
           <input
             name="user_email"
             type="email"
@@ -71,12 +59,6 @@ export default class RegistrationForm extends Component {
           />
         </div>
         <div className="user_name">
-          {/* <label
-            htmlFor="RegistrationForm__user_name"
-            className="RegForm__label"
-          >
-            User name <Required />
-          </label> */}
           <input
             name="user_name"
             type="text"
@@ -87,12 +69,6 @@ export default class RegistrationForm extends Component {
           />
         </div>
         <div className="password">
-          {/* <label
-            htmlFor="RegistrationForm__password"
-            className="RegForm__label"
-          >
-            Password <Required />
-          </label> */}
           <input
             name="password"
             type="password"

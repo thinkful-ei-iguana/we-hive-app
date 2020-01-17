@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Section } from "../../components/Utils/Utils";
 import AddHiveForm from "../../components/AddHiveForm/AddHiveForm";
 import "./AddHivePage.css";
 
@@ -17,10 +16,10 @@ export default class AddHivePage extends Component {
 
   render() {
     return (
-      <Section className="AddHivePage">
+      <section className="AddHivePage">
         <h2 className="Page-title">Create a Hive</h2>
         <AddHiveForm onAddHive={this.handleAddHive} />
-      </Section>
+      </section>
     );
   }
 }
