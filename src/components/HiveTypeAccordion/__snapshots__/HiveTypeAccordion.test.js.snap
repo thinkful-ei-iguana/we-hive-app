@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HiveTypeAccordion Component opens any clicked tab 1`] = `
+<Fragment>
+  <div
+    className="Accordion__section"
+  >
+    <Button
+      className="Accordion"
+      onClick={[Function]}
+    >
+      <p
+        className="Accordion__title"
+      />
+    </Button>
+    <ul
+      className="HiveType__list"
+    >
+      <li
+        className="goal-desc"
+      >
+        <AccordionItem
+          goalTitle="No hives yet"
+          id=""
+        />
+      </li>
+    </ul>
+    <ul
+      className="HiveType__list"
+    />
+  </div>
+</Fragment>
+`;

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import AccordionItem from "./AccordionItem";
+import RegistrationForm from "./RegistrationForm";
 
-describe(`AccordionItem Component`, () => {
+describe(`RegistrationForm Component`, () => {
   it("renders without errors", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<AccordionItem />, div);
+    ReactDOM.render(<RegistrationForm />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

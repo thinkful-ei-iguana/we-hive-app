@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import AccordionItem from "./AccordionItem";
+import Hexagon from "./Hexagon";
 
-describe(`AccordionItem Component`, () => {
+describe(`Hexagon Component`, () => {
   it("renders without errors", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<AccordionItem />, div);
+    ReactDOM.render(<Hexagon />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import AccordionItem from "./AccordionItem";
+import TargetDate from "./TargetDate";
 
-describe(`AccordionItem Component`, () => {
+describe(`TargetDate Component`, () => {
   it("renders without errors", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<AccordionItem />, div);
+    ReactDOM.render(<TargetDate />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import AccordionItem from "./AccordionItem";
+import PostCodeForm from "./PostCodeForm";
 
-describe(`AccordionItem Component`, () => {
+describe(`PostCodeForm Component`, () => {
   it("renders without errors", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<AccordionItem />, div);
+    ReactDOM.render(<PostCodeForm />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });

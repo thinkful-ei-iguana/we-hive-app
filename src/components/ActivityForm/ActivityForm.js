@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button, Textarea } from "../Utils/Utils";
@@ -33,7 +32,7 @@ export default class ActivityForm extends Component {
     return (
       <form className="ActivityForm" onSubmit={this.handleActSubmit}>
         <div className="action">
-          <label htmlFor="ActForm__action">Add Action Taken</label>
+          <label htmlFor="ActForm__action">Add action taken</label>
           <Textarea name="action" id="ActForm__action"></Textarea>
         </div>
 
@@ -45,12 +44,10 @@ export default class ActivityForm extends Component {
             id="ActForm__notes"
           ></Textarea>
           <div className="btn-container">
-            <Button className="Act-button" type="submit">
-              Create some buzz
-            </Button>
-            <Link to={`/myhives/${hiveId}/hivemind`}>
+            <Button type="submit">Create some buzz</Button>
+            <a href={`/myhives/${hiveId}/hivemind`}>
               <Button>View Hive Mind</Button>
-            </Link>
+            </a>
           </div>
         </div>
       </form>

@@ -1,12 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
-import AccordionItem from "./AccordionItem";
+import JoinCodeForm from "./JoinCodeForm";
 
-describe(`AccordionItem Component`, () => {
+describe(`JoinCodeForm Component`, () => {
   it("renders without errors", () => {
     const div = document.createElement("div");
-    ReactDOM.render(<AccordionItem />, div);
+    ReactDOM.render(<JoinCodeForm />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 });
