@@ -1,68 +1,34 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# WeHive
 
-## Available Scripts
+My users will jive together like a beehive using WeHive.
 
-In the project directory, you can run:
+Studies show that people who act collaboratively stick to their task 64% longer than those working alone. Groups of people working toward a common goal report higher engagement levels, lower fatigue levels and higher success rates.
 
-### `npm start`
+Users can use my app to create accountability groups amongst their peers where they can log actions they've taken to make progress on their goals and collaborate with their friends.
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Users who wish to create a "hive" can register for an account and add their goals according to its type. e.g. "Current goal" or "Dream goal". The main purpose of the app is to connect users with each other, so the hive creator adds a passcode to the hive and shares it with interested parties. Those users wishing to join that hive will need to create an account and use the passcode to be allowed entry to the hive. There, all users can log activity and comment on the group's progress in the "Hive Mind."
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+![Landing Page](README/wehivelanding.gif "Landing Page")
+![User Dashboard](README/dashboard.png "User Dashboard")
+![Log Activity](README/activitylogger.png "Log Activity")
+![Hive Mind](README/hivemind.png "Hive Mind")
 
-### `npm test`
+## See it live!
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+[WeHive Live App](http://www.github.com)
 
-### `npm run build`
+[WeHive Server (GitHub)](https://github.com/thinkful-ei-iguana/we-hive-server/tree/for-submission)
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## What to Expect
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+This is phase 1 of WeHive. Ultimately, users will be able to search for groups of people with common goals and request to join.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Additionally, users will be able to log additional information about their progress, including things like time spent on the activity, satisfaction level with progress, notes about progress, and reminders for future actions. Users will be able to choose to include this information in the Hive Mind. Users will also be able to set short-term goals and milestones within each of their Hive Minds.
 
-### `npm run eject`
+## Technology Used
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Front-End: _ReactJS | CSS_
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Back-End: _NodeJS | KnexJS | ExpressJS | PostgreSQL_
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Testing: _Mocha | Chai_
