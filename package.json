@@ -25,7 +25,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "REACT_APP_API_ENDPOINT=https://vast-bayou-48826.herokuapp.com/api npm run build",
-    "deploy": "now ./build",
+    "deploy": "now --prod ./build",
     "postdeploy": "now alias -A ./build/now.json"
   },
   "eslintConfig": {
