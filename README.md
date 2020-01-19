@@ -1,6 +1,6 @@
 # WeHive
 
-My users will jive together like a beehive using WeHive.
+My users will _jive_ together like a _beehive_ using _WeHive_.
 
 Studies show that people who act collaboratively stick to their task 64% longer than those working alone. Groups of people working toward a common goal report higher engagement levels, lower fatigue levels and higher success rates.
 
@@ -15,7 +15,7 @@ Users who wish to create a "hive" can register for an account and add their goal
 
 ## See it live!
 
-[WeHive Live App](http://www.github.com)
+[WeHive Live App](https://we-hive-app-iguana.now.sh/)
 
 [WeHive Server (GitHub)](https://github.com/thinkful-ei-iguana/we-hive-server/tree/for-submission)
 
