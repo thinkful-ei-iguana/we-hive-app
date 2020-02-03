@@ -58,7 +58,7 @@ export default class HiveNavPage extends Component {
             <Link to="/">
               <img src={Logo} alt="logo" className="HiveNavPage__logo" />
             </Link>
-            <h2 className="Nav_heading">My Hives</h2>
+            {/* <h2 className="Nav_heading">My Hives</h2> */}
             <Button
               className="Nav__menu"
               onClick={() => this.handleToggleMenu()}

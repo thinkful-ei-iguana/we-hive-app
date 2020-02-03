@@ -20,7 +20,7 @@
   flex-direction: row;
   width: 320px;
   justify-content: space-around;
-  margin: 40px 0 40px;
+  margin: 10px 0 40px;
 }
 
 .Button {
@@ -84,14 +84,14 @@
   left: 0;
   width: 80px;
   height: 46.188px;
-  /* z-index: 2; */
   background: inherit;
 }
 
 @media (min-width: 768px) {
   .Button {
-    background: #ff940d;
-    color: rgb(255, 245, 212);
+    background-color: #ff940d;
+    /* color: rgb(255, 245, 212); */
+    color: black;
     cursor: pointer;
     z-index: 10;
     border: none;
@@ -102,7 +102,6 @@
     position: relative;
     width: 120px;
     height: 69.28px;
-    background-color: #ff940d;
     margin: 34.64px 0;
   }
 

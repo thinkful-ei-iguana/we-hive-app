@@ -8,7 +8,7 @@ export default class AccordionItem extends Component {
     return (
       <>
         <a href={`/myhives/${id}`}>
-          <div className={"HiveNavItem__title"} onClick={() => showMenu()}>
+          <div className="HiveNavItem__title" onClick={() => showMenu()}>
             {goalTitle}
           </div>
         </a>

@@ -13,13 +13,14 @@
   margin: 10px;
   width: 100px;
   height: 100px;
+  padding-bottom: 40px;
 }
 .logo-container {
   display: flex;
   flex-direction: row;
   width: 320px;
   justify-content: space-around;
-  margin: 40px 0 40px;
+  margin: 40px 0 10px;
 }
 
 .Nav_heading {

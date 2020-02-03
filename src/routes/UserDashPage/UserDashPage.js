@@ -29,8 +29,8 @@ export default class UserDashPage extends Component {
                 </h3>
               </Link>
               <Link to="/create">
-                <div>
-                  <Hexagon className="dash-left" />
+                <div className="dash-left">
+                  <Hexagon />
                 </div>
               </Link>
             </div>
@@ -41,13 +41,13 @@ export default class UserDashPage extends Component {
                 <h4 className="dash-welcome">
                   Life is more fun with others. Click here to create a hive.
                   Then, click{" "}
-                  <span className="orange">Add members to hive</span>. Set a
+                  <span className="hex-light">Add members to hive</span>. Set a
                   password and share it with your friends!
                 </h4>
               </Link>
               <Link to="/create">
-                <div className="dash-right">
-                  <Hexagon />
+                <div>
+                  <Hexagon className="dash-hex" />
                 </div>
               </Link>
             </div>
@@ -60,8 +60,8 @@ export default class UserDashPage extends Component {
               </h4>
             </Link>
             <Link to="/join">
-              <div className="dash-left">
-                <Hexagon />
+              <div>
+                <Hexagon className="dash-hex" />
               </div>
             </Link>
           </div>

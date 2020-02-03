@@ -31,9 +31,9 @@ export default class HiveMindPage extends Component {
   renderHiveActivity() {
     const { activityList } = this.context;
     return (
-      <>
+      <div className="hivemind-text">
         <HiveActivity activityList={activityList} />
-      </>
+      </div>
     );
   }
 
@@ -46,9 +46,7 @@ export default class HiveMindPage extends Component {
           <h2 className="user-welcome-heading">Hive Mind</h2>
           <h2 className="Goal-desc">{hive.goal_description}</h2>
           {hive.group_message && (
-            <>
-              <div className="group-message">{hive.group_message}</div>
-            </>
+            <div className="group-message">{hive.group_message}</div>
           )}
 
           {this.renderHiveActivity()}
