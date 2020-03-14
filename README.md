@@ -17,7 +17,7 @@ Users who wish to create a "hive" can register for an account and add their goal
 
 [WeHive Live App](https://wehive.now.sh/)
 
-[WeHive Server (GitHub)](https://github.com/thinkful-ei-iguana/we-hive-app)
+[WeHive Server (GitHub)](https://github.com/thinkful-ei-iguana/we-hive-server)
 
 ## What to Expect
 

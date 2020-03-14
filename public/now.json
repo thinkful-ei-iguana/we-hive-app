@@ -2,5 +2,14 @@
   "version": 2,
   "name": "we-hive-app",
   "alias": "wehive",
-  "routes": [{ "handle": "filesystem" }, { "src": ".*", "dest": "/index.html" }]
+  "routes": [
+    {
+      "src": "^/static/(.*)",
+      "dest": "/static/$1"
+    },
+    {
+      "src": ".*",
+      "dest": "/index.html"
+    }
+  ]
 }
