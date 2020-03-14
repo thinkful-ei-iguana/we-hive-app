@@ -55,10 +55,10 @@ export default class HiveNavPage extends Component {
       <div className="App__main wrapper">
         <div className="HiveNavPage__container">
           <div className="logo-container">
-            <Link to="/">
+            <Link to="/myhives">
               <img src={Logo} alt="logo" className="HiveNavPage__logo" />
             </Link>
-            {/* <h2 className="Nav_heading">My Hives</h2> */}
+
             <Button
               className="Nav__menu"
               onClick={() => this.handleToggleMenu()}

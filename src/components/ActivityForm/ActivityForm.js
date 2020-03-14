@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 import HiveContext from "../../context/HiveContext";
 import HiveApiService from "../../services/hive-api-service";
 import { Button, Textarea } from "../Utils/Utils";
@@ -15,10 +16,11 @@ export default class ActivityForm extends Component {
   handleActSubmit = event => {
     event.preventDefault();
     const { hive } = this.context;
+
     const { action, notes } = event.target;
 
     HiveApiService.postHiveActivity(hive.id, action.value, notes.value)
-      .then(this.context.addActivityList)
+      .then(this.context.addActivity)
       .then(() => {
         action.value = "";
         notes.value = "";
@@ -29,11 +31,16 @@ export default class ActivityForm extends Component {
 
   render() {
     const { hiveId } = this.props;
+
     return (
       <form className="ActivityForm" onSubmit={this.handleActSubmit}>
         <div className="action">
           <label htmlFor="ActForm__action">Add action taken</label>
-          <Textarea name="action" id="ActForm__action"></Textarea>
+          <Textarea
+            name="action"
+            id="ActForm__action"
+            maxLength="100"
+          ></Textarea>
         </div>
 
         <div className="notes">
@@ -42,12 +49,13 @@ export default class ActivityForm extends Component {
             aria-label="Add notes"
             name="notes"
             id="ActForm__notes"
+            maxLength="100"
           ></Textarea>
           <div className="btn-container">
             <Button type="submit">Create some buzz</Button>
-            <a href={`/myhives/${hiveId}/hivemind`}>
+            <Link to={`/myhives/${hiveId}/hivemind`}>
               <Button>View Hive Mind</Button>
-            </a>
+            </Link>
           </div>
         </div>
       </form>

@@ -24,7 +24,7 @@ export default class LoginPage extends Component {
     this.setState({ error: null });
 
     AuthApiService.postLogin({
-      user_email: "web@gmail.com",
+      user_email: "demo@me.com",
       password: "Password1!"
     })
 

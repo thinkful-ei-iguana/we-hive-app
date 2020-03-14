@@ -9,28 +9,7 @@ const HiveContext = React.createContext({
   error: null,
   hive: nullHive,
   hives: [],
-  hiveTypes: [
-    {
-      id: 1,
-      type: "Events"
-    },
-    {
-      id: 2,
-      type: "Current Goals"
-    },
-    {
-      id: 3,
-      type: "Stretch Goals"
-    },
-    {
-      id: 4,
-      type: "Dream Goals"
-    },
-    {
-      id: 5,
-      type: "Completed Goals"
-    }
-  ],
+  hiveTypes: [],
   user: null,
   users: [],
   addActivity: () => {},

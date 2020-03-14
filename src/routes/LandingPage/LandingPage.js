@@ -5,12 +5,15 @@ import Hexagon from "../../components/Hexagon/Hexagon";
 import "./LandingPage.css";
 import Hex from "../../images/Hexbg.png";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+
 export default class LandingPage extends Component {
   static contextType = HiveContext;
 
   render() {
     const demoUser = {
-      user_email: "web@gmail.com",
+      user_email: "demo@me.com",
       password: "$2a$12$8zTUtyLYgtn4hjqnKZ.isepUhdgxYhRRBGANpeTsEJLPTZFNLIw1."
     };
     return (
@@ -24,6 +27,14 @@ export default class LandingPage extends Component {
                 <div>Together</div>
               </h1>
             </Link>
+            <a href="#more">
+              <div className="chevron-block" id="more">
+                <FontAwesomeIcon
+                  icon={faChevronDown}
+                  className="chevron large"
+                />
+              </div>
+            </a>
           </div>
         </section>
 

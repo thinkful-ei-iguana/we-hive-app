@@ -70,6 +70,7 @@ export default class AddHiveForm extends Component {
             className="add-form-input"
             name="goal_description"
             id="AddForm__goal_description"
+            maxLength="20"
           />
         </div>
         <div className="target_date">
@@ -92,6 +93,7 @@ export default class AddHiveForm extends Component {
             name="group_message"
             id="AddForm__group_message"
             placeholder="Write a message to the hive..."
+            maxLength="40"
           />
         </div>
         <Button type="submit">Save hive</Button>

@@ -25,7 +25,7 @@ export default class UserDashPage extends Component {
             <div className="dash-flex">
               <Link to="/create">
                 <h3 className="dash-welcome">
-                  You don't have any hives...yet. Click here to create one.
+                  You don't have any hives...yet. Click to add.
                 </h3>
               </Link>
               <Link to="/create">
@@ -39,10 +39,10 @@ export default class UserDashPage extends Component {
             <div className="dash-flex">
               <Link to="/create">
                 <h4 className="dash-welcome">
-                  Life is more fun with others. Click here to create a hive.
-                  Then, click{" "}
-                  <span className="hex-light">Add members to hive</span>. Set a
-                  password and share it with your friends!
+                  Life is more fun with others. <br />
+                  Create a hive <br />
+                  Add members <br />
+                  Set password and share with your friends!
                 </h4>
               </Link>
               <Link to="/create">
@@ -55,7 +55,7 @@ export default class UserDashPage extends Component {
           <div className="dash-flex">
             <Link to="/join">
               <h4 className="dash-welcome">
-                Have a password? Click here, add code, and immediately begin
+                Have a password? Add code here and immediately begin
                 collaborating with friends.
               </h4>
             </Link>
