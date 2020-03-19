@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-
+import HiveApiService from "../../services/hive-api-service";
 import JoinCodeForm from "../../components/JoinCodeForm/JoinCodeForm";
 import "./JoinCodePage.css";
 
@@ -10,9 +10,12 @@ export default class PostCodePage extends Component {
     }
   };
 
-  handleAddCode = code => {
+  handleAddCode = () => {
     const { history } = this.props;
     history.goBack();
+    HiveApiService.getHives()
+      .then(this.context.setHives)
+      .catch(this.context.setError);
   };
 
   render() {

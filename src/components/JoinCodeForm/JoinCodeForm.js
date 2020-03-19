@@ -28,7 +28,7 @@ export default class JoinCodeForm extends Component {
         <input
           className="JoinCodeForm__input"
           name="code"
-          type="text"
+          type="password"
           required
         />
         <Button type="submit">Join new hive</Button>

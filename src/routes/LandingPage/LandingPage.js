@@ -19,7 +19,7 @@ export default class LandingPage extends Component {
     return (
       <>
         <section className="pre-demo">
-          <div className="wrapper">
+          <div className="landing_wrapper">
             <img src={Hex} className="hex-graphic" alt="hex graphic" />
             <Link to="/myhives">
               <h1>

@@ -1,5 +1,4 @@
 .Goal-desc {
-  background: rgb(255, 245, 212);
   text-transform: uppercase;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
@@ -12,15 +11,26 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100vw;
+  height: 100vh;
 }
+
 .ActItem__hive_heading {
   padding: 100px 10px 50px;
   font-family: "Oswald", sans-serif;
   font-weight: 500;
   letter-spacing: 0.2em;
   text-align: center;
+  position: relative;
 }
 
 .orange {
   color: #ff4500;
+}
+
+@media (min-width: 1440px) {
+  .ActPage__main {
+    width: 48vw;
+    margin-top: 5%;
+  }
 }

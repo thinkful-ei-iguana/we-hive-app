@@ -9,9 +9,11 @@ export default class PostCodeForm extends Component {
   };
 
   static contextType = HiveContext;
+  state = { error: null };
 
   handleCodeSubmit = ev => {
     ev.preventDefault();
+
     const { hiveId } = this.props;
     const { user } = this.context;
     const { code } = ev.target;
@@ -22,18 +24,33 @@ export default class PostCodeForm extends Component {
         code.value = "";
         this.props.onAddCode();
       })
-      .catch(this.context.setError);
+      .catch(res => {
+        code.value = "";
+        this.setState({ error: res.error });
+      });
   };
+
+  handleNewCode = () => {
+    this.setState({ error: null });
+  };
+
   render() {
+    const { error } = this.state;
     return (
       <form className="JoinCodeForm" onSubmit={this.handleCodeSubmit}>
-        <input
-          className="JoinCodeForm__input"
-          name="code"
-          type="text"
-          required
-        />
-        <Button type="submit">Save password</Button>
+        <div role="alert">
+          {error && <p className="red">Please use a different code</p>}
+        </div>
+        {!error && (
+          <input
+            className="JoinCodeForm__input"
+            name="code"
+            type="password"
+            required
+          />
+        )}
+        {error && <Button onClick={this.handleNewCode}>Try Again</Button>}
+        {!error && <Button type="submit">Save password</Button>}
       </form>
     );
   }

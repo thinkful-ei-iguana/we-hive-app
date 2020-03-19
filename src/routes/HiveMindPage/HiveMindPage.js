@@ -50,13 +50,13 @@ export default class HiveMindPage extends Component {
           )}
 
           {this.renderHiveActivity()}
-        </div>
 
-        <Link to={`/myhives/${hive.id}`}>
-          <Button type="submit" className="hive-mind-button">
-            Add Activity
-          </Button>
-        </Link>
+          <Link to={`/myhives/${hive.id}`}>
+            <Button type="submit" className="hive-mind-button">
+              Add Activity
+            </Button>
+          </Link>
+        </div>
       </>
     );
   }

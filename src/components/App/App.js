@@ -76,13 +76,14 @@ class App extends Component {
     return (
       <div className="App">
         <Header />
-        <main className="Hive_container wrapper">
+        <main className="Hive_container">
           {this.state.hasError && (
             <p className="red">Something went wrong. Please try again later.</p>
           )}
           <div className="Nav_flex">
             <nav className="App__nav collapsed">{this.renderNavRoutes()}</nav>
           </div>
+
           <section className="App__main wrapper">
             {this.renderMainRoutes()}
           </section>

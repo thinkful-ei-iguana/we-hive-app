@@ -13,7 +13,11 @@ export default class UserDashPage extends Component {
     HiveApiService.getHives()
       .then(this.context.setHives)
       .catch(this.context.setError);
+    HiveApiService.getUser()
+      .then(this.context.setUser)
+      .catch(this.context.setError);
   }
+
   render() {
     const { hives } = this.context;
 

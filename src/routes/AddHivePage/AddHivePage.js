@@ -9,7 +9,7 @@ export default class AddHivePage extends Component {
     }
   };
 
-  handleAddHive = hiveId => {
+  handleAddHive = () => {
     const { history } = this.props;
     history.push(`/myhives`);
   };
