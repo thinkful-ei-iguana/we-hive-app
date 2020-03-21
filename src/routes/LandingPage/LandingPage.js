@@ -1,6 +1,8 @@
 import React, { Component } from "react";
+import AuthApiService from "../../services/auth-api-service";
+import TokenService from "../../services/token-service";
 import { Link } from "react-router-dom";
-import HiveContext from "../../context/HiveContext";
+import UserContext from "../../context/UserContext";
 import Hexagon from "../../components/Hexagon/Hexagon";
 import "./LandingPage.css";
 import Hex from "../../images/Hexbg.png";
@@ -9,24 +11,53 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 export default class LandingPage extends Component {
-  static contextType = HiveContext;
+  static contextType = UserContext;
 
-  render() {
-    const demoUser = {
+  state = { error: null };
+
+  componentDidMount() {
+    this.setState({ error: null });
+    AuthApiService.postLogin({
       user_email: "demo@me.com",
-      password: "$2a$12$8zTUtyLYgtn4hjqnKZ.isepUhdgxYhRRBGANpeTsEJLPTZFNLIw1."
-    };
+      password: "Password1!"
+    });
+  }
+
+  handleDemoLogin = event => {
+    event.preventDefault();
+    this.setState({ error: null });
+
+    AuthApiService.postLogin({
+      user_email: "demo@me.com",
+      password: "Password1!"
+    })
+
+      .then(res => {
+        TokenService.saveAuthToken(res.authToken);
+        this.handleLoginSuccess();
+      })
+      .catch(res => {
+        this.setState({ error: res.error });
+      });
+  };
+
+  handleLoginSuccess = () => {
+    const { location, history } = this.props;
+    const destination = (location.state || {}).from || "/myhives";
+    history.push(destination);
+  };
+  render() {
     return (
       <>
         <section className="pre-demo">
           <div className="landing_wrapper">
             <img src={Hex} className="hex-graphic" alt="hex graphic" />
-            <Link to="/myhives">
-              <h1>
-                <p className="landing__tagline"></p>
-                <div>Together</div>
-              </h1>
-            </Link>
+
+            <h1>
+              <p className="landing__tagline"></p>
+              <div>Together</div>
+            </h1>
+
             <a href="#more">
               <div className="chevron-block" id="more">
                 <FontAwesomeIcon
@@ -57,15 +88,14 @@ export default class LandingPage extends Component {
               <span className="bold">higher success rates</span>.
             </div>
           </div>
-          <Link to="/myhives">
-            <button
-              type="submit"
-              className="ldg-btn"
-              onClick={() => this.context.setUser(demoUser)}
-            >
-              View Demo
-            </button>
-          </Link>
+
+          <button
+            type="submit"
+            className="ldg-btn"
+            onClick={this.handleDemoLogin}
+          >
+            View Demo
+          </button>
         </section>
 
         <section className="post-demo">

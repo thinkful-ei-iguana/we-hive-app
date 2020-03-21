@@ -29,7 +29,7 @@ export default class UserDashPage extends Component {
             <div className="dash-flex">
               <Link to="/create">
                 <h3 className="dash-welcome">
-                  You don't have any hives...yet. Click to add.
+                  You don't have any hives...yet. Add one now!
                 </h3>
               </Link>
               <Link to="/create">

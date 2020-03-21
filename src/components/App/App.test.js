@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 import { HiveProvider } from "../../context/HiveContext";
-import UserService from "../UserService/UserService";
+import { UserProvider } from "../../context/UserContext";
 import App from "./App";
 
 it("renders without crashing", () => {
@@ -10,11 +10,11 @@ it("renders without crashing", () => {
 
   ReactDOM.render(
     <BrowserRouter>
-      <HiveProvider>
-        <UserService>
+      <UserProvider>
+        <HiveProvider>
           <App />
-        </UserService>
-      </HiveProvider>
+        </HiveProvider>
+      </UserProvider>
     </BrowserRouter>,
     div
   );
