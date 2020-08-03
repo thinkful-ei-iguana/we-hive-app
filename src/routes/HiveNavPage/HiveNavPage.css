@@ -51,7 +51,9 @@
   .HiveNavPage__container {
     width: 50vw;
   }
-
+  .collapsed {
+    background-color: #ffc400;
+  }
   .Nav_heading {
     margin-bottom: 20px;
     color: rgba(255, 196, 0);

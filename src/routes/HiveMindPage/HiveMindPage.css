@@ -5,7 +5,6 @@
   align-items: center;
   width: 100vw;
   height: 100vh;
-  margin-top: 25vh;
 }
 
 .Goal-desc {
@@ -86,6 +85,13 @@ img {
 }
 
 @media (min-width: 768px) {
+  .HiveMind__page,
+  .HiveMindPage__activity,
+  .HiveMindPage__activity-label,
+  .HiveMindPage__activity-list {
+    width: 48vw;
+    overflow: hidden;
+  }
   .HiveMindPage__activity-label-buzz {
     text-align: left;
     font-size: 16px;
@@ -114,16 +120,6 @@ img {
 }
 
 @media (min-width: 1440px) {
-  .HiveMind__page,
-  .HiveMindPage__activity,
-  .HiveMindPage__activity-label,
-  .HiveMindPage__activity-list {
-    margin: 0;
-    padding: 0;
-    width: 49vw;
-    overflow: hidden;
-  }
-
   .HiveMindPage__activity-label-buzz {
     text-align: left;
     margin-left: 100px;

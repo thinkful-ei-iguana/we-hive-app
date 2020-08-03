@@ -27,7 +27,11 @@
 .orange {
   color: #ff4500;
 }
-
+@media (min-width: 768px) {
+  .ActPage__main {
+    width: 48vw;
+  }
+}
 @media (min-width: 1440px) {
   .ActPage__main {
     width: 48vw;

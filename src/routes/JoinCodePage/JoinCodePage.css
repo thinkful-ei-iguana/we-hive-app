@@ -6,9 +6,8 @@
   width: 100vw;
   height: 100vh;
 }
-
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
   .JoinCodePage {
-    width: 49vw;
+    width: 48vw;
   }
 }

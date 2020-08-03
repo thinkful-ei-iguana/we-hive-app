@@ -9,10 +9,19 @@
 .Nav_flex {
   display: flex;
   flex-wrap: wrap;
-  height: auto;
-  width: auto;
 }
 .Hive_container {
   display: flex;
   flex-wrap: wrap;
+}
+
+@media (min-width: 768px) {
+  .Nav_flex {
+    width: 50vw;
+  }
+}
+@media (min-width: 1024px) {
+  .Nav_flex {
+    justify-content: center;
+  }
 }

@@ -44,11 +44,6 @@
 
 @media (min-width: 768px) {
   .hex-flex {
-    width: 40vw;
-  }
-}
-@media (min-width: 1440px) {
-  .hex-flex {
-    width: 60vw;
+    width: 48vw;
   }
 }
